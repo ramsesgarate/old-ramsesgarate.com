@@ -1,29 +1,15 @@
-# Gridsome Blog Starter
+# ramsesgarate.com
 
-> A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/0a51d0e9-f611-4dd8-887f-fc1889e68540/deploy-status)](https://app.netlify.com/sites/ramsesgarate/deploys)
 
-## Features
-- Beautiful and simple design.
-- Markdown for content.
-- Tags support.
-- Dark / Light toggle.
-- CSS variables, SCSS & BEM for styling.
-- 100, 100, 100, 100 score on Google Lighthouse.
-- Uses same front-matter fields as Dev.to.
+Ramses personal website runs on Gridsome and Vue.
 
-## Demo URL
+**Note**: The source for this site was not created to be a template or theme, but for my own use. Feel free to take whatever inspiration from it that you want, but this code was not written with the intention of being, cloned and deployed. As such, I do not provide support or guidance for doing that. I recommend using the [Gridsome Blog Starter](https://github.com/gridsome/gridsome-starter-blog/) to set up a blog or an existing theme created for that purpose.
 
-https://gridsome-starter-blog.netlify.com
+## Acknowledgements
 
-## Install
+- Gridsome - [Gridsome Blog Starter](https://github.com/gridsome/gridsome-starter-blog)
 
-### 1. Install Gridsome CLI tool if you don't have
+## License
 
-`npm install --global @gridsome/cli`
-
-### 2. Install this starter
-
-1. `gridsome create my-gridsome-site https://github.com/gridsome/gridsome-starter-blog.git`
-2. `cd my-gridsome-site` to open folder
-3. `gridsome develop` to start local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+This project is open source and available under the [MIT License](LICENSE).
