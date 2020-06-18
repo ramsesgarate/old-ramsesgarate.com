@@ -1,17 +1,9 @@
 <template>
   <div id="app">
 
-    <header class="header">
-      <div class="header__left">
-        <Logo v-if="showLogo" /> 
-      </div>
-      
-      <div class="header__right">        
-        <ToggleTheme />
-      </div>
-    </header>
+    <nav-bar/>
 
-    <main class="main">
+    <main class="main-content">
       <slot/>
     </main>
 
@@ -25,7 +17,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import ToggleTheme from '~/components/ToggleTheme.vue'
+import NavBar from '~/components/NavBar.vue'
 
 export default {
   props: {
@@ -33,13 +25,13 @@ export default {
   },
   components: {
     Logo,
-    ToggleTheme
+    NavBar
   }
 }
 </script>
 
 <style lang="scss">
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,11 +51,25 @@ export default {
     position: sticky;
     width: 100%;
   }
-}
+} */
 
-.main {
+/* .main {
   margin: 0 auto;
   padding: 1.5vw 15px 0;
+} */
+
+.main-content {
+    margin-top: 55px;
+    padding: 40px 0 0;
+    min-height: calc(300vh - 190px);
+}
+
+@media (min-width: 620px) {
+    .main-content {
+        margin-top: 140px;
+        padding: 60px 0 0;
+        min-height: calc(300vh - 360px);
+    }
 }
 
 .footer {
