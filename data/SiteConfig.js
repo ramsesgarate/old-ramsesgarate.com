@@ -1,0 +1,31 @@
+module.exports = {
+  siteTitle: 'Ramses Garate',
+  siteTitleShort: 'Ramses Garate',
+  siteTitleAlt: 'Ramses Garate',
+  siteLogo: '/images/Logo-RG-SC.png',
+  siteUrl: 'https://ramsesgarate.netlify.app/',
+  repo: 'https://github.com/ramsesgarate/ramsesgarate.com',
+  pathPrefix: '',
+  dateFromFormat: 'DD-MM-YYYY',
+  siteDescription: 'Soy Ramses Garate, un desarrollador FrontEnd autodidacta de 23 años',
+  siteRss: '/rss.xml',
+  userName: 'Ramses',
+  googleAnalyticsID: '',
+  userEmail: 'rsgarate@gmail.com',
+  userTwitter: 'https://twitter.com/ramsesgarate/',
+  userTwitterHandler: '@ramsesgarate',
+  userGithub: 'https://github.com/ramsesgarate/',
+  menuLinks: [{
+      name: 'Sobre mi',
+      link: '/me/',
+    },
+    {
+      name: 'Blog',
+      link: '/blog/',
+    },
+    {
+      name: 'Contacto',
+      link: '/contact/',
+    },
+  ],
+}

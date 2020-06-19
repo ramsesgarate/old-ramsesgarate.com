@@ -19,12 +19,10 @@ a:not(.button) {
     color: var(--link-color);
     text-decoration: none;
     font-weight: 500;
-    transition: color .2s, background .2s;
+    transition: color .2s;
     padding: 1px 2px;
     &:hover {
         opacity: .8;
-        background: var(--darken-link-color);
-        border-radius: $border-radius;
         color: var(--highlight);
     }
 }
