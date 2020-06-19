@@ -9,11 +9,11 @@
             Soy un  desarrollador FrontEnd autodidacta de 23 años Venezolano, actualmente vivo en Chile, en este espacio voy a estar creando contenido sobre las distintas tecnologias FrontEnd como HTML, CSS y JavaScript.
           </p> 
           <div class="social-button">
-            <gh-btns-follow user="ramsesgarate" show-count></gh-btns-follow>
+            <gh-btns-follow user="ramsesgarate" show-count rel="noopener"></gh-btns-follow>
           </div>
         </div>
         <div class="img-me">
-          <g-image src="~/assets/images/CARICATURA-RG.svg" alt="Caricature Ramses"></g-image>
+          <g-image src="~/assets/images/caricatura-rg-350x350.png" alt="Caricature Ramses"></g-image>
         </div>
       </div>
 

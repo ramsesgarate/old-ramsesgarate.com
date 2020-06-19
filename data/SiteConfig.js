@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: 'Ramses Garate',
   siteTitleShort: 'Ramses Garate',
   siteTitleAlt: 'Ramses Garate',
-  siteLogo: '/images/Logo-RG-SC.png',
+  siteLogo: '/images/logo-50x50.png',
   siteUrl: 'https://ramsesgarate.netlify.app/',
   repo: 'https://github.com/ramsesgarate/ramsesgarate.com',
   pathPrefix: '',

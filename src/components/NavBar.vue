@@ -2,7 +2,7 @@
   <nav class="nav" :class="{fixed}">
     <div class="nav-container">
         <g-link to="/">
-          <g-image src="~/assets/images/Logo-RG-SC.png" class="favicon" alt="Logo Personal"></g-image>
+          <g-image src="~/assets/images/logo-50x50.png" class="favicon" alt="Logo Personal"></g-image>
           <span class="text">Ramses Garate</span>
         </g-link>
       <div class="links">
