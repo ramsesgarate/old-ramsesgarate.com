@@ -2,10 +2,12 @@
   <Layout>
     <div class="container">
 
-      <h1>Hola soy Ramses Garate!</h1>
+      <h1>Contacto</h1>
 
       <p>
-        Puedes contactarme escribiendo a mi correo rsgarate@gmail.com
+        Envíame un correo electrónico a rsgarate@gmail.com si quieres hablar conmigo. Estoy cerca.
+        <br>
+        Tenga en cuenta: este es mi sitio personal y no hago publicidad, publicaciones patrocinadas, afiliados, etc.
       </p>
 
     </div>    

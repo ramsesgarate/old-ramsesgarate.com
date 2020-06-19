@@ -13,7 +13,7 @@
           </div>
         </div>
         <div class="img-me">
-          <g-image src="~/assets/images/CARICATURA-RG.png"></g-image>
+          <g-image src="~/assets/images/CARICATURA-RG.svg" alt="Caricature Ramses"></g-image>
         </div>
       </div>
 
