@@ -106,7 +106,7 @@ export default {
 .nav a {
     display: flex;
     align-items: center;
-    color: #333;
+    color: var(--body-color);
     margin-right: 0;
     font-weight: 500;
     font-size: 1.15rem;
@@ -142,7 +142,7 @@ export default {
     font-weight: 600;
     padding: .75rem;
     margin: 0 .25rem;
-    color: rgba(0, 0, 0, .6);
+    color: var(--body-color);
     line-height: 1.2;
     text-align: center;
     border-radius: 6px;

@@ -11,7 +11,7 @@
         <br>
         Actualmente estoy trabajando a tiempo completo como desarrollador de software en <a href="https://awto.cl/" target="_blank" rel="noopener noreferrer">Awto</a>.
         <br>
-        Mi objetivo es compartir las cosas en las que tengo conocimiento y que estoy aprendiendo, por eso decidi crear este rincón de aprendizaje gratuito, sin anuncios, publicaciones patrocinadas, ventanas emergentes de boletines informativos, enlaces de afiliados y el resto del ruido molesto que estamos tan acostumbrados a ver en Internet en estos días.
+        Mi objetivo es compartir las cosas en las que tengo conocimiento y que estoy aprendiendo, por eso decidí crear este rincón de aprendizaje gratuito, sin anuncios, publicaciones patrocinadas, ventanas emergentes de boletines informativos, enlaces de afiliados y el resto del ruido molesto que estamos tan acostumbrados a ver en Internet en estos días.
         <br>
         Puedes leer mis artículos o contactarme.
       </p>
@@ -27,12 +27,12 @@
       <h2>Aprendiendo</h2>
       <h4>¡Nunca dejes de aprender!</h4>
       <p>
-        Siempre quiero aprender más, hacer más y ser más. También creo firmemente que nunca deberiamos conformarnos.
+        Siempre quiero aprender más, hacer más y ser más. También creo firmemente que nunca deberíamos conformarnos.
         <br>
         ¡Soy muy trabajador , súper curioso , apasionado , comprometido y también soy un aprendiz rápido!.
         <br>
         <strong>
-          Actualmente me encuentro mejorando mis habilidades con CSS, es algo que habia evitado por mucho tiempo y decidi dejar de postergarlo.
+          Actualmente me encuentro mejorando mis habilidades con CSS, es algo que había evitado por mucho tiempo y decidí dejar de postergarlo.
         </strong>
       </p>
 
