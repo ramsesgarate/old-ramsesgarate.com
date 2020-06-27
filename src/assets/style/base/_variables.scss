@@ -1,0 +1,101 @@
+// Colors
+$body-bg-color: #F9FAFB;
+$body-color: #5D6063;
+$heading-color: #333;
+$primary-color: #0C9AF9;
+$link-color: $primary-color;
+$link-color-hover: #FFF;
+
+/* Containers */
+
+$x-small: 720px;
+$small: 800px;
+$medium: 1200px;
+$large: 1300px;
+
+/* Breakpoints */
+
+$mobile: 620px;
+$tablet: $small;
+$desktop: $medium;
+$width: 800px;
+
+/* Colors */
+
+$background: #f0f0f0;
+$primary-color: #5183f5;
+$secondary-color: rgb(255, 90, 95);
+$green: #1fc844;
+$yellow: #fed356;
+$accent-color: #cdcdcd;
+$light: #f2f2f2;
+$alternate-background: #f0f0f0;
+$alternate-color: #404040;
+$link-color: $primary-color;
+$link-hover-color: darken($link-color, 10%);
+$highlight: #ffeea8;
+$error: #d33c40;
+$bq-border: 16px solid #f0f0f0;
+$code: Menlo;
+
+/* Typography */
+
+// Body font
+$font-size: 1rem;
+$body-font-size: 1.15rem;
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$font-color: #454545;
+$light-font-color: rgba(0, 0, 0, 0.6);
+$font-family: "Roboto",
+"Helvetica",
+"Arial",
+sans-serif;
+$line-height: 1.5;
+// Headings
+$heading-font-color: #222;
+$heading-font-weight: 500;
+$heading-line-height: 1.3;
+// Mobile heading font size
+$h1-mobile: 1.85rem;
+$h2-mobile: 1.7rem;
+$h3-mobile: 1.5rem;
+$h4-mobile: 1.3rem;
+$h5-mobile: 1.2rem;
+// Heading font size
+$h1: 2.5rem;
+$h2: 2.1rem;
+$h3: 1.85rem;
+$h4: 1.5rem;
+$h5: 1.4rem;
+
+/* Padding */
+
+$padding: 60px;
+$margins: 2rem;
+$content-padding: 60px 0;
+$content-padding-mobile: 30px 0;
+
+/* Borders */
+
+$border-width: 2px;
+$border-style: solid;
+$border-color: #ccc;
+$border-radius: 6px;
+$borders: $border-width $border-style $border-color;
+$box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.16);
+
+/* Buttons */
+
+$primary-hover: lighten($primary-color, 33%);
+$button-background: $primary-color;
+$button-background-hover: darken($primary-color, 15%);
+$button-color: white;
+$button-font-weight: 500;
+$button-font-size: 1.1rem;
+$button-border-width: 2px;
+$button-border-style: solid;
+$button-border-color: $primary-color;
+$button-border-radius: $border-radius;
+$button-text-transform: none;
