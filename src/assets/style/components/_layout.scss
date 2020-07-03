@@ -1,0 +1,68 @@
+.main-content {
+    margin-top: 55px;
+    padding: 40px 0 0;
+    min-height: calc(100vh - 190px);
+}
+
+@include small-breakpoint {
+    .main-content {
+        margin-top: 140px;
+        padding: 60px 0 0;
+        min-height: calc(100vh - 360px);
+    }
+}
+
+.container {
+    max-width: $width;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+}
+
+@include small-breakpoint {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+.front-page {
+    margin-top: 2rem;
+    h2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 0;
+        padding-bottom: 0;
+        @include small-breakpoint {
+            justify-content: flex-start;
+        }
+        a.view-all {
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            background: $light;
+            border-radius: $border-radius;
+            color: lighten($font-color, 10%);
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0.25rem 0 0 2rem;
+            &:hover,
+            &:focus {
+                background: darken($light, 5%);
+            }
+        }
+    }
+}
+
+.section {
+    margin: 40px 0;
+    &:first-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@include small-breakpoint {
+    .section {
+        margin: 4rem 0;
+    }
+}

@@ -1,11 +1,13 @@
 <template>
   <Layout>
-    <h1 class="tag-title text-center space-bottom">
-      # {{ $page.tag.title }}
-    </h1>
+    <div class="container">
+      <h1 class="tag-title text-center space-bottom">
+        # {{ $page.tag.title }}
+      </h1>
 
-    <div class="posts">
-      <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
+      <div class="posts">
+        <PostList v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
+      </div>
     </div>
   </Layout>
 </template>
@@ -34,12 +36,12 @@ query Tag ($id: ID!) {
 
 <script>
 import Author from '~/components/Author.vue'
-import PostCard from '~/components/PostCard.vue'
+import PostList from '~/components/PostList.vue'
 
 export default {
   components: {
     Author,
-    PostCard
+    PostList
   },
   metaInfo: {
     title: 'Hello, world!'

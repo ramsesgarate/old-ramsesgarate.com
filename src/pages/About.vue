@@ -58,22 +58,4 @@ export default {
 </script>
 
 <style>
-.container, .quotations {
-    max-width: 800px;
-    padding: 0 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-wrap: break-word;
-}
-
-p {
-  font-size: 1rem;
-  text-align: justify;
-}
-
-@media (min-width: 620px) {
-    .container, .quotations {
-        padding: 0 2rem;
-    }
-}
 </style>
