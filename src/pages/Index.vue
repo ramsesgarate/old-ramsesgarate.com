@@ -1,27 +1,29 @@
 <template>
-  <Layout :show-logo="false">
-    <div class="container">
+    <Layout :show-logo="false">
 
-      <div class="about-me">
-        <div class="information">
-          <h1><span>¡Hola,</span> <br>Soy Ramses Garate!</h1>  
-          <p>
-            Soy un  desarrollador FrontEnd autodidacta de 23 años Venezolano, actualmente vivo en Chile, en este espacio voy a estar creando contenido sobre las distintas tecnologias FrontEnd como HTML, CSS y JavaScript.
-          </p> 
-          <div class="social-button">
-            <gh-btns-follow user="ramsesgarate" show-count rel="noopener"></gh-btns-follow>
-          </div>
-        </div>
-        <div class="img-me">
-          <g-image src="~/assets/images/caricatura-rg-350x350.png" alt="Caricature Ramses"></g-image>
-        </div>
-      </div>
+      <Author/>
 
-    <!-- List posts -->
-      <div class="posts">
-        <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+      <div class="container front-page">
+        <section class="section">
+          <h2>
+            Ultimos articulos
+            <g-link to="/blog" class="view-all">
+              View all
+            </g-link>
+          </h2>
+          <PostList v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+        </section>
+
+        <section class="section">
+          <h2>
+            Mas populares
+            <g-link to="/categories/popular" class="view-all">
+              View all
+            </g-link>
+          </h2>
+          <PostList v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+        </section>
       </div>
-    </div>
 
   </Layout>
 </template>
@@ -36,7 +38,6 @@ query {
         date (format: "D. MMMM YYYY")
         timeToRead
         description
-        cover_image (width: 770, height: 380, blur: 10)
         path
         tags {
           id
@@ -51,12 +52,12 @@ query {
 
 <script>
 import Author from '~/components/Author.vue'
-import PostCard from '~/components/PostCard.vue'
+import PostList from '~/components/PostList.vue'
 
 export default {
   components: {
     Author,
-    PostCard
+    PostList
   },
   metaInfo: {
     titleTemplate: '%s - FrontEnd Developer'
@@ -65,49 +66,6 @@ export default {
 </script>
 
 <style>
-.container {
-  max-width: 800px;
-  padding: 0 2rem;
-  margin: 0 auto;
-}
 
-
-.about-me {
-  display: flex;
-}
-
-.information {
-  flex: 1 1 50%;
-}
-.information h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -.03rem;
-  font-weight: 700;
-}
-
-.information h1 span{
-  font-size: 3rem;
-}
-
-.information p {
-  font-size: 1.2rem;
-  text-align: justify;
-  margin: 0 0 2rem;
-}
-
-.information .social-button {
-  display: flex;
-  align-items: center;
-}
-
-.information .social-button a:not(.button) {
-  color: #000;
-  padding: 3px 10px;
-}
-
-.img-me {
-  flex: 1 1 40%;
-}
 
 </style>

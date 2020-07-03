@@ -1,5 +1,5 @@
 // Import main css
-import '~/assets/style/index.scss'
+import '~/assets/style/main.scss'
 import 'vue-github-buttons/dist/vue-github-buttons.css';
 
 
