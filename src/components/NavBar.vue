@@ -1,13 +1,11 @@
 <template>
-  <nav class="nav" :class="{fixed}">
-    <div class="nav-container">
-      <div class="brand">
-        <g-link to="/">
-          <g-image src="~/assets/images/logo-50x50.png" class="favicon" alt="Logo"></g-image>
-          <span class="text">Ramses Garate</span>
-        </g-link>
-      </div>
-      <div class="links">
+  <nav>
+    <div class="container">
+      <g-link to="/" class="link-home">
+        <g-image src="~/assets/images/logo-50x50.png" class="favicon" alt="Logo"></g-image>
+        <span class="text">Ramses Garate</span>
+      </g-link>
+      <div class="links-nav">
         <g-link 
           v-for="(link, index) in links" 
           :key="index"
@@ -16,9 +14,6 @@
           {{link.name}}
         </g-link>
       </div>
-      <div class="cta">
-          <ToggleTheme/>
-        </div>
     </div>
   </nav>
 </template>
@@ -33,39 +28,20 @@ export default {
   },
   data() {
     return {
-      fixed: false, 
       links: [
         {
-          name: 'Sobre mi',
-          link: '/about/'
-        },
-        {
           name: 'Blog',
-          link: '/blog/'
+          link: '/blog/',
+          icon: 'article'
         },
         {
-          name: 'Contacto',
-          link: '/contact/'
+          name: 'Sobre mi',
+          link: '/about/',
+          icon: 'code'
         }
       ]
     }
   },
-  mounted() {
-      window.addEventListener('scroll', this.handleScroll);
-  },
-  destroyed() {
-      window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll(event) {
-        if (window.scrollY > 20) {
-          this.fixed = true;
-        }else {
-          this.fixed = false;
-        }
-    }
-},
-
 }
 </script>
 

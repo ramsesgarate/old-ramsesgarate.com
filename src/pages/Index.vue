@@ -1,29 +1,33 @@
 <template>
-    <Layout :show-logo="false">
-
-      <Author/>
-
-      <div class="container front-page">
-        <section class="section">
-          <h2>
-            Ultimos articulos
-            <g-link to="/blog" class="view-all">
-              View all
-            </g-link>
-          </h2>
-          <PostList v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-        </section>
-
-        <section class="section">
-          <h2>
-            Mas populares
-            <g-link to="/categories/popular" class="view-all">
-              View all
-            </g-link>
-          </h2>
-          <PostList v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-        </section>
+  <Layout :show-logo="false">
+    <section class="author">
+      <div class="author info">
+        <h1>	&lt;hola-mundo/&gt;</h1>
+        <p>Soy un desarrollador FrontEnd autodidacta de 23 años Venezolano, actualmente vivo en Chile, en este espacio voy a estar creando contenido sobre las distintas tecnologias FrontEnd como HTML, CSS y JavaScript.</p>
       </div>
+        <g-image src="~/assets/images/caricatura-rg-350x350.png" alt="Caricature Ramses"></g-image>
+    </section>
+
+    <section>
+      <h2>
+        Ultimos articulos
+      </h2>        
+      <PostList :posts="$page.posts.edges"/>
+    </section>
+
+    <section>
+      <h2>
+        Mas populares
+      </h2>
+      <PostList :posts="$page.posts.edges"/>
+    </section>
+
+    <section>
+      <h2>
+        Proyectos
+      </h2>
+      <ProjectList :projects="projects"/>
+    </section>
 
   </Layout>
 </template>
@@ -35,7 +39,7 @@ query {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "D. MMMM YYYY" locale: "es-ES")
         timeToRead
         description
         path
@@ -51,16 +55,28 @@ query {
 </page-query>
 
 <script>
-import Author from '~/components/Author.vue'
 import PostList from '~/components/PostList.vue'
+import ProjectList from '~/components/ProjectList.vue'
 
 export default {
   components: {
-    Author,
-    PostList
+    PostList,
+    ProjectList
   },
   metaInfo: {
     titleTemplate: '%s - FrontEnd Developer'
+  },
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          title: 'ramses.dev', 
+          description: 'Tema personal de Gridsome (repositorio de esta web).', 
+          link: 'https://github.com/ramsesgarate/ramsesgarate.com'
+        }
+      ]
+    }
   }
 }
 </script>

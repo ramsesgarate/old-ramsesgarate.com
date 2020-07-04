@@ -1,11 +1,16 @@
 <template>
   <Layout>
-    <div class="container">
-      <h1>Articulos</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
-      <PostList v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
 
-    </div>
+    <section class="blog">
+      <h1>Blog</h1>
+      <p>Artículos, tutoriales, fragmentos, reflexiones y todo lo demás.</p>
+      <input type="search" placeholder="Busca tu publicación...">
+    </section>
+
+    <section>
+      <PostList :posts="$page.posts.edges"/>
+    </section>
+
   </Layout>
 </template>
 
@@ -16,7 +21,7 @@ query {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "D. MMMM YYYY" locale: "es-ES")
         timeToRead
         description
         path

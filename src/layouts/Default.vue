@@ -1,15 +1,10 @@
 <template>
   <div id="app">
-
     <nav-bar/>
-
-    <main class="main-content">
+    <main class="container">
       <slot/>
     </main>
-
     <Footer/>
-      
-
   </div>
 </template>
 

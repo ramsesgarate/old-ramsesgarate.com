@@ -11,7 +11,4 @@ export default {
 </script>
 
 <style lang="scss">
-.post-date {
-  flex: 1;
-}
 </style>

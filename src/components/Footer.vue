@@ -1,6 +1,10 @@
 <template>
-  <div class="footer container">
-    <div>
+  <footer class="footer container">
+    <div class="links-nav">
+      <g-link to="/contact/">Contacto</g-link>
+      <g-link to="/about/">Sobre mi</g-link>
+    </div>
+    <div class="external-links">
       <a href="https://github.com/ramsesgarate" title="Open-source on GitHub" target="_blank" rel="noopener noreferrer">
         <g-image src="~/assets/images/github-d160ace5798527574789e89ec034e8f7.png" class="footer-img" alt="GitHub"></g-image>
       </a>
@@ -11,7 +15,7 @@
         <g-image src="~/assets/images/only-logo.svg" class="footer-img" alt="GridSome"></g-image>
       </a>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

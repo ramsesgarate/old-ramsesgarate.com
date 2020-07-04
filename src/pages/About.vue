@@ -1,9 +1,7 @@
 <template>
   <Layout>
-    <div class="container">
+    <section class="about-me">
       <h1>Sobre mi</h1>
-
-
       <p>
         Si te preguntas quién soy...
         <br>
@@ -45,7 +43,7 @@
         <li>Aprender GraphQL</li>
         <li>Aprender NodeJS</li>
       </ul>
-    </div>
+    </section>
   </Layout>
 </template>
 
