@@ -19,13 +19,8 @@
 </template>
 
 <script>
-import ToggleTheme from '~/components/ToggleTheme.vue'
-
 export default {
   name: 'nav-bar',
-  components: {
-    ToggleTheme
-  },
   data() {
     return {
       links: [

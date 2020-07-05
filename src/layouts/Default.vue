@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import NavBar from '~/components/NavBar.vue'
 import Footer from '~/components/Footer'
 
@@ -18,7 +17,6 @@ export default {
     showLogo: { default: true }
   },
   components: {
-    Logo,
     NavBar,
     Footer
   }

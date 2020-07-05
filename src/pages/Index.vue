@@ -1,5 +1,5 @@
 <template>
-  <Layout :show-logo="false">
+  <Layout>
     <section class="author">
       <div class="author info">
         <h1>	&lt;hola-mundo/&gt;</h1>
