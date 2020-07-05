@@ -1,12 +1,10 @@
-const config = require('./data/SiteConfig');
-
 module.exports = {
-  pathPrefix: config.pathPrefix,
-  siteUrl: config.siteUrl,
-  siteName: config.siteTitle,
-  siteDescription: config.siteDescription,
-  author: config.author,
-  title: config.siteTitle,
+  pathPrefix: '',
+  siteUrl: 'https://ramsesgarate.netlify.app/',
+  siteName: 'Ramses Garate',
+  siteDescription: 'Soy Ramses Garate, un desarrollador FrontEnd autodidacta de 23 años',
+  author: 'Ramses Garate',
+  title: 'Ramses Garate',
 
   templates: {
     Post: '/:title',
