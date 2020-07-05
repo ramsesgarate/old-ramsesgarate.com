@@ -11,14 +11,10 @@
     "@gridsome/remark-prismjs": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.6.0",
-    "gridsome": "^0.7.0",
-    "vue-github-buttons": "^3.1.0"
+    "gridsome": "^0.7.0"
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
-    "eslint-plugin-gridsome": "^1.4.12",
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.1",
-    "vue-eslint-parser": "^7.1.0"
+    "sass-loader": "^9.0.1"
   }
 }
