@@ -1,5 +1,5 @@
 ---
-title: Say hello to Gridsome 🎉
+title: Hola Gridsome 🎉
 date: 2019-02-07
 published: true
 tags: ['markdown', 'releases']

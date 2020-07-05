@@ -333,9 +333,14 @@ a.post-tags__link {
 
 /* Blog */
 
-.blog p {
+.blog p,
+.tag p {
     font-size: 1.2rem;
-    color: var(--light-font-color);
+}
+
+.tag p span {
+    color: var(--primary);
+    font-weight: 500;
 }
 
 @media screen and (min-width: 800px) {
@@ -384,11 +389,10 @@ a.post-tags__link {
 
 .gradient-blue {
     background: rgb(0, 87, 223);
-    background: linear-gradient(207deg, rgba(0, 87, 223, 1) 10%, rgba(4, 145, 223, 1) 30%, rgba(4, 145, 223, 1) 60%, rgba(0, 87, 223, 1) 90%);
+    background: linear-gradient(45deg, var(--primary), #66A6FF);
 }
 
 .gradient-blue h3,
-.gradient-blue a,
 .gradient-blue p {
     color: #fff;
 }

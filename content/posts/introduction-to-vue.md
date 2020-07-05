@@ -1,8 +1,8 @@
 ---
-title: A post with a cover image
+title: Introducción a Vue
 date: 2019-01-07
 published: true
-tags: ['markdown', 'cover-image']
+tags: ['javascript', 'vue']
 series: false
 cover_image: ./images/alexandr-podvalny-220262-unsplash.jpg
 canonical_url: false

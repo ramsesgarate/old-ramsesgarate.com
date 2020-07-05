@@ -40,8 +40,6 @@ query {
         id
         title
         date (format: "D. MMMM YYYY" locale: "es-ES")
-        timeToRead
-        description
         path
         tags {
           id

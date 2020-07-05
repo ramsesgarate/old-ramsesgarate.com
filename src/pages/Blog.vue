@@ -4,7 +4,7 @@
     <section class="blog">
       <h1>Blog</h1>
       <p>Artículos, tutoriales, fragmentos, reflexiones y todo lo demás.</p>
-      <input type="search" placeholder="Busca tu publicación...">
+      <!-- <input id="search" type="search" name="search" placeholder="Busca tu publicación..."> -->
     </section>
 
     <section>
@@ -22,8 +22,6 @@ query {
         id
         title
         date (format: "D. MMMM YYYY" locale: "es-ES")
-        timeToRead
-        description
         path
         tags {
           id
