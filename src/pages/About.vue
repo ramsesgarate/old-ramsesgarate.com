@@ -2,11 +2,13 @@
   <Layout>
     <section class="about-me">
       <h1>Sobre mi</h1>
+      <h3>Hola a todos 👋</h3>
+      <h3>Me llamo Ramses Garate y soy un loco de JavaScript</h3>
       <p>
-        Si te preguntas quién soy...
-        <br>
-        Me llamo Ramses Garate, soy un joven autodidacta de 23 años, actualmente me encuentro aprendiendo el arte de desarrollar interfacez.
-        <br>
+        He estado obsesionado con la programación desde el año 2016, sin embargo, no fue hasta el año pasado (2019) que le empece a dedicar mas tiempo a la programacion, hasta que finalmente me termino encantando. Actualmente trabajo a tiempo completo como desarrollador en la startup <a href="https://awto.cl/" target="_blank" rel="noopener noreferrer">Awto</a>.
+      </p>
+      <p>
+        Naci y creci en Venezuela, pero a finales del año 2018 me mude a Chile, 
         Actualmente estoy trabajando a tiempo completo como desarrollador de software en <a href="https://awto.cl/" target="_blank" rel="noopener noreferrer">Awto</a>.
         <br>
         Mi objetivo es compartir las cosas en las que tengo conocimiento y que estoy aprendiendo, por eso decidí crear este rincón de aprendizaje gratuito, sin anuncios, publicaciones patrocinadas, ventanas emergentes de boletines informativos, enlaces de afiliados y el resto del ruido molesto que estamos tan acostumbrados a ver en Internet en estos días.

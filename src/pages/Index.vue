@@ -3,21 +3,23 @@
     <section class="author">
       <div class="author info">
         <h1>	&lt;hola-mundo/&gt;</h1>
-        <p>Soy un desarrollador FrontEnd autodidacta de 23 años Venezolano, actualmente vivo en Chile, en este espacio voy a estar creando contenido sobre las distintas tecnologias FrontEnd como HTML, CSS y JavaScript.</p>
+        <p>Hola, soy Ramses Garate, un desarrollador Front-end autodidacta de 23 años, decidí crear mi propia página web para colocar las cosas que he aprendido, consejos, mejores prácticas y lo que estoy aprendiendo sobre desarrollo web.</p>
+        <p>Mi objetivo es hacer un espacio en la web sin los molestos anuncios, publicaciones patrocinadas, ventanas emergentes de noticias y todo ese ruido molesto que estamos acostumbrados a ver en internet hoy en día.</p>
+        <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
       </div>
         <g-image src="~/assets/images/caricatura-rg-350x350.png" alt="Caricature Ramses"></g-image>
     </section>
 
     <section>
       <h2>
-        Ultimos articulos
+        Últimos artículos
       </h2>        
       <PostList :posts="$page.posts.edges"/>
     </section>
 
     <section>
       <h2>
-        Mas populares
+        Más populares
       </h2>
       <PostList :posts="$page.posts.edges"/>
     </section>

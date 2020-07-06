@@ -420,6 +420,19 @@ input {
     box-shadow: 0 0 0 0.2rem rgba(158, 195, 255, 0.43);
 }
 
+
+/* Author */
+
+.author div p:first-of-type {
+    font-size: 1.15rem;
+}
+
+@media screen and (min-width: 800px) {
+    .author div p:first-of-type {
+        font-size: 1.3rem;
+    }
+}
+
 .author img {
     display: none;
 }
