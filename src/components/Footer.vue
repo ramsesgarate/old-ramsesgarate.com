@@ -1,7 +1,6 @@
 <template>
   <footer class="footer container">
     <div class="links-nav">
-      <g-link to="/contact/">Contacto</g-link>
       <g-link to="/about/">Sobre mi</g-link>
     </div>
     <div class="external-links">
