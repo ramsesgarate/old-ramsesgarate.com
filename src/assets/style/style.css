@@ -102,16 +102,13 @@ h5 {
     margin-bottom: 1rem;
 }
 
-
-/* @media screen and (min-width: 800px) {
-    body {
-        padding: 0 2rem;
-    }
-} */
-
 a {
     text-decoration: none;
     color: var(--primary);
+}
+
+a:hover {
+    border-bottom: 2px solid var(--primary);
 }
 
 .container {
@@ -212,6 +209,16 @@ nav .container {
     background-color: rgba(0, 0, 0, 0.034);
 }
 
+.link-home:hover,
+.links-nav a:hover,
+.post-list__link:hover,
+.external-links a:hover,
+.project:hover,
+.post-tags__link:hover,
+.avatar:hover {
+    border-bottom: none;
+}
+
 @media screen and (min-width: 800px) {
     nav .container {
         height: 120px;
@@ -237,6 +244,7 @@ nav .container {
     padding: .5rem 1rem;
     margin-bottom: 8px;
     border-radius: 6px;
+    transition: background-color .2s;
 }
 
 .post-list__link:hover {
@@ -273,6 +281,127 @@ a.post-tags__link {
     border-radius: .3rem;
     border-bottom: 0;
     white-space: nowrap
+}
+
+
+/* Post View*/
+
+.post-header {
+    margin-bottom: 1rem;
+}
+
+.post-header h1 {
+    margin-bottom: 14px;
+    font-size: 2rem;
+}
+
+.post__header {
+    width: calc(100% + var(--space) * 2);
+    margin-left: calc(var(--space) * -1);
+    margin-top: calc(var(--space) * -1);
+    margin-bottom: calc(var(--space) / 2);
+    overflow: hidden;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.post__header img {
+    width: 100%;
+}
+
+.post__header:empty {
+    display: none;
+}
+
+.post__content h2:first-child {
+    margin-top: 0;
+}
+
+.post__content ul,
+.post__content ol {
+    margin-left: 1.2rem;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.55rem;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+.post__content blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #e4e1f8;
+    border-radius: .3rem;
+    border: 0 solid var(--primary);
+    border-left-width: 8px;
+}
+
+.post__content blockquote ol,
+.post__content blockquote ol {
+    color: #5a5858;
+}
+
+.post__content blockquote blockquote {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.post__content blockquote p {
+    margin: 0;
+    color: #5a5858;
+}
+
+.post__content p:first-of-type {
+    font-size: 1rem;
+}
+
+.post__content img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+
+.info-post {
+    display: flex;
+    padding: 10px 0 20px 0;
+    align-items: center;
+    color: #495057;
+    font-size: .85rem;
+}
+
+.author-avatar .avatar img {
+    height: 56px;
+    width: 56px;
+    background-color: gray;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.author-avatar .avatar {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    margin-right: 20px;
+}
+
+.info-post .info-data p {
+    margin-bottom: 0;
+}
+
+.info-post .meta-post {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-post span.date {
+    margin-right: 16px;
+}
+
+.info-post span.time-lecture {
+    font-weight: 700;
 }
 
 
@@ -366,6 +495,7 @@ a.post-tags__link {
 .card {
     border-radius: 6px;
     padding: 1.5rem;
+    transition: transform .3s;
 }
 
 
@@ -373,6 +503,11 @@ a.post-tags__link {
 
 .project {
     text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transform: scale(1.05);
 }
 
 .project h3 {

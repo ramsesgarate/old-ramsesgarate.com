@@ -224,6 +224,10 @@ This is a normal paragraph:
 ```terminal
 This is a code block.
 ```
+
+```shell
+git status
+```
 Here is an example of AppleScript:
 
     tell application "Foo"
@@ -239,7 +243,7 @@ easy to include example HTML source code using Markdown -- just paste
 it and indent it, and Markdown will handle the hassle of encoding the
 ampersands and angle brackets. For example, this:
 
-```js
+```html
 <div class="footer">
     &copy; 2004 Foo Corporation
 </div>
@@ -250,6 +254,42 @@ it's also easy to use Markdown to write about Markdown's own syntax.
 
 ```javascript
 const ramses = 'hola';
+```
+
+```js
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { id: 0, text: 'Vegetables' },
+      { id: 1, text: 'Cheese' },
+      { id: 2, text: 'Whatever else humans are supposed to eat' }
+    ]
+  }
+})
+```
+
+```html
+<template>
+  <Layout>
+    <h1>About us</h1>
+  </Layout>
+</template>
+
+<script>
+import Layout from '~/layouts/Default.vue'
+
+export default {
+  components: {
+    Layout
+  }
+}
+</script>
 ```
 
 ## Span Elements
