@@ -468,3 +468,23 @@ code.language-shell::before {
     content: '$ ';
     color: #848991;
 }
+
+@media screen and (min-width: 800px) {
+    .filename {
+        padding: .5rem 1rem .75rem;
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.filename {
+    font-size: .9rem;
+    margin-bottom: -.8rem;
+    padding: .5rem 1.5rem .75rem;
+    line-height: 1.8;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+}

@@ -6,15 +6,6 @@
           {{ $page.post.title }}
         </h1>
         <div class="info-post">
-          <div class="author-avatar">
-            <g-link to="/" class="avatar">
-              <g-image 
-                src="~/assets/images/IMG_20200707_163458.jpg" 
-                alt="Profile Author" 
-                quality="70"
-                ></g-image>
-            </g-link>
-          </div>
           <div class="info-data">
             <p>Ramses Garate</p>
             <span class="meta-post">
@@ -34,21 +25,48 @@
 
         <PostTags :tags="$page.post.tags" />
       </div>
-
+      
+      <nav class="post-nav">
+          <div class="post-nav__previous">
+            <g-link v-if="previousPage" exact class="post-nav__link" :to="previousPage.link">
+              &larr; {{ previousPage.title }}
+            </g-link>
+          </div>
+          <div class="post-nav__next">
+            <g-link v-if="nextPage" exact class="post-nav__link" :to="nextPage.link">
+              {{ nextPage.title }} &rarr;
+            </g-link>
+          </div>
+        </nav>
     </section>
-    
-
   </Layout>
 </template>
 
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
+import postLinks from '~/data/post-links.yaml'
 
 export default {
   components: {
     PostMeta,
     PostTags
+  },
+  computed: {
+    postLinks(){
+      return postLinks;
+    },
+    currentIndex () {
+      return this.postLinks.findIndex(item => {
+        return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
+      })
+    },
+    nextPage () {
+      return this.postLinks[this.currentIndex + 1]
+    },
+    previousPage () {
+      return this.postLinks[this.currentIndex - 1]
+    }
   },
   metaInfo () {
     return {

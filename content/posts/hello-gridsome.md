@@ -1,5 +1,6 @@
 ---
 title: Hola Gridsome 🎉
+path: 'hello-gridsome'
 date: 2019-02-07
 published: true
 tags: ['markdown', 'releases']

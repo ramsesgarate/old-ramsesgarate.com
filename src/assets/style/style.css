@@ -107,10 +107,6 @@ a {
     color: var(--primary);
 }
 
-a:hover {
-    border-bottom: 2px solid var(--primary);
-}
-
 .container {
     max-width: 800px;
     margin-left: auto;
@@ -209,16 +205,6 @@ nav .container {
     background-color: rgba(0, 0, 0, 0.034);
 }
 
-.link-home:hover,
-.links-nav a:hover,
-.post-list__link:hover,
-.external-links a:hover,
-.project:hover,
-.post-tags__link:hover,
-.avatar:hover {
-    border-bottom: none;
-}
-
 @media screen and (min-width: 800px) {
     nav .container {
         height: 120px;
@@ -285,6 +271,10 @@ a.post-tags__link {
 
 
 /* Post View*/
+
+.post.content-box {
+    margin-bottom: 30px;
+}
 
 .post-header {
     margin-bottom: 1rem;
@@ -364,27 +354,18 @@ a.post-tags__link {
     margin: 0 auto;
 }
 
+.post__content h2 a,
+.post__content h3 a,
+.post__content h4 a {
+    color: var(--heading-color);
+}
+
 .info-post {
     display: flex;
     padding: 10px 0 20px 0;
     align-items: center;
     color: #495057;
     font-size: .85rem;
-}
-
-.author-avatar .avatar img {
-    height: 56px;
-    width: 56px;
-    background-color: gray;
-    border-radius: 50%;
-    vertical-align: middle;
-}
-
-.author-avatar .avatar {
-    position: relative;
-    height: 48px;
-    width: 48px;
-    margin-right: 20px;
 }
 
 .info-post .info-data p {
@@ -402,6 +383,39 @@ a.post-tags__link {
 
 .info-post span.time-lecture {
     font-weight: 700;
+}
+
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.post-nav__next {
+    margin-right: -.75rem;
+}
+
+.post-nav__previous {
+    margin-left: -.75rem;
+}
+
+.post-nav__previous,
+.post-nav__next {
+    padding: .5rem .75rem;
+    border-radius: 6px;
+    font-size: .85rem;
+}
+
+.post-nav__previous:hover,
+.post-nav__next:hover {
+    background-color: rgba(0, 0, 0, 0.034);
+}
+
+@media screen and (min-width: 800px) {
+    .post-nav__previous,
+    .post-nav__next {
+        font-size: 1rem;
+    }
 }
 
 

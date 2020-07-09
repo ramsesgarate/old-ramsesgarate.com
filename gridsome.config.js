@@ -7,7 +7,7 @@ module.exports = {
   title: 'Ramses Garate',
 
   templates: {
-    Post: '/:title',
+    Post: '/blog/:path',
     Tag: '/tag/:id'
   },
 
@@ -16,6 +16,16 @@ module.exports = {
     options: {
       typeName: 'Post',
       path: 'content/posts/*.md',
+      remark: {
+        autolinkHeadings: {
+          behavior: 'wrap',
+          content: {
+            type: 'text',
+            value: '#'
+          }
+        },
+
+      },
       refs: {
         tags: {
           typeName: 'Tag',
