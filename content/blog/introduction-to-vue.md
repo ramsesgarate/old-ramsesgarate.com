@@ -1,8 +1,8 @@
 ---
 title: Introducción a Vue
+path: 'introduction-to-vue'
 date: 2019-01-07
 published: true
-path: 'introduction-to-vue'
 tags: ['javascript', 'vue']
 series: false
 cover_image: ./images/alexandr-podvalny-220262-unsplash.jpg

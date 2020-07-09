@@ -59,14 +59,6 @@ h5 {
     line-height: 1.3;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
 blockquote,
 dl,
 ol,
@@ -278,11 +270,22 @@ a.post-tags__link {
 
 .post-header {
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .post-header h1 {
     margin-bottom: 14px;
     font-size: 2rem;
+}
+
+.meta-dot {
+    margin: 0 10px;
+}
+
+@media screen and (min-width: 800px) {
+    .post-header h1 {
+        font-size: 2.5rem;
+    }
 }
 
 .post__header {
@@ -366,6 +369,7 @@ a.post-tags__link {
     align-items: center;
     color: #495057;
     font-size: .85rem;
+    justify-content: center;
 }
 
 .info-post .info-data p {
@@ -375,10 +379,6 @@ a.post-tags__link {
 .info-post .meta-post {
     display: flex;
     flex-wrap: wrap;
-}
-
-.info-post span.date {
-    margin-right: 16px;
 }
 
 .info-post span.time-lecture {
@@ -416,6 +416,18 @@ a.post-tags__link {
     .post-nav__next {
         font-size: 1rem;
     }
+}
+
+.post-footer {
+    margin: 2rem 0;
+}
+
+a.link-edit-page svg {
+    margin-right: 12px;
+}
+
+.post-footer .post-tags {
+    margin: 1.5rem 0;
 }
 
 

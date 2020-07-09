@@ -15,7 +15,7 @@ module.exports = {
     use: '@gridsome/source-filesystem',
     options: {
       typeName: 'Post',
-      path: 'content/posts/*.md',
+      path: 'content/blog/*.md',
       remark: {
         autolinkHeadings: {
           behavior: 'wrap',
