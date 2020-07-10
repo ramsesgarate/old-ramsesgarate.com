@@ -1,7 +1,13 @@
 <template>
   <footer class="footer container">
     <div class="links-nav">
-      <g-link to="/about/">Sobre mi</g-link>
+      <g-link 
+        v-for="(link,index) in links"
+        :key="index"
+        :to="link.path"
+      >
+        {{link.name}}
+      </g-link>
     </div>
     <div class="external-links">
       <a href="https://github.com/ramsesgarate" title="Open-source on GitHub" target="_blank" rel="noopener noreferrer">
@@ -18,8 +24,14 @@
 </template>
 
 <script>
-export default {
+import { footerLinks } from "~/data/navLinks"
 
+export default {
+  computed: {
+    links() {
+      return footerLinks;
+    }
+  }
 }
 </script>
 

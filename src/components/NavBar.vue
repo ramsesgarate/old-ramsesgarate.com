@@ -9,7 +9,7 @@
         <g-link 
           v-for="(link, index) in links" 
           :key="index"
-          :to="link.link"
+          :to="link.path"
         >
           {{link.name}}
         </g-link>
@@ -19,24 +19,14 @@
 </template>
 
 <script>
+import { navLinks } from "~/data/navLinks"
+
 export default {
-  name: 'nav-bar',
-  data() {
-    return {
-      links: [
-        {
-          name: 'Blog',
-          link: '/blog/',
-          icon: 'article'
-        },
-        {
-          name: 'Sobre mi',
-          link: '/about/',
-          icon: 'code'
-        }
-      ]
+  computed: {
+    links() {
+      return navLinks;
     }
-  },
+  }
 }
 </script>
 
