@@ -3,32 +3,23 @@
     <section class="author">
       <div class="author info">
         <h1>	&lt;hola-mundo/&gt;</h1>
-        <p>Hola, soy Ramses Garate, un desarrollador Front-end autodidacta de 23 años, decidí crear mi propia página web para colocar las cosas que he aprendido, consejos, mejores prácticas y lo que estoy aprendiendo sobre desarrollo web.</p>
+        <p>Hola, soy Ramses Garate, un desarrollador Front-end autodidacta de 23 años, decidí crear mi propia página web para compartir mis conocimiento, lo que estoy aprendiendo, consejos y mejores prácticas sobre desarrollo web.</p>
         <p>Mi objetivo es hacer un espacio en la web sin los molestos anuncios, publicaciones patrocinadas, ventanas emergentes de noticias y todo ese ruido molesto que estamos acostumbrados a ver en internet hoy en día.</p>
         <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
       </div>
     </section>
 
-    <section>
-      <h2>
-        Últimos artículos
-      </h2>        
+    <Section title="Últimos artículos">
       <PostList :posts="$page.posts.edges"/>
-    </section>
-
-    <section>
-      <h2>
-        Más populares
-      </h2>
+    </Section>
+    
+    <Section title="Más Populares">
       <PostList :posts="$page.posts.edges"/>
-    </section>
+    </Section>
 
-    <section>
-      <h2>
-        Proyectos
-      </h2>
+    <Section title="Proyectos">
       <ProjectList :projects="projects"/>
-    </section>
+    </Section>
 
   </Layout>
 </template>
@@ -54,13 +45,15 @@ query {
 </page-query>
 
 <script>
-import PostList from '~/components/PostList.vue'
-import ProjectList from '~/components/ProjectList.vue'
+import Section from '~/components/Section'
+import PostList from '~/components/PostList'
+import ProjectList from '~/components/ProjectList'
 
 export default {
   components: {
     PostList,
-    ProjectList
+    ProjectList,
+    Section
   },
   metaInfo: {
     titleTemplate: '%s - FrontEnd Developer'

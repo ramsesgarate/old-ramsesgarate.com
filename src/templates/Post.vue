@@ -61,11 +61,8 @@ export default {
     previousPage () {
       return this.postLinks[this.currentIndex - 1]
     },
-    currentPath () {
-      return this.postLinks[this.currentIndex].link.slice(0,-1)
-    },
     editLink () {
-      return `https://github.com/ramsesgarate/ramsesgarate.com/blob/master/content${this.currentPath}.md`
+      return `https://github.com/ramsesgarate/ramsesgarate.com/blob/master/${this.$page.post.fileInfo.path}`
     },
   },
   metaInfo () {
@@ -86,6 +83,9 @@ export default {
 query Post ($id: ID!) {
   post: post (id: $id) {
     title
+    fileInfo {
+      path
+    }
     path
     date (format: "D. MMMM YYYY" locale: "es-ES")
     timeToRead

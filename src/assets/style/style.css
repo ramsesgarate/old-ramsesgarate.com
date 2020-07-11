@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 /* Global Variables */
 
@@ -116,12 +115,21 @@ a {
     margin: -1em 0 0 -1em;
 }
 
-.grid--gutters>.col {
+.grid--gutters>.col,
+.grid--gutters>.col-2 {
     padding: 1em 0 0 1em;
 }
 
 .col {
     flex-basis: 100%;
+}
+
+.col-2 {
+    flex-basis: 50%;
+}
+
+.col-3 {
+    flex-basis: 33%;
 }
 
 @media screen and (min-width: 620px) {
@@ -133,6 +141,9 @@ a {
     }
     .col-1-of-3 {
         flex: 0 0 33%;
+    }
+    .col-1-of-5 {
+        flex: 0 0 20%;
     }
 }
 
@@ -515,6 +526,11 @@ a.link-edit-page svg {
     border-radius: 6px;
 }
 
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 
 /* Card */
 
@@ -545,6 +561,12 @@ a.link-edit-page svg {
     font-size: .9rem;
 }
 
+.mx-auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Colors Gradient */
 
@@ -556,6 +578,24 @@ a.link-edit-page svg {
 .gradient-blue h3,
 .gradient-blue p {
     color: #fff;
+}
+
+
+/* Target */
+
+.target {
+    text-align: center;
+    margin: .5rem;
+    transition: transform .2s;
+}
+
+.target p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.target:hover {
+    transform: scale(1.1);
 }
 
 
