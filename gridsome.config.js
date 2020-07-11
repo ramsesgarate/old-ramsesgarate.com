@@ -39,17 +39,15 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: ['/exclude-me'],
+        exclude: ['/tag/*'],
         config: {
           '/blog/*': {
-            changefreq: 'weekly',
-            priority: 0.5,
-            lastmod: '2020-02-19',
+            changefreq: 'daily',
+            priority: 0.7,
           },
           '/about': {
-            changefreq: 'monthly',
+            changefreq: 'daily',
             priority: 0.7,
-            lastmod: '2020-05-12',
           }
         }
       }
