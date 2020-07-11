@@ -14,28 +14,47 @@ module.exports = {
   },
 
   plugins: [{
-    use: '@gridsome/source-filesystem',
-    options: {
-      typeName: 'Post',
-      path: 'content/blog/*.md',
-      remark: {
-        autolinkHeadings: {
-          behavior: 'wrap',
-          content: {
-            type: 'text',
-            value: '#'
-          }
-        },
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Post',
+        path: 'content/blog/*.md',
+        remark: {
+          autolinkHeadings: {
+            behavior: 'wrap',
+            content: {
+              type: 'text',
+              value: '#'
+            }
+          },
 
+        },
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
       },
-      refs: {
-        tags: {
-          typeName: 'Tag',
-          create: true
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/exclude-me'],
+        config: {
+          '/blog/*': {
+            changefreq: 'weekly',
+            priority: 0.5,
+            lastmod: '2020-02-19',
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7,
+            lastmod: '2020-05-12',
+          }
         }
       }
     }
-  }],
+  ],
 
   transformers: {
     remark: {
