@@ -16,17 +16,18 @@ module.exports = {
   plugins: [{
       use: 'gridsome-plugin-rss',
       options: {
-        contentTypeName: 'BlogPost',
+        contentTypeName: 'Post',
         feedOptions: {
           title: 'Ramses Garate Blog RSS Feed',
+          description: 'Soy Ramses Garate, un desarrollador FrontEnd autodidacta de 23 años',
           feed_url: 'https://ramsesgarate.com/blog/rss.xml',
           site_url: 'https://ramsesgarate.com/blog/'
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.description,
-          url: 'https://ramsesgarate.com/blog/' + node.slug,
-          author: node.fields.author
+          url: 'https://ramsesgarate.com' + node.path,
+          date: node.date
         }),
         output: {
           dir: './static',
