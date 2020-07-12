@@ -2,7 +2,7 @@
   <nav>
     <div class="container">
       <g-link to="/" class="link-home">
-        <g-image src="~/assets/images/logo-50x50.png" class="favicon" alt="Logo"></g-image>
+        <g-image src="~/assets/images/logo-79x79.png" class="favicon" alt="Logo"></g-image>
         <span class="text">Ramses Garate</span>
       </g-link>
       <div class="links-nav">
