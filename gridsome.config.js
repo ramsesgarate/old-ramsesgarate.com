@@ -14,6 +14,20 @@ module.exports = {
   },
 
   plugins: [{
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        flexsearch: {
+          cache: true,
+          profile: 'match'
+        },
+        searchFields: ['title', 'tags'],
+        collections: [{
+          typeName: 'Post',
+          indexName: 'Post',
+          fields: ['title', 'description']
+        }, ]
+      }
+    }, {
       use: 'gridsome-plugin-rss',
       options: {
         contentTypeName: 'Post',
