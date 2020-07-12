@@ -18,10 +18,10 @@ module.exports = {
       options: {
         contentTypeName: 'Post',
         feedOptions: {
-          title: 'Ramses Garate Blog RSS Feed',
+          title: 'Ramses Garate | RSS Feed',
           description: 'Soy Ramses Garate, un desarrollador FrontEnd autodidacta de 23 años',
-          feed_url: 'https://ramsesgarate.com/blog/rss.xml',
-          site_url: 'https://ramsesgarate.com/blog/'
+          feed_url: 'https://ramsesgarate.com/rss.xml',
+          site_url: 'https://ramsesgarate.com/'
         },
         feedItemOptions: node => ({
           title: node.title,

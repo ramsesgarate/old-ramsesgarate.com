@@ -2,12 +2,21 @@
   <footer class="footer container">
     <div class="links-nav">
       <g-link 
-        v-for="(link,index) in links"
-        :key="index"
+        v-for="(link,index) in siteLinks"
+        :key="`internal-${index}`"
         :to="link.path"
       >
         {{link.name}}
       </g-link>
+      <a
+        v-for="(link, index) in externalLinks"
+        :key="`external-${index}`"
+        :href="link.path"
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        {{link.name}}
+      </a>
     </div>
     <div class="external-links">
       <a href="https://github.com/ramsesgarate" title="Open-source on GitHub" target="_blank" rel="noopener noreferrer">
@@ -28,8 +37,11 @@ import { footerLinks } from "~/data/navLinks"
 
 export default {
   computed: {
-    links() {
-      return footerLinks;
+    siteLinks() {
+      return footerLinks.filter(link => !link.external);
+    },
+    externalLinks () {
+      return footerLinks.filter(link => link.external);
     }
   }
 }

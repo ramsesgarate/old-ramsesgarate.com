@@ -11,4 +11,9 @@ export const navLinks = [{
 export const footerLinks = [{
   name: 'Sobre mi',
   path: '/about/',
+  external: false
+}, {
+  name: 'RSS feed',
+  path: '/rss.xml',
+  external: true
 }]
