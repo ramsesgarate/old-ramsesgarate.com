@@ -14,6 +14,26 @@ module.exports = {
   },
 
   plugins: [{
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'BlogPost',
+        feedOptions: {
+          title: 'Ramses Garate Blog RSS Feed',
+          feed_url: 'https://ramsesgarate.com/blog/rss.xml',
+          site_url: 'https://ramsesgarate.com/blog/'
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.description,
+          url: 'https://ramsesgarate.com/blog/' + node.slug,
+          author: node.fields.author
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
+    }, {
       "use": "@gridsome/plugin-google-analytics",
       "options": {
         "id": "UA-172467274-1"

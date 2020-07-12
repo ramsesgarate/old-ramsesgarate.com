@@ -5,8 +5,17 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data store API here: https://gridsome.org/docs/data-store-api/
+module.exports = function(api) {
+  api.loadSource(actions => {
+    actions.addCollection('BlogPost')
   })
 }
+
+BlogPost.addNode({
+  title: BlogPost.title,
+  description: BlogPost.description,
+  fields: {
+    AuthorName: BlogPost.AuthorName,
+    'url-slug': BlogPost['url-slug']
+  }
+})
