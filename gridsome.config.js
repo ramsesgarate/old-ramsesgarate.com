@@ -24,7 +24,7 @@ module.exports = {
         collections: [{
           typeName: 'Post',
           indexName: 'Post',
-          fields: ['title', 'description']
+          fields: ['title', 'description', 'date', 'tags', 'path']
         }, ]
       }
     }, {

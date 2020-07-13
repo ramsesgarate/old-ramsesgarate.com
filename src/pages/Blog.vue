@@ -11,11 +11,10 @@
       class="input"
       type="text"
       placeholder="Search">
-    {{ searchResults }}
     </section>
 
     <section>
-      <PostList :posts="$page.posts.edges"/>
+      <PostList :posts="allPost"/>
     </section>
 
   </Layout>
@@ -26,7 +25,6 @@ query {
   posts: allPost(filter: { published: { eq: true }}) {
     edges {
       node {
-        id
         title
         date (format: "D. MMMM YYYY" locale: "es-ES")
         path
@@ -55,10 +53,13 @@ export default {
     searchTerm: ''
   }),
   computed: {
-    searchResults () {
+    allPost () {
       const searchTerm = this.searchTerm
-      if (searchTerm.length < 3) return []
-      return this.$search.search({ query: searchTerm, limit: 5, suggest: true })
+      if (searchTerm.length){
+        return this.$search.search({ query: searchTerm })
+      } else {
+        return this.$page.posts.edges
+      }
     }
   }
 }
