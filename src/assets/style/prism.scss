@@ -23,7 +23,7 @@ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascr
 
 code {
     color: rgb(0, 38, 253);
-    background: #1900741f;
+    background: rgba(0, 4, 255, 0.103);
     padding: .1rem .3rem;
     border-radius: .3rem;
 }
@@ -487,4 +487,6 @@ code.language-shell::before {
     background-color: #000;
     color: #fff;
     z-index: 1;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }

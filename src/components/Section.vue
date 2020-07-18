@@ -1,6 +1,11 @@
 <template>
   <section :class="className">
-    <h2> {{this.title}}</h2>
+    <div class="section__title">
+      <g-image v-if="icon" class="img-icon" :src="require(`!!assets-loader!@images/${icon}`)"  alt="Icon Section"></g-image>
+      <h2>
+        {{this.title}}
+      </h2> 
+    </div>
     <slot/>
   </section>
 </template>
@@ -13,11 +18,24 @@ export default {
     },
     title: {
       type: String
+    },
+    icon: {
+      type: String
     }
   }
 }
 </script>
 
 <style>
+
+.section__title {
+  display: flex;
+  align-items: center;
+}
+.img-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+}
 
 </style>

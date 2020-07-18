@@ -47,6 +47,9 @@ module.exports = {
         remark: {
           autolinkHeadings: {
             behavior: 'wrap',
+            linkProperties: {
+              ariaHidden: false
+            },
             content: {
               type: 'text',
               value: '#'

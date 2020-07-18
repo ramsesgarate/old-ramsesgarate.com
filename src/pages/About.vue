@@ -5,8 +5,11 @@
       <p>
         Mi nombre es Ramses Garate y tengo 23 años, mi camino en la programación empezó en el año 2016, aprendiendo C y un poco de Python en el ramo de algoritmo y programación de la universidad, sin embargo, no fue sino el año pasado (2019) que le empecé a dedicar más tiempo a la programación, hasta que finalmente me terminó encantando. Actualmente trabajo a tiempo completo como desarrollador en la Startup <a href="https://awto.cl/" target="_blank" rel="noopener noreferrer">Awto</a>.
       </p>
-      <div class="mx-auto">
-        <g-image src="~/assets/images/caricatura-rg-350x350.png" alt="Caricatura Ramses Garate"></g-image>
+      <div class="text-center ">
+        <g-image 
+          src="~/assets/images/caricatura-rg-350x350.png" 
+          alt="Caricatura Ramses Garate" 
+          class="caricature img-responsive"></g-image>
       </div>
       <p>
         Nací y crecí en Venezuela, pero a finales del año 2018 me mudé a Chile, mi lenguaje de programación favorito es JavaScript y el framework de JS es VueJS. La programación es interesante, cada año surgen nuevas tecnologías, nuevos lenguajes de programación, nuevas posibilidades, etc..., esto causa que siempre nos mantengamos en constante aprendizaje.
@@ -19,10 +22,13 @@
       
       <h2>Mis habilidades</h2>
       <p>Realmente, no se todo sobre estas tecnologías, pero tengo una base y sé que con el tiempo voy a ir mejorándolas:</p>
-      <div class="row grid--gutters py-2">
-        <div class="col-2 col-1-of-5" v-for="(language, index) in languages" :key="index">
-          <div class="target">
-            <g-image :src="require(`!!assets-loader!@images/${language.icon}`)" :alt="language.text"></g-image>
+      <div class="row">
+        <div class="col-2 col-1-of-4 text-center" v-for="(language, index) in languages" :key="index">
+          <div>
+            <g-image 
+              class="img-icon" 
+              :src="require(`!!assets-loader!@images/${language.icon}`)"
+              alt="language.text"></g-image>
             <p>{{language.text}}</p>
           </div>
         </div>
@@ -39,24 +45,32 @@ export default {
     return {
       languages: [
         {
-          icon: 'icons/icons8-html-5-50.png',
+          icon: 'icons/icons8-html-5-100.png',
           text: 'HTML'
         },
         {
-          icon: 'icons/icons8-css3-50.png',
+          icon: 'icons/icons8-css3-100.png',
           text: 'CSS'
         },
         {
-          icon: 'icons/icons8-sass-50.png',
+          icon: 'icons/icons8-sass-100.png',
           text: 'Sass'
         },
         {
-          icon: 'icons/icons8-javascript-50.png',
+          icon: 'icons/icons8-javascript-100.png',
           text: 'JavaScript'
         },
         {
-          icon: 'icons/icons8-vue-js-50.png',
-          text: 'VueJS'
+          icon: 'icons/icons8-vue-js-100.png',
+          text: 'Vue'
+        },
+        {
+          icon: 'icons/icons8-git-100.png',
+          text: 'Git'
+        },
+        {
+          icon: 'icons/icons8-logo-de-mysql-100.png',
+          text: 'MySql'
         }
       ]
     }
@@ -66,3 +80,18 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import '~/assets/style/base/grid.scss';
+
+.caricature {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    max-width: 350px;
+}
+
+.img-icon {
+  width: 48px;
+  height: 48px;
+}
+</style>

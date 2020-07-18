@@ -1,0 +1,46 @@
+@import './variables.scss';
+.row>.col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.col,
+.col-2 {
+    flex-basis: 0;
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-2 {
+    max-width: 50%;
+}
+
+.col-1-of-2,
+.col-1-of-3,
+.col-1-of-4 {
+    flex: 0 0 100%;
+}
+
+@include mobile-breakpoint {
+    .col-1-of-3,
+    .col-1-of-2,
+    .col-1-of-4 {
+        flex-basis: 50%;
+    }
+}
+
+@include phablet-breakpoint {
+    .col-1-of-3,
+    .col-1-of-4 {
+        flex-basis: 33.333%;
+    }
+}
+
+@include tablet-breakpoint {
+    .col-1-of-4 {
+        flex-basis: 25%;
+    }
+}

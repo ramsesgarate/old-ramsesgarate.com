@@ -1,6 +1,6 @@
 <template>
   <footer class="footer container">
-    <div class="links-nav">
+    <div class="links-nav row">
       <g-link 
         v-for="(link,index) in siteLinks"
         :key="`internal-${index}`"
@@ -48,4 +48,43 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/assets/style/base/variables.scss';
+
+.footer {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .85rem;
+
+    & .links-nav > a {
+        color: $font-color;
+        margin-right: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &.active {
+            background-color: transparent;
+        }
+    }
+
+    & .external-links a {
+        margin-right: 12px;
+        & img {
+            width: 30px;
+            height: 30px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+    } 
+}
+
+@include phablet-breakpoint {
+    .footer {
+        font-size: 1rem;
+        height: 150px;
+    }
+}
 </style>

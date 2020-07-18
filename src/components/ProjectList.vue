@@ -1,24 +1,38 @@
 <template>
-  <div class="row grid--gutters">
+  <div class="row">
     <div class="col col-1-of-3" v-for="project in projects" :key="project.id">
-      <div class="card gradient-blue ">
-        <a :href="project.link"  class="project" target="_blank" rel="noopener noreferrer">
-          <h3>
-            {{project.title}}
-          </h3>
-          <p>{{project.description}}</p>
-        </a>
-      </div>
+      <Card 
+        :title="project.title" 
+        :paragraph="project.description"
+        class="blue-gradient"
+        :to="project.link"
+        />
     </div>
   </div>
-  
 </template>
 
 <script>
+import Card from './Card'
+
 export default {
-  props: ['projects']
+  components: {
+    Card
+  },
+  props: {
+    projects: {
+      type: Array
+    }
+  }
 }
 </script>
 
 <style lang="scss">
+@import '~/assets/style/base/grid.scss';
+
+.blue-gradient {
+    background: rgb(18,83,241);
+    background: linear-gradient(142deg, rgba(18,83,241,1) 10%, rgba(0,147,255,1) 100%);
+    color: #fff;
+}
+
 </style>

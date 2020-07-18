@@ -1,15 +1,28 @@
 <template>
-   <div class="post-meta">
-      Posted {{ post.date }}.
-      <template v-if="post.timeToRead">
-        <strong>{{ post.timeToRead }} min read.</strong>
-      </template>
-    </div>
+  <div class="post-meta">
+    <post-date :date="date" label/>
+    <template v-if="timeToRead">
+      <span class="dot"> • </span>
+      <strong>{{ timeToRead }} min de lectura</strong>
+    </template>
+  </div>
 </template>
 
 <script>
+import PostDate from './PostDate'
+
 export default {
-  props: ['post']
+  components: {
+    PostDate
+  },
+  props: {
+    date: {
+      type: String
+    },
+    timeToRead: {
+      type: Number
+    }
+  }
 }
 </script>
 

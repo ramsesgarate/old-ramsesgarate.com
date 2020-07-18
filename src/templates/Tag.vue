@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="tag">
-      <h1 class="tag-title text-center space-bottom">
+      <h1 class="tag-title">
         Tag: {{ $page.tag.title }}
       </h1>
       <p><span>{{ $page.tag.belongsTo.totalCount }}</span> post encontrados</p>
@@ -52,6 +52,13 @@ export default {
 </script>
 
 <style lang="scss">
+.tag p{
+  font-size: 1.2rem;
+  
+  & span {
+    color: #275efe;
+  }
+}
 
 </style>
 

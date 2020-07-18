@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+//
+html {
+    font-size: $font-size-mobile;
+    line-height: 1.5;
+    font: $font-style $font-variant $font-weight #{$font-size-mobile}/#{$line-height} $font-family;
+    font-family: $font-family;
+}
+
+body {
+    color: $font-color;
+    background-color: $background;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+section>h2 {
+    margin-top: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $heading-color;
+    line-height: $heading-line-height;
+}
+
+blockquote,
+dl,
+ol,
+p,
+table,
+ul {
+    font-size: 1.05rem;
+    margin: 0 0 1.5rem;
+}
+
+h1 {
+    font-size: $h1-mobile;
+    line-height: $h1-line-height;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: $h2-mobile;
+}
+
+h3 {
+    font-size: $h3-mobile;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: $h4-mobile;
+}
+
+h5 {
+    font-size: $h5-mobile;
+}
+
+h4,
+h5 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+}
+
+.container {
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-left: -16px;
+}
+
+@include phablet-breakpoint {
+    html {
+        font-size: $font-size;
+    }
+    h1 {
+        font-size: $h1;
+    }
+    h2 {
+        font-size: $h2;
+    }
+    h3 {
+        font-size: $h3;
+    }
+    h4 {
+        font-size: $h4;
+    }
+    h5 {
+        font-size: $h5;
+    }
+}

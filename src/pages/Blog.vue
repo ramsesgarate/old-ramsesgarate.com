@@ -47,7 +47,9 @@ export default {
 }
 </script>
 
-
-<style>
+<style lang="scss">
+.blog p {
+  font-size: 1.2rem;
+}
 
 </style>

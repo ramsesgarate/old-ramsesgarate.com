@@ -18,6 +18,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.link-edit-page {
+  & svg {
+    margin-right: 8px;
+  }
+}
 
 </style>

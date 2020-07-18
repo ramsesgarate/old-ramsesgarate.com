@@ -1,50 +1,68 @@
 <template>
   <Layout>
     <section class="">
-      <div class="post-header">
-        <h1>
-          {{ $page.post.title }}
-        </h1>
-        <div class="info-post">
-          <div class="info-data">
-            <p>Ramses Garate</p>
-            <span class="meta-post">
-              <post-date :date="$page.post.date" label/>
-              <span class="meta-dot"> • </span>
-              <span class="time-lecture"> {{$page.post.timeToRead}} min de lectura</span>
-            </span>
-          </div>
-        </div>
+      <read-progress color="#275EFE" opacity="0.5"></read-progress>
+      <div class="read-progress-container">
+        <span class="read-progress-bar" style="width: 101.899%; color: rgb(72, 184, 132); height: 4px; opacity: 0.5; background-color: rgb(72, 184, 132);"></span>
       </div>
+      <post-header 
+        :title="$page.post.title"
+        :date="$page.post.date"
+        :time-to-read="$page.post.timeToRead"
+        :cover-image="$page.post.cover_image"
+      />
 
-      <div class="post content-box">
-        <div class="post__header">
-          <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
-        </div>
-        <div class="post__content" v-html="$page.post.content" />
-      </div>
-      <div class="post-footer">
-        <link-edit-page :edit-link="editLink"/>
-        <post-tags :tags="$page.post.tags" />
-        <post-nav-footer :previous-page="previousPage" :next-page="nextPage"/>
-      </div>
+      <post-body
+        :content="$page.post.content" 
+      />
+
+      <post-footer
+        :edit-link="editLink"
+        :tags="$page.post.tags"
+        :previous-page="previousPage" 
+        :next-page="nextPage"
+      />
     </section>
   </Layout>
 </template>
 
+<page-query>
+query Post ($id: ID!) {
+  post: post (id: $id) {
+    title
+    fileInfo {
+      path
+    }
+    path
+    date (format: "D. MMMM YYYY" locale: "es-ES")
+    timeToRead
+    tags {
+      id
+      title
+      path
+    }
+    description
+    content
+    cover_image (width: 860, blur: 10)
+  }
+}
+</page-query>
+
 <script>
-import LinkEditPage from '~/components/LinkEditPage'
-import PostDate from '~/components/PostDate'
-import PostTags from '~/components/PostTags'
-import PostNavFooter from '~/components/PostNavFooter'
 import postLinks from '~/data/post-links.yaml'
+import PostBody from '~/components/PostBody'
+import PostHeader from '~/components/PostHeader'
+import PostFooter from '~/components/PostFooter'
 
 export default {
   components: {
-    LinkEditPage,
-    PostDate,
-    PostTags,
-    PostNavFooter
+    PostBody,
+    PostHeader,
+    PostFooter,
+    ReadProgress: () =>
+      import ('vue-read-progress')
+      .then(m => m.default)
+      .catch()
   },
   computed: {
     postLinks(){
@@ -79,24 +97,15 @@ export default {
 }
 </script>
 
-<page-query>
-query Post ($id: ID!) {
-  post: post (id: $id) {
-    title
-    fileInfo {
-      path
-    }
-    path
-    date (format: "D. MMMM YYYY" locale: "es-ES")
-    timeToRead
-    tags {
-      id
-      title
-      path
-    }
-    description
-    content
-    cover_image (width: 860, blur: 10)
-  }
+<style lang="scss" scoped>
+
+.read-progress-container{
+      width: 100%;
+    background-color: transparent;
+    position: fixed;
+    display: block;
+    z-index: 9999;
+    top: 0;
+    left: 0;
 }
-</page-query>
+</style>
