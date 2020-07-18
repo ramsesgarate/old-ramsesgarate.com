@@ -1,7 +1,10 @@
 <template>
   <Layout>
     <section class="">
-      <read-progress color="#275EFE" opacity="0.5"></read-progress>
+      <ClientOnly>
+        <read-progress color="#275EFE" opacity="0.5"></read-progress>
+      </ClientOnly>
+      
       <div class="read-progress-container">
         <span class="read-progress-bar" style="width: 101.899%; color: rgb(72, 184, 132); height: 4px; opacity: 0.5; background-color: rgb(72, 184, 132);"></span>
       </div>
