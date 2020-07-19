@@ -7,18 +7,47 @@
       <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
     </section>
 
-    <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
+    <section>
+      <div class="section__title">
+        <g-image 
+          src="~/assets/images/icons/icons8-editar-archivo-100.png" 
+          width="50" 
+          height="50" 
+          alt="Icon Section"></g-image>
+        <h2>
+          Últimos artículos
+        </h2> 
+      </div>
       <PostList :posts="$page.posts.edges"/>
-    </Section>
-    
-    <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
-      <PostList :posts="$page.posts.edges"/>
-    </Section>
+    </section>
 
-    <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
+    <section>
+      <div class="section__title">
+        <g-image 
+          src="~/assets/images/icons/icons8-producto-caliente.-100.png" 
+          width="50" 
+          height="50" 
+          alt="Icon Section"></g-image>
+        <h2>
+          Más populares
+        </h2> 
+      </div>
+      <PostList :posts="$page.posts.edges"/>
+    </section>
+
+    <section>
+      <div class="section__title">
+        <g-image 
+          src="~/assets/images/icons/icons8-proyecto-100.png" 
+          width="50" 
+          height="50" 
+          alt="Icon Section"></g-image>
+        <h2>
+          Proyectos
+        </h2> 
+      </div>
       <ProjectList :projects="projects"/>
-    </Section>
-
+    </section>
   </Layout>
 </template>
 
@@ -43,12 +72,14 @@ query {
 </page-query>
 
 <script>
+import Layout from '~/layouts/Default.vue'
 import Section from '~/components/Section'
 import PostList from '~/components/PostList'
 import ProjectList from '~/components/ProjectList'
 
 export default {
   components: {
+    Layout,
     PostList,
     ProjectList,
     Section
@@ -81,4 +112,15 @@ section.author p:first-of-type{
         font-size: 1.25rem;
     }
 }
+
+.section__title {
+    display: flex;
+    align-items: center;
+
+    & img {
+        width: 50px;
+        height: 50px;
+        margin-right: 12px;
+    }
+} 
 </style>

@@ -39,10 +39,12 @@ query Tag ($id: ID!) {
 </page-query>
 
 <script>
+import Layout from '~/layouts/Default.vue'
 import PostList from '~/components/PostList.vue'
 
 export default {
   components: {
+    Layout,
     PostList
   },
   metaInfo: {

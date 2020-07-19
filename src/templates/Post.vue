@@ -52,6 +52,7 @@ query Post ($id: ID!) {
 </page-query>
 
 <script>
+import Layout from '~/layouts/Default.vue'
 import postLinks from '~/data/post-links.yaml'
 import PostBody from '~/components/PostBody'
 import PostHeader from '~/components/PostHeader'
@@ -59,6 +60,7 @@ import PostFooter from '~/components/PostFooter'
 
 export default {
   components: {
+    Layout,
     PostBody,
     PostHeader,
     PostFooter,
