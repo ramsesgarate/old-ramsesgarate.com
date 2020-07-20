@@ -57,14 +57,12 @@ query {
 </page-query>
 
 <script>
-import Layout from '~/layouts/Default.vue'
 import Section from '~/components/Section'
 import PostList from '~/components/PostList'
 import ProjectList from '~/components/ProjectList'
 
 export default {
   components: {
-    Layout,
     PostList,
     ProjectList,
     Section
