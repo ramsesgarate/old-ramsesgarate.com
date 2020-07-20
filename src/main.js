@@ -1,5 +1,5 @@
 // Import main css
-import '~/assets/style/main.scss'
+
 
 // Import default layout so we don't need to import it to every page
 
