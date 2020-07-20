@@ -24,59 +24,24 @@
       <p>Realmente, no se todo sobre estas tecnologías, pero tengo una base y sé que con el tiempo voy a ir mejorándolas:</p>
       <div class="row">
         <div class="col-2 col-1-of-4 text-center">
-          <g-image 
-            src="~/assets/images/icons/icons8-html-5-100.png"
-            width="48"
-            height="48"
-            alt="Language Icon"></g-image>
           <p>HTML</p>
         </div>
         <div class="col-2 col-1-of-4 text-center">
-          <g-image 
-            src="~/assets/images/icons/icons8-css3-100.png"
-            width="48"
-            height="48"
-            alt="Language Icon"></g-image>
           <p>CSS</p>
         </div>
         <div class="col-2 col-1-of-4 text-center">
-          <g-image 
-            src="~/assets/images/icons/icons8-sass-100.png"
-            width="48"
-            height="48"
-            alt="Language Icon"></g-image>
           <p>Sass</p>
         </div>
         <div class="col-2 col-1-of-4 text-center">
-          <g-image 
-            src="~/assets/images/icons/icons8-javascript-100.png"
-            width="48"
-            height="48"
-            alt="Language Icon"></g-image>
           <p>JavaScript</p>
         </div>
         <div class="col-2 col-1-of-4 text-center">
-          <g-image 
-            src="~/assets/images/icons/icons8-vue-js-100.png"
-            width="48"
-            height="48"
-            alt="Language Icon"></g-image>
           <p>Vue</p>
         </div>
         <div class="col-2 col-1-of-4 text-center">
-          <g-image 
-            src="~/assets/images/icons/icons8-git-100.png"
-            width="48"
-            height="48"
-            alt="Language Icon"></g-image>
           <p>GIT</p>
         </div>
         <div class="col-2 col-1-of-4 text-center">
-          <g-image 
-            src="~/assets/images/icons/icons8-logo-de-mysql-100.png"
-            width="48"
-            height="48"
-            alt="Language Icon"></g-image>
           <p>MySql</p>
         </div>
       </div>

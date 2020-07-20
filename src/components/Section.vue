@@ -1,13 +1,6 @@
 <template>
   <section :class="className">
     <div class="section__title">
-      <g-image 
-        v-if="icon" 
-        class="img-icon" 
-        :src="icon" 
-        width="50" 
-        height="50" 
-        alt="Icon Section"></g-image>
       <h2>
         {{this.title}}
       </h2> 

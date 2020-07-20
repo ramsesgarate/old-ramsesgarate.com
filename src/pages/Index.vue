@@ -9,11 +9,6 @@
 
     <section>
       <div class="section__title">
-        <g-image 
-          src="~/assets/images/icons/icons8-editar-archivo-100.png" 
-          width="50" 
-          height="50" 
-          alt="Icon Section"></g-image>
         <h2>
           Últimos artículos
         </h2> 
@@ -23,11 +18,6 @@
 
     <section>
       <div class="section__title">
-        <g-image 
-          src="~/assets/images/icons/icons8-producto-caliente.-100.png" 
-          width="50" 
-          height="50" 
-          alt="Icon Section"></g-image>
         <h2>
           Más populares
         </h2> 
@@ -37,11 +27,6 @@
 
     <section>
       <div class="section__title">
-        <g-image 
-          src="~/assets/images/icons/icons8-proyecto-100.png" 
-          width="50" 
-          height="50" 
-          alt="Icon Section"></g-image>
         <h2>
           Proyectos
         </h2> 
