@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <tab-bar/>
+    <tab-bar v-if="showTabBar"/>
     <main class="container">
       <slot/>
     </main>
@@ -19,6 +19,11 @@ export default {
     NavBar,
     TabBar,
     Footer
+  },
+  data() {
+    return {
+      showTabBar: false
+    }
   }
 }
 </script>
