@@ -23,26 +23,11 @@
       <h2>Mis habilidades</h2>
       <p>Realmente, no se todo sobre estas tecnologías, pero tengo una base y sé que con el tiempo voy a ir mejorándolas:</p>
       <div class="row">
-        <div class="col-2 col-1-of-4 text-center">
-          <p>HTML</p>
-        </div>
-        <div class="col-2 col-1-of-4 text-center">
-          <p>CSS</p>
-        </div>
-        <div class="col-2 col-1-of-4 text-center">
-          <p>Sass</p>
-        </div>
-        <div class="col-2 col-1-of-4 text-center">
-          <p>JavaScript</p>
-        </div>
-        <div class="col-2 col-1-of-4 text-center">
-          <p>Vue</p>
-        </div>
-        <div class="col-2 col-1-of-4 text-center">
-          <p>GIT</p>
-        </div>
-        <div class="col-2 col-1-of-4 text-center">
-          <p>MySql</p>
+        <div 
+          class="col-2 col-1-of-4 languages" 
+          v-for="(language, index) in languages" 
+          :key="index">
+          <p><span>o</span>{{language.text}}</p>
         </div>
       </div>
 
@@ -101,6 +86,15 @@ export default {
     margin-bottom: 1rem;
     margin-top: 1rem;
     width: 350px;
+}
+.languages p {
+  font-weight: 700;
+  span {
+    color: #275EFE;
+    font-size: 20px;
+    margin-right: 6px;
+  }
+  
 }
 
 </style>

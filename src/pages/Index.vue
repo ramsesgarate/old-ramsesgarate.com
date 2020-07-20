@@ -7,32 +7,17 @@
       <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
     </section>
 
-    <section>
-      <div class="section__title">
-        <h2>
-          Últimos artículos
-        </h2> 
-      </div>
+    <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
       <PostList :posts="$page.posts.edges"/>
-    </section>
-
-    <section>
-      <div class="section__title">
-        <h2>
-          Más populares
-        </h2> 
-      </div>
+    </Section>
+    
+    <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
       <PostList :posts="$page.posts.edges"/>
-    </section>
+    </Section>
 
-    <section>
-      <div class="section__title">
-        <h2>
-          Proyectos
-        </h2> 
-      </div>
+    <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
       <ProjectList :projects="projects"/>
-    </section>
+    </Section>
   </Layout>
 </template>
 
