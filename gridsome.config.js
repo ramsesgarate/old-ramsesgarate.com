@@ -11,12 +11,6 @@ module.exports = {
   },
 
   plugins: [{
-      use: 'gridsome-plugin-bundle-analyzer',
-      options: {
-        onlyProduction: true, // only production bundle will be analyzed by default
-        analyzerOptions: {}, // see https://github.com/webpack-contrib/webpack-bundle-analyzer
-      },
-    }, {
       use: 'gridsome-plugin-rss',
       options: {
         contentTypeName: 'Post',

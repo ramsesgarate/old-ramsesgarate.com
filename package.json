@@ -13,7 +13,6 @@
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.6.0",
     "gridsome": "^0.7.19",
-    "gridsome-plugin-bundle-analyzer": "^1.0.0",
     "gridsome-plugin-rss": "^1.2.0",
     "vue-read-progress": "^1.0.4"
   },
