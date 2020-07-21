@@ -34,5 +34,4 @@ export default {
     background: linear-gradient(142deg, rgba(18,83,241,1) 10%, rgba(0,147,255,1) 100%);
     color: #fff;
 }
-
 </style>

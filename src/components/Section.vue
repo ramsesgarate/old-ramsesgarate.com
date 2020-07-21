@@ -1,10 +1,8 @@
 <template>
   <section :class="className">
-    <div class="section__title">
-      <h2>
-        {{this.title}}
-      </h2> 
-    </div>
+    <h2>
+      {{this.title}}
+    </h2> 
     <slot/>
   </section>
 </template>
@@ -24,17 +22,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-.section__title {
-  display: flex;
-  align-items: center;
-}
-.img-icon {
-  width: 50px;
-  height: 50px;
-  margin-right: 12px;
-}
-
-</style>

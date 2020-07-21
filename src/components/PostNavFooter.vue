@@ -49,5 +49,4 @@ export default {
     margin-left: auto;
   }
 }
-
 </style>

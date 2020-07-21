@@ -35,10 +35,12 @@ query {
 </page-query>
 
 <script>
+import Layout from '~/layouts/Default.vue'
 import PostList from '~/components/PostList.vue'
 
 export default {
   components: {
+    Layout,
     PostList
   },
   metaInfo: {
@@ -51,5 +53,4 @@ export default {
 .blog p {
   font-size: 1.2rem;
 }
-
 </style>

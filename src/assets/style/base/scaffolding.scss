@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400, 600');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 html {
     font-size: $font-size-mobile;
 }
@@ -7,8 +7,7 @@ body {
     color: $font-color;
     background-color: $background;
     font: $font-style $font-variant $font-weight #{$font-size-mobile}/#{$line-height};
-    font-family: 'Poppins', sans-serif;
-    font-display: swap;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
 

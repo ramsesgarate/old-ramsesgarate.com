@@ -7,7 +7,7 @@
       </p>
       <div class="text-center ">
         <g-image
-          src="~/assets/images/caricatura-rg-350x350.png" 
+          src="~/assets/images/caricature-rg.svg" 
           alt="Caricatura Ramses Garate" 
           class="caricature img-responsive"></g-image>
       </div>
@@ -37,8 +37,12 @@
 </template>
 
 <script>
+import Layout from '~/layouts/Default.vue'
 
 export default {
+  components: {
+    Layout
+  },
   data() {
     return {
       languages: [
@@ -96,5 +100,4 @@ export default {
   }
   
 }
-
 </style>

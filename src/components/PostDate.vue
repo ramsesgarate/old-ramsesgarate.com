@@ -19,9 +19,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.post-date {
-  font-style: italic;
-}
-</style>

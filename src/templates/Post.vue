@@ -4,10 +4,7 @@
       <ClientOnly>
         <read-progress color="#275EFE" opacity="0.5"></read-progress>
       </ClientOnly>
-      
-      <div class="read-progress-container">
-        <span class="read-progress-bar" style="width: 101.899%; color: rgb(72, 184, 132); height: 4px; opacity: 0.5; background-color: rgb(72, 184, 132);"></span>
-      </div>
+
       <post-header 
         :title="$page.post.title"
         :date="$page.post.date"
@@ -52,6 +49,7 @@ query Post ($id: ID!) {
 </page-query>
 
 <script>
+import Layout from '~/layouts/Default.vue'
 import postLinks from '~/data/post-links.yaml'
 import PostBody from '~/components/PostBody'
 import PostHeader from '~/components/PostHeader'
@@ -59,6 +57,7 @@ import PostFooter from '~/components/PostFooter'
 
 export default {
   components: {
+    Layout,
     PostBody,
     PostHeader,
     PostFooter,
@@ -99,16 +98,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-.read-progress-container{
-      width: 100%;
-    background-color: transparent;
-    position: fixed;
-    display: block;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-}
-</style>

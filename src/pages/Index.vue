@@ -42,12 +42,14 @@ query {
 </page-query>
 
 <script>
+import Layout from '~/layouts/Default.vue'
 import Section from '~/components/Section'
 import PostList from '~/components/PostList'
 import ProjectList from '~/components/ProjectList'
 
 export default {
   components: {
+    Layout,
     PostList,
     ProjectList,
     Section
@@ -78,17 +80,6 @@ section.author p:first-of-type{
 @media screen and (min-width: 750px) {
     section.author p:first-of-type{
         font-size: 1.25rem;
-    }
-}
-
-.section__title {
-    display: flex;
-    align-items: center;
-
-    & img {
-        width: 50px;
-        height: 50px;
-        margin-right: 12px;
     }
 } 
 </style>

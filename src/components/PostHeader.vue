@@ -54,6 +54,7 @@ export default {
   }
   & img {
     margin-top: 1rem;
+    width: 100%;
   }
 }
 
