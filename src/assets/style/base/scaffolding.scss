@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 html {
     font-size: $font-size-mobile;
     line-height: 1.5;
     font: $font-style $font-variant $font-weight #{$font-size-mobile}/#{$line-height};
-    font-family: $font-family;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
