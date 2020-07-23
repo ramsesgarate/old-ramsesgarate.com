@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <tab-bar v-if="showTabBar"/>
+    <tab-bar/>
     <main class="container">
       <slot/>
     </main>
@@ -10,16 +10,15 @@
 </template>
 
 <script>
+import NavBar from '~/components/NavBar'
+import TabBar from '~/components/TabBar'
+import Footer from '~/components/Footer'
+
 export default {
   components: {
-    'nav-bar': () => import('~/components/NavBar'),
-    'tab-bar': () => import('~/components/TabBar'),
-    'Footer': () => import('~/components/Footer')
-  },
-  data() {
-    return {
-      showTabBar: true
-    }
+    NavBar,
+    TabBar,
+    Footer
   }
 }
 </script>
