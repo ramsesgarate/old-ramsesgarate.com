@@ -8,15 +8,15 @@
     </section>
 
     <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
-      <PostList :posts="$page.posts.edges"/>
+      <post-list :posts="$page.posts.edges"/>
     </Section>
     
     <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
-      <PostList :posts="$page.posts.edges"/>
+      <post-list :posts="$page.posts.edges"/>
     </Section>
 
     <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
-      <ProjectList :projects="projects"/>
+      <project-list :projects="projects"/>
     </Section>
   </Layout>
 </template>
@@ -42,17 +42,12 @@ query {
 </page-query>
 
 <script>
-import Layout from '~/layouts/Default.vue'
-import Section from '~/components/Section'
-import PostList from '~/components/PostList'
-import ProjectList from '~/components/ProjectList'
-
 export default {
   components: {
-    Layout,
-    PostList,
-    ProjectList,
-    Section
+    'Layout': () => import('~/layouts/Default.vue'),
+    'post-list': () => import('~/components/PostList'),
+    'project-list': () => import('~/components/ProjectList'),
+    'Section': () => import('~/components/Section'),
   },
   metaInfo: {
     titleTemplate: '%s - FrontEnd Developer'

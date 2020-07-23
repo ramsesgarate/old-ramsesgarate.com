@@ -10,19 +10,15 @@
 </template>
 
 <script>
-import NavBar from '~/components/NavBar'
-import TabBar from '~/components/TabBar'
-import Footer from '~/components/Footer'
-
 export default {
   components: {
-    NavBar,
-    TabBar,
-    Footer
+    'nav-bar': () => import('~/components/NavBar'),
+    'tab-bar': () => import('~/components/TabBar'),
+    'Footer': () => import('~/components/Footer')
   },
   data() {
     return {
-      showTabBar: false
+      showTabBar: true
     }
   }
 }
