@@ -77,6 +77,28 @@ module.exports = {
           }
         }
       }
+    }, {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        disableServiceWorker: false,
+        manifestPath: 'manifest.json',
+        title: 'Ramses Garate',
+        startUrl: '/',
+        display: 'standalone',
+        statusBarStyle: 'default',
+        themeColor: '#275efe',
+        backgroundColor: '#fcfcfc',
+        icon: './src/favicon.png',
+        shortName: 'RG',
+        description: 'Soy Ramses Garate, un desarrollador FrontEnd autodidacta de 23 años!',
+        categories: ['education'],
+        lang: 'es-419',
+        dir: 'auto',
+        maskableIcon: true,
+        msTileColor: '#275efe',
+        appleMaskIcon: './src/favicon.png',
+        appleMaskIconColor: '#275efe',
+      }
     }
   ],
 

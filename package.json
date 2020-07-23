@@ -13,8 +13,8 @@
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.6.0",
     "gridsome": "^0.7.19",
+    "gridsome-plugin-pwa": "0.0.18",
     "gridsome-plugin-rss": "^1.2.0",
-    "typeface-roboto": "0.0.75",
     "vue-read-progress": "^1.0.4"
   },
   "devDependencies": {
