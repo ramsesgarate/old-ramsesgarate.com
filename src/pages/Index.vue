@@ -43,9 +43,15 @@ query {
 
 <script>
 import Layout from '~/layouts/Default.vue'
-import Section from '~/components/Section'
-import PostList from '~/components/PostList'
-import ProjectList from '~/components/ProjectList'
+const Section = () => import(
+  /* webpackChunkName: "Section" */ '~/components/Section'
+);
+const PostList = () => import(
+  /* webpackChunkName: "post-list" */ '~/components/PostList'
+);
+const ProjectList = () => import(
+  /* webpackChunkName: "project-list" */ '~/components/ProjectList'
+);
 
 export default {
   components: {

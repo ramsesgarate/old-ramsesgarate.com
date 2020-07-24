@@ -11,8 +11,12 @@
 
 <script>
 import NavBar from '~/components/NavBar'
-import TabBar from '~/components/TabBar'
-import Footer from '~/components/Footer'
+const TabBar = () => import(
+  /* webpackChunkName: "tab-bar" */ '~/components/TabBar'
+);
+const Footer = () => import(
+  /* webpackChunkName: "Footer" */ '~/components/Footer'
+);
 
 export default {
   components: {
