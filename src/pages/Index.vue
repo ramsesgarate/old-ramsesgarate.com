@@ -49,13 +49,17 @@ query {
 
 <script>
 import Layout from '~/layouts/Default.vue'
+import Section from '~/components/Section'
+import PostList from '~/components/PostList'
+import ProjectList from '~/components/ProjectList'
+
 
 export default {
   components: {
     Layout,
-    Section: () => import('~/components/Section.vue'),
-    PostList: () => import('~/components/PostList.vue'),
-    ProjectList: () => import('~/components/ProjectList.vue'),
+    Section,
+    PostList,
+    ProjectList
   },
   metaInfo: {
     titleTemplate: '%s - FrontEnd Developer'

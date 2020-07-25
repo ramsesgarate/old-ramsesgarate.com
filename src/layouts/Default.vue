@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <nav-bar/>
-      <tab-bar/>
     <main class="container">
       <slot/>
     </main>
@@ -11,12 +10,12 @@
 
 <script>
 import NavBar from '~/components/NavBar'
+import Footer from '~/components/Footer'
 
 export default {
   components: {
     NavBar,
-    TabBar: () => import('~/components/TabBar.vue'),
-    Footer: () => import('~/components/Footer.vue'),
+    Footer
   }
 }
 </script>
