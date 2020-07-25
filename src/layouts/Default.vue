@@ -1,15 +1,11 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <lazy-component>
       <tab-bar/>
-    </lazy-component>
     <main class="container">
       <slot/>
     </main>
-    <lazy-component>
-      <Footer/>
-    </lazy-component>
+    <Footer/>
   </div>
 </template>
 
