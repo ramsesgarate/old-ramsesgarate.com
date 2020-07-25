@@ -7,19 +7,19 @@
       <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
     </section>
 
-    <LazyHydrate when-visible>
+    <LazyHydrate when-idle>
       <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
         <PostList :posts="$page.posts.edges"/>
       </Section>
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <LazyHydrate when-idle>
       <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
         <PostList :posts="$page.posts.edges"/>
       </Section>
     </LazyHydrate>
 
-    <LazyHydrate when-visible>      
+    <LazyHydrate when-idle>      
       <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
         <ProjectList :projects="projects"/>
       </Section>

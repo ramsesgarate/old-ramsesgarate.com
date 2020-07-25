@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <tab-bar/>
+    <LazyHydrate when-idle>
+      <tab-bar/>
+    </LazyHydrate>
     <main class="container">
       <slot/>
     </main>
