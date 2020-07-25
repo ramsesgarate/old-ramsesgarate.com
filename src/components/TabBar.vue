@@ -29,7 +29,7 @@
 export default {
   data () {
     return {
-      showNavbar: false,
+      showNavbar: true,
       lastScrollPosition: 0
     }
   },

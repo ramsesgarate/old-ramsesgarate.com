@@ -10,19 +10,14 @@
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration';
 import NavBar from '~/components/NavBar'
-const TabBar = () => import(
-  /* webpackChunkName: "tab-bar" */ '~/components/TabBar'
-);
-const Footer = () => import(
-  /* webpackChunkName: "Footer" */ '~/components/Footer'
-);
 
 export default {
   components: {
     NavBar,
-    TabBar,
-    Footer
+    TabBar: () => import('~/components/TabBar.vue'),
+    Footer: () => import('~/components/Footer.vue'),
   }
 }
 </script>

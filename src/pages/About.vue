@@ -7,7 +7,8 @@
       </p>
       <div class="text-center ">
         <g-image
-          src="~/assets/images/caricature-rg.svg" 
+          src="~/assets/images/caricatura-rg.png" 
+          blur="5"
           alt="Caricatura Ramses Garate" 
           class="caricature img-responsive"></g-image>
       </div>

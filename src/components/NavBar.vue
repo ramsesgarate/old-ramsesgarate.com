@@ -3,8 +3,11 @@
     <div class="container">
       <g-link to="/" class="link-home">
         <g-image 
-          src="~/assets/images/logo-79x79.png" 
-          class="favicon" 
+          src="~/assets/images/logo-rg.png" 
+          class="favicon"
+          blur="5"
+          width="100"
+          height="100" 
           alt="Logo"
           ></g-image>
         <span class="text">Ramses Garate</span>
@@ -55,8 +58,9 @@ nav .container {
         display: none;
     }
     & .favicon {
-        width: 30px;
-        height: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
         margin-right: 12px;
     }
 }

@@ -7,17 +7,24 @@
       <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
     </section>
 
-    <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
-      <PostList :posts="$page.posts.edges"/>
-    </Section>
-    
-    <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
-      <PostList :posts="$page.posts.edges"/>
-    </Section>
+    <LazyHydrate when-visible>
+      <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
+        <PostList :posts="$page.posts.edges"/>
+      </Section>
+    </LazyHydrate>
 
-    <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
-      <ProjectList :projects="projects"/>
-    </Section>
+    <LazyHydrate when-visible>
+      <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
+        <PostList :posts="$page.posts.edges"/>
+      </Section>
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>      
+      <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
+        <ProjectList :projects="projects"/>
+      </Section>
+    </LazyHydrate>
+    
   </Layout>
 </template>
 
@@ -42,23 +49,15 @@ query {
 </page-query>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration';
 import Layout from '~/layouts/Default.vue'
-const Section = () => import(
-  /* webpackChunkName: "Section" */ '~/components/Section'
-);
-const PostList = () => import(
-  /* webpackChunkName: "post-list" */ '~/components/PostList'
-);
-const ProjectList = () => import(
-  /* webpackChunkName: "project-list" */ '~/components/ProjectList'
-);
 
 export default {
   components: {
     Layout,
-    PostList,
-    ProjectList,
-    Section
+    Section: () => import('~/components/Section.vue'),
+    PostList: () => import('~/components/PostList.vue'),
+    ProjectList: () => import('~/components/ProjectList.vue'),
   },
   metaInfo: {
     titleTemplate: '%s - FrontEnd Developer'

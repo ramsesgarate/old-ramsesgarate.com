@@ -1,6 +1,6 @@
 <template>
   <div class="page-404">
-    <g-image src="~/assets/images/icons8-darth-vader-480.png" width="300" alt="Dart Vader"></g-image>
+    <g-image src="~/assets/images/icons8-darth-vader-480.png" blur="5" width="300" alt="Dart Vader"></g-image>
     <h3>&lt;404-ERROR/&gt;</h3>
     <h4>Subestimas el poder del lado oscuro</h4>
     <Button to="/" dark>Regresar al Inicio</Button>
