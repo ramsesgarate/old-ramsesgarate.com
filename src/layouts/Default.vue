@@ -1,18 +1,19 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <LazyHydrate when-idle>
+    <lazy-component>
       <tab-bar/>
-    </LazyHydrate>
+    </lazy-component>
     <main class="container">
       <slot/>
     </main>
-    <Footer/>
+    <lazy-component>
+      <Footer/>
+    </lazy-component>
   </div>
 </template>
 
 <script>
-import LazyHydrate from 'vue-lazy-hydration';
 import NavBar from '~/components/NavBar'
 
 export default {

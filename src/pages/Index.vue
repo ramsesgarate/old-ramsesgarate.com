@@ -7,23 +7,22 @@
       <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
     </section>
 
-    <LazyHydrate when-idle>
+    <lazy-component>
       <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
         <PostList :posts="$page.posts.edges"/>
       </Section>
-    </LazyHydrate>
+    </lazy-component>
 
-    <LazyHydrate when-idle>
+    <lazy-component>
       <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
         <PostList :posts="$page.posts.edges"/>
       </Section>
-    </LazyHydrate>
-
-    <LazyHydrate when-idle>      
+    </lazy-component>
+    <lazy-component>
       <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
         <ProjectList :projects="projects"/>
       </Section>
-    </LazyHydrate>
+    </lazy-component>
     
   </Layout>
 </template>
@@ -49,7 +48,6 @@ query {
 </page-query>
 
 <script>
-import LazyHydrate from 'vue-lazy-hydration';
 import Layout from '~/layouts/Default.vue'
 
 export default {

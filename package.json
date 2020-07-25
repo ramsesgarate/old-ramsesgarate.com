@@ -15,7 +15,7 @@
     "gridsome": "^0.7.19",
     "gridsome-plugin-pwa": "0.0.18",
     "gridsome-plugin-rss": "^1.2.0",
-    "vue-lazy-hydration": "^1.0.0-beta.14",
+    "vue-lazyload": "^1.3.3",
     "vue-read-progress": "^1.0.4"
   },
   "devDependencies": {
