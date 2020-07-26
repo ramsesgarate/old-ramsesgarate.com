@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <nav-bar/>
+    <tab-bar/>
     <main class="container">
       <slot/>
     </main>
@@ -11,11 +12,13 @@
 <script>
 import NavBar from '~/components/NavBar'
 import Footer from '~/components/Footer'
+import TabBar from '~/components/TabBar'
 
 export default {
   components: {
     NavBar,
-    Footer
+    Footer,
+    TabBar
   }
 }
 </script>
