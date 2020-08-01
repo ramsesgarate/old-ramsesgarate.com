@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <SEO/>
     <section class="">
       <ClientOnly>
         <read-progress color="#275EFE" opacity="0.5"></read-progress>
@@ -62,6 +63,7 @@ import postLinks from '~/data/post-links.yaml'
 
 export default {
   components: {
+    SEO,
     Layout,
     PostBody,
     PostHeader,
