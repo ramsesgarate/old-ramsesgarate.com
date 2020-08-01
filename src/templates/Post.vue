@@ -63,7 +63,6 @@ import postLinks from '~/data/post-links.yaml'
 
 export default {
   components: {
-    SEO,
     Layout,
     PostBody,
     PostHeader,
