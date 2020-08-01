@@ -6,7 +6,7 @@ module.exports = {
   author: 'Ramses Garate',
   title: 'Ramses Garate',
   templates: {
-    Post: '/blog/:path',
+    Post: '/blog/:slug',
     Tag: '/tag/:id'
   },
 
@@ -40,7 +40,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
-        path: 'content/blog/*.md',
+        path: 'content/blog/*/index.md',
         remark: {
           autolinkHeadings: {
             behavior: 'wrap',

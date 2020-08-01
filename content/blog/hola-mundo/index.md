@@ -1,12 +1,12 @@
 ---
-title: Hola Gridsome 🎉
-path: 'hello-gridsome'
-date: 2019-02-07
+title: Hola Mundo 🎉
+date: 2020-08-01
+slug: 'hola-mundo'
 published: true
-tags: ['markdown', 'releases']
+tags: ['blog', 'notas']
 canonical_url: false
-description: "A new static site generator baby is born. It's highly inspired by Gatsby.js (React based) but built on top of Vue.js. We have been working on it for a year and will have a beta ready soon. You can expect this baby to grow up fast!"
-date-update: 2020-02-03
+description: "Bienvenido a mi sitio web, en este espacio voy a estar compartiendo las cosas que he aprendido en mi camino como desarrollador web, lo que estoy aprendiendo, consejos, mejores prácticas, etc."
+cover_image: ./cover-image.png
 ---
 
 A new static site generator baby is born. It's highly inspired by Gatsby.js (React based) but built on top of Vue.js. We have been working on it for a year and will have a beta ready soon. You can expect this baby to grow up fast!

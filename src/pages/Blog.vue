@@ -1,6 +1,5 @@
 <template>
   <Layout>
-
     <section class="blog">
       <h1>Blog</h1>
       <p>Artículos, tutoriales, fragmentos, reflexiones y todo lo demás.</p>

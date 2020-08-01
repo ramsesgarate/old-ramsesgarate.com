@@ -49,11 +49,16 @@ query Post ($id: ID!) {
 </page-query>
 
 <script>
-import Layout from '~/layouts/Default.vue'
-import postLinks from '~/data/post-links.yaml'
+// Layout
+import Layout from '~/layouts/Default'
+
+//Components
+import SEO from '~/components/SEO'
 import PostBody from '~/components/PostBody'
 import PostHeader from '~/components/PostHeader'
 import PostFooter from '~/components/PostFooter'
+
+import postLinks from '~/data/post-links.yaml'
 
 export default {
   components: {
