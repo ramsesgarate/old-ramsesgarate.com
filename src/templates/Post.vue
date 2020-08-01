@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    <SEO/>
     <section class="">
       <ClientOnly>
         <read-progress color="#275EFE" opacity="0.5"></read-progress>
@@ -54,7 +53,6 @@ query Post ($id: ID!) {
 import Layout from '~/layouts/Default'
 
 //Components
-import SEO from '~/components/SEO'
 import PostBody from '~/components/PostBody'
 import PostHeader from '~/components/PostHeader'
 import PostFooter from '~/components/PostFooter'
@@ -73,6 +71,13 @@ export default {
       .catch()
   },
   computed: {
+    coverImage() {
+      let coverImage = "";
+      const cover = this.$page.post.cover_image;
+      if (cover.src) {
+        return coverImage = `https://ramsesgarate.com/${this.$page.post.cover_image.src}`;
+      }
+    },
     postLinks(){
       return postLinks;
     },
@@ -93,13 +98,42 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.$page.post.title,
       meta: [
+        { name: "description", content: this.$page.post.description },
+
+        // Some Open Graph Tags
+        { property: "og:title", content: this.$page.post.title },
+        { property: "og:description", content: this.$page.post.description },
+        { property: "og:image", content: this.coverImage },
         {
-          name: 'description',
-          content: this.$page.post.description
+          property: "og:url",
+          content: "https://ramsesgarate.com/ " + this.$page.post.path
+        },
+
+        // Some Twitter Cards Tags
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: this.$page.post.title },
+        { name: "twitter:image", content: this.coverImage },
+        { name: "twitter:description", content: this.$page.post.description }
+      ],
+      //Some ld+json tags
+      script: [
+        {
+          type: "application/ld+json",
+          json: {
+            "@context": "http://schema.org",
+            "@type": "BlogPosting",
+            description: this.$page.post.description,
+            datePublished: this.$page.post.date,
+            author: {
+              name: this.$page.post.author
+            },
+            headline: this.$page.post.title,
+            image: this.coverImage,
+          }
         }
-      ]
+      ],
+      title: this.$page.post.title
     }
   }
 }
