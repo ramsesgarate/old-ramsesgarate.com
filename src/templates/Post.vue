@@ -36,6 +36,7 @@ query Post ($id: ID!) {
     path
     author
     date
+    date_update
     dateFormat: date (format: "D. MMMM YYYY" locale: "es-ES")
     timeToRead
     tags {
@@ -142,11 +143,11 @@ export default {
               "@id": "https://ramsesgarate.com/blog/"
             },
             "publisher": {
-              "@type": "Person",
+              "@type": "Organization",
               "name": "Ramses Garate",
               "logo": {
                 "@type": "ImageObject",
-                "url": "src/favicon.png"
+                "url": "../favicon.png"
               }
             }
           }
