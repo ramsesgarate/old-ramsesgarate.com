@@ -142,14 +142,7 @@ export default {
               "@type": "WebPage",
               "@id": "https://ramsesgarate.com/blog/"
             },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Ramses Garate",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "../favicon.png"
-              }
-            }
+            "publisher": "Ramses Garate"
           }
         }
       ],
