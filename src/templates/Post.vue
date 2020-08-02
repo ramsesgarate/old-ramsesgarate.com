@@ -77,7 +77,7 @@ export default {
       let coverImage = "";
       const cover = this.$page.post.cover_image;
       if (cover.src) {
-        return coverImage = `https://ramsesgarate.com/${this.$page.post.cover_image.src}`;
+        return coverImage = `https://ramsesgarate.com${this.$page.post.cover_image.src}`;
       }
     },
     postLinks(){
@@ -107,13 +107,16 @@ export default {
         { property: "og:title", content: this.$page.post.title },
         { property: "og:description", content: this.$page.post.description },
         { property: "og:image", content: this.coverImage },
-        {
+        { property: "og:locale", content: "es_419" },{
           property: "og:url",
           content: "https://ramsesgarate.com/ " + this.$page.post.path
         },
 
         // Some Twitter Cards Tags
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:url", content: "https://ramsesgarate.com/" },
+        { name: "twitter:site", content: "@ramsesgarate" },
+        { name: "twitter:creator", content: "@ramsesgarate" },
         { name: "twitter:title", content: this.$page.post.title },
         { name: "twitter:image", content: this.coverImage },
         { name: "twitter:description", content: this.$page.post.description }
@@ -125,13 +128,27 @@ export default {
           json: {
             "@context": "http://schema.org",
             "@type": "BlogPosting",
-            description: this.$page.post.description,
-            datePublished: this.$page.post.date,
-            author: {
-              name: this.$page.post.author
+            "description": this.$page.post.description,
+            "datePublished": this.$page.post.date,
+            "author": {
+              "name": this.$page.post.author,
+              "@type": "Person"
             },
-            headline: this.$page.post.title,
-            image: this.coverImage,
+            "headline": this.$page.post.title,
+            "image": this.coverImage,
+            "dateModified": this.$page.post.date_update,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://ramsesgarate.com/blog/"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Ramses Garate",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "src/favicon.png"
+              }
+            }
           }
         }
       ],

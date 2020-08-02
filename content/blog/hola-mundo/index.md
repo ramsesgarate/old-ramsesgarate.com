@@ -1,6 +1,7 @@
 ---
 title: Hola Mundo 🎉
 date: 2020-08-01
+date_update: 2020-08-01
 slug: 'hola-mundo'
 published: true
 tags: ['blog', 'notas']
