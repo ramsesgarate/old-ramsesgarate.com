@@ -112,7 +112,7 @@ export default {
         { property: "og:type", content: "article" },
         {
           property: "og:url",
-          content: "https://ramsesgarate.com/ " + this.$page.post.path
+          content: "https://ramsesgarate.com" + this.$page.post.path
         },
 
         // Some Twitter Cards Tags
