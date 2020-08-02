@@ -108,7 +108,9 @@ export default {
         { property: "og:title", content: this.$page.post.title },
         { property: "og:description", content: this.$page.post.description },
         { property: "og:image", content: this.coverImage },
-        { property: "og:locale", content: "es_419" },{
+        { property: "og:locale", content: "es_419" },
+        { property: "og:type", content: "article" },
+        {
           property: "og:url",
           content: "https://ramsesgarate.com/ " + this.$page.post.path
         },
