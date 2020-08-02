@@ -7,7 +7,7 @@
 
       <post-header 
         :title="$page.post.title"
-        :date="$page.post.date"
+        :date="$page.post.dateFormat"
         :time-to-read="$page.post.timeToRead"
         :cover-image="$page.post.cover_image"
       />
@@ -34,7 +34,9 @@ query Post ($id: ID!) {
       path
     }
     path
-    date (format: "D. MMMM YYYY" locale: "es-ES")
+    author
+    date
+    dateFormat: date (format: "D. MMMM YYYY" locale: "es-ES")
     timeToRead
     tags {
       id
@@ -43,7 +45,7 @@ query Post ($id: ID!) {
     }
     description
     content
-    cover_image (width: 860, blur: 10)
+    cover_image (blur: 5)
   }
 }
 </page-query>
