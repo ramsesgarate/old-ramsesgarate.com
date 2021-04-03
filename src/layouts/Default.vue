@@ -1,24 +1,25 @@
 <template>
-  <div id="app">
-    <nav-bar/>
-    <tab-bar/>
+  <div id="app" class="">
+    <nav-bar />
+    <tab-bar />
     <main class="container">
-      <slot/>
+      <slot />
     </main>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '~/components/NavBar'
-import Footer from '~/components/Footer'
-import TabBar from '~/components/TabBar'
+import NavBar from "~/components/NavBar";
+import Footer from "~/components/Footer";
+import TabBar from "~/components/TabBar";
 
 export default {
   components: {
     NavBar,
     Footer,
-    TabBar
-  }
-}
+    TabBar,
+  },
+};
 </script>
+

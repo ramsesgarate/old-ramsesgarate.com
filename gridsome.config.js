@@ -10,7 +10,11 @@ module.exports = {
     Tag: '/tag/:id'
   },
 
-  plugins: [{
+  plugins: [
+    {
+      use: 'gridsome-plugin-tailwindcss',
+    },
+    {
       use: 'gridsome-plugin-rss',
       options: {
         contentTypeName: 'Post',

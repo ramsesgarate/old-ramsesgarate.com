@@ -19,8 +19,13 @@
     "vue-read-progress": "^1.0.4"
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.4",
+    "autoprefixer": "^9.8.6",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.1"
+    "postcss": "^7.0.35",
+    "sass-loader": "^9.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
   },
   "version": "0.0.0"
 }

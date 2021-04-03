@@ -6,7 +6,7 @@ import '~/assets/style/main.scss';
 import VueLazyload from 'vue-lazyload'
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
-export default function(Vue) {
+export default function (Vue) {
   Vue.use(VueLazyload, {
     lazyComponent: true
   });
