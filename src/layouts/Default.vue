@@ -2,7 +2,7 @@
   <div id="app" class="">
     <nav-bar />
     <tab-bar />
-    <main class="container bg-black">
+    <main class="container bg-gray-200">
       <slot />
     </main>
     <Footer />
