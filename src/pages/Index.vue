@@ -1,29 +1,28 @@
 <template>
   <Layout>
-    <section class="author">
-      <h1>	&lt;hola-mundo/&gt;</h1>
-      <p>Hola, soy Ramses Garate, un desarrollador Front-end autodidacta de 23 años, decidí crear mi propia página web para compartir lo que he aprendido, lo que estoy aprendiendo, consejos, mejores prácticas sobre desarrollo web, etc...</p>
-      <p>Mi objetivo es hacer un espacio en la web sin los molestos anuncios, publicaciones patrocinadas, ventanas emergentes de noticias y todo ese ruido molesto que estamos acostumbrados a ver en internet hoy en día.</p>
-      <p>Puedes leer todas mis publicaciones en mi <g-link to="/blog/">Blog</g-link>,  si te quieres poner en contacto conmigo, no dudes en escribirme a rsgarate@gmail.com.</p>
-    </section>
+    <HomeWelcome />
+    <wave />
+    <HomeStack />
+    <div class="border-b-2 border-gray-900 max-w-5xl mx-auto"></div>
 
-    <lazy-component>
-      <Section title="Últimos artículos" icon="icons/icons8-editar-archivo-100.png">
-        <PostList :posts="$page.posts.edges"/>
-      </Section>
-    </lazy-component>
+    <Section class="mt-16">
+      <template #title class="flex justify-between">
+        Últimos artículos
+        <g-link
+          class="text-lg bg-teal-400 text-gray-100 rounded px-1"
+          to="/blog/"
+        >
+          Ver todos</g-link
+        >
+      </template>
+      <PostList :posts="$page.posts.edges" />
+    </Section>
 
-    <lazy-component>
-      <Section title="Más Populares" icon="icons/icons8-producto-caliente.-100.png">
-        <PostList :posts="$page.posts.edges"/>
-      </Section>
-    </lazy-component>
-    <lazy-component>
-      <Section title="Proyectos" icon="icons/icons8-proyecto-100.png">
-        <ProjectList :projects="projects"/>
-      </Section>
-    </lazy-component>
-    
+    <div class="border-b-2 border-gray-900 max-w-5xl mx-auto"></div>
+
+    <Section title="Proyectos" class="mt-16">
+      <ProjectList :projects="projects" />
+    </Section>
   </Layout>
 </template>
 
@@ -34,6 +33,8 @@ query {
       node {
         id
         title
+        description
+        cover_image (blur: 5)
         date (format: "D. MMMM YYYY" locale: "es-ES")
         path
         tags {
@@ -48,45 +49,39 @@ query {
 </page-query>
 
 <script>
-import Layout from '~/layouts/Default.vue'
-import Section from '~/components/Section'
-import PostList from '~/components/PostList'
-import ProjectList from '~/components/ProjectList'
-
+import Wave from "~/assets/svg/wave-header.svg";
+import HomeWelcome from "~/components/templates/home/Welcome";
+import HomeStack from "~/components/templates/home/Stack";
+import Card from "~/components/templates/home/Card.vue";
+import Section from "~/components/Section";
+import PostList from "~/components/PostList";
+import ProjectList from "~/components/ProjectList";
 
 export default {
   components: {
-    Layout,
+    HomeStack,
+    Wave,
+    HomeWelcome,
+    Card,
     Section,
     PostList,
-    ProjectList
+    ProjectList,
   },
   metaInfo: {
-    titleTemplate: '%s - FrontEnd Developer'
+    titleTemplate: "%s - FrontEnd Developer",
   },
   data() {
     return {
       projects: [
         {
           id: 1,
-          title: 'ramses.dev', 
-          description: 'Tema personal de Gridsome (repositorio de esta web).', 
-          link: 'https://github.com/ramsesgarate/ramsesgarate.com'
+          title: "ramsesgarate.com",
+          subtitle: "Pagina Web",
+          description: "Tema personal de Gridsome (repositorio de esta web).",
+          link: "https://github.com/ramsesgarate/ramsesgarate.com",
         },
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+};
 </script>
-
-<style lang="scss">
-section.author p:first-of-type{
-    font-size: 1.15rem;
-}
-
-@media screen and (min-width: 750px) {
-    section.author p:first-of-type{
-        font-size: 1.25rem;
-    }
-} 
-</style>

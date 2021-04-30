@@ -1,5 +1,5 @@
 <template>
-  <div class="post-body">
+  <div class="">
     <div class="post__content" v-html="content" />
   </div>
 </template>
@@ -8,56 +8,88 @@
 export default {
   props: {
     content: {
-      type: String
+      type: String,
     },
     coverImage: {
-      type: String
-    }
-  }
-
-}
+      type: String,
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-@import '~/assets/style/prism.scss';
-@import '~/assets/style/base/variables.scss';
+@import "~/assets/style/prism.scss";
+@import "~prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-.post-body {
-    & h2 a,
-    & h3 a,
-    & h4 a,
-    & h5 a {
-        color: $heading-color;
+.post__content {
+  ::selection {
+    @apply bg-teal-400 bg-opacity-30;
+  }
+
+  h1,
+  h2,
+  h3 {
+    a {
+      @apply float-left text-teal-400 -ml-8 text-center opacity-0 no-underline transition-opacity duration-200 ease-in;
+
+      &::before {
+        content: " ";
+
+        @apply absolute top-0 h-full;
+      }
+
+      &::after {
+        @apply hidden;
+      }
     }
 
-    & ul,
-    & ol {
-        padding: 0;
-        margin: 0 0 1.55rem 1.2rem;
-        list-style-position: outside;
-        list-style-image: none;
+    &:hover a {
+      @apply opacity-100;
     }
+  }
 
-    & img {
-        max-width: 100%;
-        display: block;
-        height: auto;
-        margin: 0 auto;
-    }
+  h1 {
+    @apply text-5xl font-semibold mb-6;
+  }
 
-    & blockquote {
-        margin: 1.5rem 0;
-        padding: 1rem;
-        background: rgba(0, 4, 255, 0.103);
-        border-radius: .3rem;
-        border: solid $primary;
-        border-width: 0 0 0 8px;
+  h2 {
+    @apply text-4xl font-semibold mb-5;
+  }
 
-        & p {
-          margin: 0;
-        }
+  h3 {
+    @apply text-3xl font-semibold mb-4;
+  }
 
-    }
+  h4 {
+    @apply text-2xl font-semibold mb-3;
+  }
+
+  h5 {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  p {
+    @apply text-lg font-normal mb-5 leading-relaxed;
+  }
+
+  ul {
+    @apply list-disc pl-10 mb-7;
+  }
+
+  ol {
+    @apply list-decimal pl-10 mb-7;
+  }
+
+  a {
+    @apply text-teal-400 hover:border-teal-400 border-b-2 border-transparent transition-colors duration-300 ease-in;
+  }
+
+  blockquote {
+    @apply border-l-2 border-teal-400 pl-4 italic  bg-teal-400 bg-opacity-10 rounded-r;
+  }
+
+  img {
+    @apply rounded;
+  }
 }
-
 </style>

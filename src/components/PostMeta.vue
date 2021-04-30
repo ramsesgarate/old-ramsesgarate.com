@@ -1,27 +1,27 @@
 <template>
-  <div class="post-meta">
-    <post-date :date="date" label/>
+  <div class="flex justify-center text-gray-300 font-normal flex-wrap">
+    <post-date :date="date" label class="text-gray-300" />
     <template v-if="timeToRead">
-      <span class="dot"> • </span>
-      <strong>{{ timeToRead }} min de lectura</strong>
+      <span class="text-teal-400 mx-2"> • </span>
+      {{ timeToRead }} min de lectura
     </template>
   </div>
 </template>
 
 <script>
-import PostDate from './PostDate'
+import PostDate from "./PostDate";
 
 export default {
   components: {
-    PostDate
+    PostDate,
   },
   props: {
     date: {
-      type: String
+      type: String,
     },
     timeToRead: {
-      type: Number
-    }
-  }
-}
+      type: Number,
+    },
+  },
+};
 </script>

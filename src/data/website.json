@@ -1,0 +1,20 @@
+{
+  "siteName": "Ramses Garate",
+  "siteTitleAlt": "The personal website of Kent C. Dodds",
+  "siteUrl": "https://ramsesgarate.com",
+  "siteLogo": "images/logo.png",
+  "siteDescription": "Soy Ramses Garate. Soy Desarrollador Frontend y un aspirante a blogger. Este sitio web es mi jardín digital, un compendio de las cosas que he aprendido y estoy aprendiendo.",
+  "author": "Ramses Garate",
+  "userTwitter": "@ramsesgarate",
+  "ogSiteName": "Ramses Garate",
+  "ogLanguage": "es_ES",
+
+  "themeColor": "#275efe",
+  "backgroundColor": "#fcfcfc",
+
+  "twitter": "https://twitter.com/ramsesgarate",
+  "twitterUser": "@ramsesgarate",
+  "github": "https://github.com/ramsesgarate",
+  "linkedin": "https://www.linkedin.com/in/ramsesgarate/",
+  "rss": "https://ramsesgarate.com/rss.xml"
+}

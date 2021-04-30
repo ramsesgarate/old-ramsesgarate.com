@@ -1,9 +1,9 @@
 <template>
-  <section :class="className">
-    <h2>
-      {{this.title}}
-    </h2> 
-    <slot/>
+  <section :class="className" class="mb-16 container mx-auto max-w-screen-lg">
+    <h2 class="text-3xl mb-10 flex justify-between items-center">
+      <slot name="title">{{ this.title }}</slot>
+    </h2>
+    <slot />
   </section>
 </template>
 
@@ -11,14 +11,14 @@
 export default {
   props: {
     className: {
-      type: String
+      type: String,
     },
     title: {
-      type: String
+      type: String,
     },
     icon: {
-      type: String
-    }
-  }
-}
+      type: String,
+    },
+  },
+};
 </script>

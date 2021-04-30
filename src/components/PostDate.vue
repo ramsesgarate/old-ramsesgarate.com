@@ -1,7 +1,7 @@
 <template>
-  <div class="post-date">
-    <span v-if="label">Publicado </span>
-    <time>{{date}}</time>
+  <div class="flex text-gray-200 mb-2">
+    <span v-if="label" class="mr-2">Publicado el </span>
+    <time>{{ date }}</time>
   </div>
 </template>
 
@@ -10,12 +10,12 @@ export default {
   props: {
     date: {
       type: String,
-      required: true
+      required: true,
     },
     label: {
       type: Boolean,
-      default: false
-    }
-  }
-}
+      default: false,
+    },
+  },
+};
 </script>

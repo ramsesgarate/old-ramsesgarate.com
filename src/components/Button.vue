@@ -1,155 +1,65 @@
 <template>
   <div>
-    <g-link v-if="to"
+    <g-link
+      v-if="to"
       :to="to"
-      class="btn btn-primary btn-size--default btn-shadow" 
-      :class="{
-        'btn--outlined': outlined, 
-        'btn--text': text, 
-        'btn--dark': dark,
-        'white': white
-      }"
+      class="btn"
+      :class="classes"
       type="button"
+      v-on="$listeners"
     >
-      <span class="btn__content">
+      <link-icon class="h-5 w-5 mr-1" v-if="withIconLink" />
+      <span>
         <slot>Boton</slot>
       </span>
-      
     </g-link>
-    <button v-else
-      class="btn btn-primary btn-size--default btn-shadow" 
-      :class="{
-        'btn--outlined': outlined, 
-        'btn--text': text, 
-        'btn--dark': dark,
-        'white': white
-      }"
-      type="button"
-    >
-      <span class="btn__content">
+    <button v-else class="btn" :class="classes" v-on="$listeners" type="button">
+      <span class="">
         <slot>Boton</slot>
       </span>
-      
     </button>
   </div>
-
-  
 </template>
 
 <script>
+import LinkIcon from "~/assets/icons/icon-link.svg";
+
 export default {
   props: {
     outlined: {
-      type: Boolean
+      type: Boolean,
     },
     text: {
-      type: Boolean
+      type: Boolean,
     },
     to: {
-      type: String
+      type: String,
     },
-    dark: {
-      type: Boolean
+    withIconLink: {
+      type: Boolean,
+      default: false,
     },
-    white: {
-      type: Boolean
-    }
-  }
-
-}
+  },
+  components: {
+    LinkIcon,
+  },
+  computed: {
+    classes() {
+      return {
+        "btn--outlined": this.outlined,
+      };
+    },
+  },
+};
 </script>
 
-<style lang="scss">
-@import '~/assets/style/base/variables.scss';
-
+<style scoped lang="scss">
 .btn {
-    align-items: center;
-    border-radius: 6px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    font-weight: 500;
-    letter-spacing: .0892857143rem;
-    justify-content: center;
-    outline: 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    user-select: none;
-    vertical-align: middle;
-    cursor: pointer;
-    border-style: none;
-    transition: opacity .2s;
+  @apply rounded border-2 border-teal-400 duration-300 transition-colors ease-in px-3 py-2 flex items-center bg-teal-400 hover:bg-teal-600;
 
-    &:hover {
-          opacity: .8;
-    }
-  
-
-    &--outlined {
-      background-color: transparent;
-    }
-
-    &-size--default {
-      height: 36px;
-      min-width: 64px;
-      padding: 0 16px;
-      font-size: .875rem;
-    }
-
-    &-size--small {
-        height: 28px;
-        min-width: 50px;
-        padding: 0 12.4444444444px;
-        font-size:  .75rem;
-    }
-
-    &__content {
-        color: inherit;
-        line-height: normal;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &-shadow {
-      box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-    &>i.icon {
-        margin-right: 6px;
-    }
-
-    &-primary {
-        background-color: #275efe;
-        color: #fff;
-    }
-
-    &--dark {
-        background-color: #50fa7b;
-        color: #282936;
-    }
-
-    &.btn--outlined {
-        color: #275efe;
-        background-color: transparent;
-        border: 1px solid #275efe;
-        box-shadow: none;
-        &:hover {
-            background-color: #275dfe10;
-            box-shadow: none;
-        }
-    }
-
-    &.btn--text {
-        color: #275efe;
-        background-color: transparent;
-        border: 1px solid transparent;
-        &:hover {
-            background-color: #275dfe10;
-            box-shadow: none;
-        }
-    }
-}
-
-.white {
-  background-color: #fff!important;
+  &--outlined {
+    @apply bg-transparent hover:bg-teal-400 hover:bg-opacity-20;
+  }
 }
 </style>
+

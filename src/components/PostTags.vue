@@ -1,45 +1,26 @@
 <template>
-  <div class="post-tags">
-    <g-link class="post-tags__link color-primary" v-for="tag in tags" :key="tag.id" :to="tag.path">
-      <span>#</span>{{ tag.title }}
-    </g-link>
-  </div>
+  <g-link
+    class="px-2 py-1 bg-teal-400 hover:bg-teal-500 flex rounded mr-2 text-gray-200 items-center transition-all duration-300 lowercase"
+    :to="tag.path"
+  >
+    <span class="font-normal">
+      {{ tag.title }}
+    </span>
+  </g-link>
 </template>
 
 <script>
+import TagIcon from "~/assets/icons/icon-tag.svg";
+
 export default {
-  props: ['tags']
-}
+  props: {
+    tag: {
+      type: Object,
+      required: true,
+    },
+  },
+  components: {
+    TagIcon,
+  },
+};
 </script>
-
-<style lang="scss">
-@import '~/assets/style/base/variables.scss';
-
-.post-tags__link {
-  margin-right: 6px;
-  padding: 6px;
-  border-radius: 6px;
-  font-size: .7rem;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-}
-
-.post-tags__link .svg-icon {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-}
-
-@include phablet-breakpoint {
-    .post-tags__link {
-        font-size: .8rem;
-        padding: 8px;
-    }
-    .svg-icon {
-        width: 16px;
-        height: 16px;
-    }
-}
-</style>

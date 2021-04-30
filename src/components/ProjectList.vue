@@ -1,37 +1,31 @@
 <template>
-  <div class="row">
-    <div class="col col-1-of-3" v-for="project in projects" :key="project.id">
-      <Card 
-        :title="project.title" 
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-lg mx-auto"
+  >
+    <template v-for="project in projects">
+      <Card
+        :key="project.id"
+        :title="project.title"
+        :sub-title="project.subtitle"
         :paragraph="project.description"
         class="blue-gradient"
         :to="project.link"
-        />
-    </div>
+      />
+    </template>
   </div>
 </template>
 
 <script>
-import Card from './Card'
+import Card from "./Card";
 
 export default {
   components: {
-    Card
+    Card,
   },
   props: {
     projects: {
-      type: Array
-    }
-  }
-}
+      type: Array,
+    },
+  },
+};
 </script>
-
-<style lang="scss">
-@import '~/assets/style/base/grid.scss';
-
-.blue-gradient {
-    background: rgb(18,83,241);
-    background: linear-gradient(142deg, rgba(18,83,241,1) 10%, rgba(0,147,255,1) 100%);
-    color: #fff;
-}
-</style>

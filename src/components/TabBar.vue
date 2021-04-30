@@ -1,134 +1,111 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <nav class="tab-bar" :class="{ 'tab-bar--hidden': !showNavbar }">
-        <g-link to="/" class="tab-link">
-          <div class="icon">
-            <svg class="svg-icon" aria-label="Inicio" viewBox="0 0 48 48"><path d="M45.5 48H30.1c-.8 0-1.5-.7-1.5-1.5V34.2c0-2.6-2.1-4.6-4.6-4.6s-4.6 2.1-4.6 4.6v12.3c0 .8-.7 1.5-1.5 1.5H2.5c-.8 0-1.5-.7-1.5-1.5V23c0-.4.2-.8.4-1.1L22.9.4c.6-.6 1.6-.6 2.1 0l21.5 21.5c.3.3.4.7.4 1.1v23.5c.1.8-.6 1.5-1.4 1.5z"></path></svg>
-          </div>
-          <span>Home</span>
-        </g-link>
-        <g-link to="/blog/" class="tab-link">
-          <div class="icon">
-            <svg class="svg-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve"><g><g><path d="M472,88.014h-32v-40c0.016-4.418-3.553-8.013-7.972-8.028c-0.234-0.001-0.467,0.009-0.7,0.028l-20.872,1.76c-50.615,4.186-100.259,16.291-147.12,35.872L240,87.35l-23.312-9.672c-46.866-19.584-96.516-31.691-147.136-35.88l-20.88-1.784c-4.403-0.371-8.273,2.897-8.644,7.3c-0.02,0.233-0.029,0.467-0.028,0.7v40H8c-4.418,0-8,3.582-8,8v336c0,4.418,3.582,8,8,8h464c4.418,0,8-3.582,8-8v-336C480,91.596,476.418,88.014,472,88.014z M16,424.03V104.014h24v280c-0.015,4.166,3.169,7.646,7.32,8l21.528,1.84c5.867,0.491,11.733,1.096,17.6,1.816c1.96,0.232,3.904,0.544,5.864,0.8c3.88,0.52,7.76,1.04,11.624,1.656c2.304,0.368,4.6,0.8,6.896,1.208c3.504,0.616,7.008,1.232,10.496,1.92c2.4,0.48,4.8,1.008,7.2,1.528c3.368,0.72,6.736,1.456,10.088,2.256c2.4,0.576,4.84,1.192,7.256,1.808c3.304,0.848,6.6,1.712,9.888,2.624c2.4,0.672,4.8,1.376,7.2,2.08c3.264,0.965,6.52,1.968,9.768,3.008c2.379,0.757,4.752,1.536,7.12,2.336c3.272,1.096,6.52,2.248,9.768,3.424c2.304,0.8,4.616,1.672,6.904,2.544c0.992,0.376,1.976,0.8,2.96,1.168H16z M232,420.014l-14.752-6.16c-46.83-19.62-96.45-31.768-147.048-36L56,376.67V56.718l12.208,1.024c48.966,4.046,96.993,15.754,142.328,34.696L232,101.35V420.014z M248,420.014V101.35l21.488-8.92c45.327-18.938,93.346-30.643,142.304-34.688L424,56.718v319.928l-13.144,1.072c-50.629,4.203-100.293,16.279-147.2,35.792L248,420.014z M464,424.014H280.64c1.096-0.424,2.184-0.872,3.28-1.288c2.4-0.92,4.8-1.792,7.256-2.664c3.136-1.136,6.285-2.237,9.448-3.304c2.464-0.8,4.944-1.6,7.416-2.4c3.16-1.008,6.336-1.968,9.512-2.912c2.496-0.736,5-1.464,7.504-2.152c3.2-0.896,6.4-1.736,9.68-2.56c2.48-0.632,4.968-1.264,7.464-1.856c3.328-0.8,6.68-1.52,10.032-2.232c2.4-0.52,4.8-1.056,7.248-1.536c3.52-0.696,7.056-1.312,10.584-1.928c2.288-0.4,4.568-0.8,6.864-1.2c3.944-0.624,7.896-1.16,11.856-1.688c1.896-0.248,3.792-0.552,5.696-0.8c5.867-0.709,11.763-1.315,17.688-1.816l20.488-1.664c4.16-0.342,7.358-3.826,7.344-8v-280h24V424.014z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-          </div>
-          <span>Blog</span>
-        </g-link>
-        <g-link to="/about/" class="tab-link">
-          <div class="icon">
-            <svg class="svg-icon" viewBox="-42 0 512 512.001" xmlns="http://www.w3.org/2000/svg"><path d="m210.351562 246.632812c33.882813 0 63.21875-12.152343 87.195313-36.128906 23.96875-23.972656 36.125-53.304687 36.125-87.191406 0-33.875-12.152344-63.210938-36.128906-87.191406-23.976563-23.96875-53.3125-36.121094-87.191407-36.121094-33.886718 0-63.21875 12.152344-87.191406 36.125s-36.128906 53.308594-36.128906 87.1875c0 33.886719 12.15625 63.222656 36.128906 87.195312 23.980469 23.96875 53.316406 36.125 87.191406 36.125zm-65.972656-189.292968c18.394532-18.394532 39.972656-27.335938 65.972656-27.335938 25.996094 0 47.578126 8.941406 65.976563 27.335938 18.394531 18.398437 27.339844 39.980468 27.339844 65.972656 0 26-8.945313 47.578125-27.339844 65.976562-18.398437 18.398438-39.980469 27.339844-65.976563 27.339844-25.992187 0-47.570312-8.945312-65.972656-27.339844-18.398437-18.394531-27.34375-39.976562-27.34375-65.976562 0-25.992188 8.945313-47.574219 27.34375-65.972656zm0 0"/><path d="m426.128906 393.703125c-.691406-9.976563-2.089844-20.859375-4.148437-32.351563-2.078125-11.578124-4.753907-22.523437-7.957031-32.527343-3.3125-10.339844-7.808594-20.550781-13.375-30.335938-5.769532-10.15625-12.550782-19-20.160157-26.277343-7.957031-7.613282-17.699219-13.734376-28.964843-18.199219-11.226563-4.441407-23.667969-6.691407-36.976563-6.691407-5.226563 0-10.28125 2.144532-20.042969 8.5-6.007812 3.917969-13.035156 8.449219-20.878906 13.460938-6.707031 4.273438-15.792969 8.277344-27.015625 11.902344-10.949219 3.542968-22.066406 5.339844-33.042969 5.339844-10.96875 0-22.085937-1.796876-33.042968-5.339844-11.210938-3.621094-20.300782-7.625-26.996094-11.898438-7.769532-4.964844-14.800782-9.496094-20.898438-13.46875-9.753906-6.355468-14.808594-8.5-20.035156-8.5-13.3125 0-25.75 2.253906-36.972656 6.699219-11.257813 4.457031-21.003906 10.578125-28.96875 18.199219-7.609375 7.28125-14.390625 16.121094-20.15625 26.273437-5.558594 9.785157-10.058594 19.992188-13.371094 30.339844-3.199219 10.003906-5.875 20.945313-7.953125 32.523437-2.0625 11.476563-3.457031 22.363282-4.148437 32.363282-.679688 9.777344-1.023438 19.953125-1.023438 30.234375 0 26.726562 8.496094 48.363281 25.25 64.320312 16.546875 15.746094 38.4375 23.730469 65.066406 23.730469h246.53125c26.621094 0 48.511719-7.984375 65.0625-23.730469 16.757813-15.945312 25.253906-37.589843 25.253906-64.324219-.003906-10.316406-.351562-20.492187-1.035156-30.242187zm-44.90625 72.828125c-10.933594 10.40625-25.449218 15.464844-44.378906 15.464844h-246.527344c-18.933594 0-33.449218-5.058594-44.378906-15.460938-10.722656-10.207031-15.933594-24.140625-15.933594-42.585937 0-9.59375.316406-19.066407.949219-28.160157.617187-8.921874 1.878906-18.722656 3.75-29.136718 1.847656-10.285156 4.199219-19.9375 6.996094-28.675782 2.683593-8.378906 6.34375-16.675781 10.882812-24.667968 4.332031-7.617188 9.316407-14.152344 14.816407-19.417969 5.144531-4.925781 11.628906-8.957031 19.269531-11.980469 7.066406-2.796875 15.007812-4.328125 23.628906-4.558594 1.050781.558594 2.921875 1.625 5.953125 3.601563 6.167969 4.019531 13.277344 8.605469 21.136719 13.625 8.859375 5.648437 20.273437 10.75 33.910156 15.152344 13.941406 4.507812 28.160156 6.796875 42.273437 6.796875 14.113282 0 28.335938-2.289063 42.269532-6.792969 13.648437-4.410156 25.058594-9.507813 33.929687-15.164063 8.042969-5.140624 14.953125-9.59375 21.121094-13.617187 3.03125-1.972656 4.902344-3.042969 5.953125-3.601563 8.625.230469 16.566406 1.761719 23.636719 4.558594 7.636719 3.023438 14.121093 7.058594 19.265625 11.980469 5.5 5.261719 10.484375 11.796875 14.816406 19.421875 4.542969 7.988281 8.207031 16.289062 10.886719 24.660156 2.800781 8.75 5.15625 18.398438 7 28.675782 1.867187 10.433593 3.132812 20.238281 3.75 29.144531v.007812c.636719 9.058594.957031 18.527344.960937 28.148438-.003906 18.449219-5.214844 32.378906-15.9375 42.582031zm0 0"/></svg>
-          </div>
-          <span>Sobre mi</span>
-        </g-link>
-      </nav>
-    </div>
-  </div>
+  <nav
+    class="tab-bar fixed bottom-0 flex bg-gray-800 w-full justify-around h-14 px-2 rounded-t z-10 transition-colors duration-300 ease-linear sm:hidden"
+    :class="{ 'tab-bar--hidden': !showNavbar }"
+  >
+    <template v-for="(link, index) in navLinks">
+      <g-link
+        :to="link.path"
+        class="text-teal-400 transition-colors duration-300 ease-linear flex flex-col justify-center items-center px-2"
+        :key="index"
+      >
+        <component
+          :is="link.icon + '-icon'"
+          class="transform transition duration-300 ease-linear h-6 w-6"
+          :class="[
+            $route.path === link.path ? 'translate-y-0' : 'translate-y-3',
+          ]"
+        />
+        <span
+          class="opacity-0 transition duration-300 ease-linear"
+          :class="{
+            'text-teal-400 opacity-100': $route.path === link.path,
+          }"
+        >
+          {{ link.name }}
+        </span>
+      </g-link>
+    </template>
+  </nav>
 </template>
 
 <script>
+import HomeIcon from "~/assets/icons/icon-home.svg";
+import BookIcon from "~/assets/icons/icon-book.svg";
+import UserIcon from "~/assets/icons/icon-user.svg";
+import { navLinks } from "~/data/navLinks.js";
+
 export default {
-  data () {
+  components: {
+    HomeIcon,
+    BookIcon,
+    UserIcon,
+  },
+  data() {
     return {
       showNavbar: true,
-      lastScrollPosition: 0
-    }
+      lastScrollPosition: 0,
+      navLinks: navLinks,
+    };
   },
-  mounted () {
-      window.addEventListener('scroll', this.onScroll)
+  computed: {
+    path() {
+      return this.$route.path;
+    },
+    classes() {
+      return {
+        iconActive: [
+          "outline-none translate-y-0 transform transition-all duration-1000",
+        ],
+        iconInactive: [
+          "outline-none translate-y-3 transform transition-all duration-1000",
+        ],
+      };
+    },
   },
-  beforeDestroy () {
-      window.removeEventListener('scroll', this.onScroll)
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
   },
   methods: {
-    onScroll () {
-      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    onScroll() {
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
 
       if (currentScrollPosition < 0) {
-        return
+        return;
       }
 
       if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-        return
+        return;
       }
 
-      this.showNavbar = currentScrollPosition < this.lastScrollPosition
-      this.lastScrollPosition = currentScrollPosition
-    }
-  }
-}
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition;
+      this.lastScrollPosition = currentScrollPosition;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-@import '~/assets/style/base/variables.scss';
+@import "~/assets/style/base/variables.scss";
 
 .tab-bar {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    max-width: 580px;
-    width: 100%;
-    justify-content: space-around;
-    padding: 0 8px;
-    height: 56px;
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-    background-color: $background;
-    z-index: 2;
-    transform: translate3d(0, 0, 0);
-    transition: .2s all ease-out;
+  transform: translate3d(0, 0, 0);
+  transition: 0.2s all ease-out;
 }
 .tab-bar.tab-bar--hidden {
-    box-shadow: none;
-    transform: translate3d(0, 100%, 0);
+  box-shadow: none;
+  transform: translate3d(0, 100%, 0);
 }
 
-.tab-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 0 8px;
-    transition: color .2s ease;
-    width: 80px;
-    color: rgba(0,0,0,.6);
-    fill: rgba(0,0,0,.6);
-
-    & .icon {
-        width: 24px;
-        height: 24px;
-        box-sizing: border-box;
-        transform: translateY(10px);
-        transition: transform 1.5s ease;
-        & .svg-icon {
-            width: 24px;
-            height: 24px;
-        }
-        
-    }
-
-    & span {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.2;
-        opacity: 0;
-        transition: opacity 1.5s ease;
-    }
-
-    &.active--exact {
-        color: #275efe;
-        fill: #275efe;
-        & .icon {
-            transform: translateY(0px);
-        }
-        & span {
-            opacity: 1;
-        }
-    }
+.primary {
+  fill: #64d5ca;
 }
 
-@include phablet-breakpoint {
-    .tab-bar{
-        display: none;
-    }
+.secondary {
+  fill: #20504f;
 }
 </style>

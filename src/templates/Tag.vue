@@ -1,62 +1,75 @@
 <template>
   <Layout>
-    <section class="tag">
-      <h1 class="tag-title">
-        Tag: {{ $page.tag.title }}
-      </h1>
-      <p><span>{{ $page.tag.belongsTo.totalCount }}</span> post encontrados</p>
+    <section class="bg-gray-900">
+      <div class="container max-w-screen-lg mx-auto pt-16">
+        <h1 class="text-5xl font-medium tracking-normal leading-tight mb-4">
+          Tag: {{ $page.tag.title }}
+        </h1>
+        <p class="text-2xl tracking-normal italic text-gray-400">
+          <span class="text-teal-400">{{
+            $page.tag.belongsTo.totalCount
+          }}</span>
+          post encontrados
+        </p>
+      </div>
     </section>
-    
-    <section>
-      <PostList :posts="$page.tag.belongsTo.edges"/>
+    <wave />
+
+    <section class="container mx-auto max-w-screen-lg">
+      <PostList :posts="$page.tag.belongsTo.edges" />
     </section>
   </Layout>
 </template>
 
 <page-query>
-query Tag ($id: ID!) {
-  tag (id: $id) {
+query Tag($id: ID!) {
+  tag(id: $id) {
     title
     belongsTo {
       totalCount
       edges {
         node {
-          ...on Post {
+          ... on Post {
+            id
             title
+            cover_image(blur: 5)
+            date(format: "D. MMMM YYYY", locale: "es-ES")
             path
             tags {
               id
               title
               path
             }
-            date (format: "D. MMMM YYYY" locale: "es-ES")
           }
         }
       }
     }
   }
 }
+
 </page-query>
 
 <script>
-import Layout from '~/layouts/Default.vue'
-import PostList from '~/components/PostList.vue'
+import Layout from "~/layouts/Default.vue";
+import PostList from "~/components/PostList.vue";
+import Wave from "~/assets/svg/wave-header.svg";
 
 export default {
   components: {
     Layout,
-    PostList
+    PostList,
+    Wave,
   },
   metaInfo: {
-    title: 'Hello, world!'
-  }
-}
+    title: "Hello, world!",
+  },
+};
 </script>
 
 <style lang="scss">
-.tag p{
+.tag p {
   font-size: 1.2rem;
-  
+
   & span {
     color: #275efe;
   }
