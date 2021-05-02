@@ -1,9 +1,9 @@
 <template>
   <div class="bg-gray-900">
     <div class="container mx-auto px-4 max-w-screen-lg">
-      <div class="flex justify-between py-16 sm:py-24 flex-col sm:flex-row">
+      <div class="flex justify-between pt-12 flex-col sm:flex-row">
         <div
-          class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0"
+          class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0 flex flex-col justify-center mr-4"
         >
           <h1 class="text-3xl font-medium tracking-normal leading-tight mb-2">
             ¡Hola a todos <span class="wave">👋</span>!
@@ -24,7 +24,7 @@
         <div
           class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0 flex justify-center items-center mx-auto my-auto"
         >
-          <logo />
+          <cartoon-three />
         </div>
       </div>
     </div>
@@ -32,11 +32,13 @@
 </template>
 
 <script>
-import Logo from "~/assets/svg/logo-r.svg";
+import Cartoon from "~/assets/svg/cartoon.svg";
+import CartoonThree from "~/assets/svg/cartoon-4.svg";
 
 export default {
   components: {
-    Logo,
+    Cartoon,
+    CartoonThree,
   },
 };
 </script>

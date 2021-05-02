@@ -2,7 +2,7 @@
   "siteName": "Ramses Garate",
   "siteTitleAlt": "The personal website of Kent C. Dodds",
   "siteUrl": "https://ramsesgarate.com",
-  "siteLogo": "images/logo.png",
+  "siteLogo": "./src/favicon.png",
   "siteDescription": "Soy Ramses Garate. Soy Desarrollador Frontend y un aspirante a blogger. Este sitio web es mi jardín digital, un compendio de las cosas que he aprendido y estoy aprendiendo.",
   "author": "Ramses Garate",
   "userTwitter": "@ramsesgarate",
