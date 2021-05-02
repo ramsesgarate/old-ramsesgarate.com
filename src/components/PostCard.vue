@@ -3,7 +3,13 @@
     class="rounded bg-gray-900 hover:bg-gray-700 transition-colors duration-300 ease-in"
     :to="post.path"
   >
-    <img class="w-full rounded-t" :src="post.cover_image.src" alt="Mountain" />
+    <img
+      class="w-full h-auto rounded-t"
+      :src="post.cover_image.src"
+      alt="Mountain"
+      width="1920"
+      height="1080"
+    />
     <div class="px-6 pt-4">
       <div class="font-bold text-xl mb-2" v-html="post.title" />
       <p class="text-gray-200 font-normal lineas">

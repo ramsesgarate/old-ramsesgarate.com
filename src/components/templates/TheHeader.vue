@@ -1,7 +1,7 @@
 <template>
   <header class="bg-gray-900">
     <div
-      class="container mx-auto items-center flex justify-between py-2 h-16 sm:h-20"
+      class="container mx-auto max-w-screen-lg items-center flex justify-between py-2 h-16 sm:h-20"
     >
       <g-link to="/">
         <g-image
@@ -9,6 +9,8 @@
           :immediate="true"
           class="h-14 w-14"
           alt="Logo RG"
+          width="48"
+          height="48"
         ></g-image>
       </g-link>
       <nav class="hidden sm:flex items-center">
@@ -96,9 +98,9 @@ export default {
   },
   methods: {
     showSearchModal() {
-      this.$store.dispatch('showSearchModal')
-    }
-  }
+      this.$store.dispatch("showSearchModal");
+    },
+  },
 };
 </script>
 

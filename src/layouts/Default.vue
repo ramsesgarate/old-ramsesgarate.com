@@ -1,13 +1,19 @@
 <template>
   <div id="app" class="">
-    <the-header />
+    <LazyHydrate when-visible>
+      <the-header />
+    </LazyHydrate>
     <main class="">
       <slot />
     </main>
     <wave />
     <Footer />
-    <the-mobile-bottom-nav />
-    <modal-search :show="isSearchModalOpen" />
+    <LazyHydrate when-visible>
+      <the-mobile-bottom-nav />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <modal-search :show="isSearchModalOpen" />
+    </LazyHydrate>
   </div>
 </template>
 
@@ -44,6 +50,7 @@ import TheMobileBottomNav from "~/components/templates/TheMobileBottomNav";
 import { mapState } from "vuex";
 import ModalSearch from "@/components/ModalSearch.vue";
 import SiteSEO from "~/mixins/SiteSEO";
+import LazyHydrate from "vue-lazy-hydration";
 
 export default {
   mixins: [SiteSEO],
@@ -53,6 +60,7 @@ export default {
     TheMobileBottomNav,
     Wave,
     ModalSearch,
+    LazyHydrate,
   },
   computed: mapState({
     isSearchModalOpen: (state) => state.isSearchModalOpen,

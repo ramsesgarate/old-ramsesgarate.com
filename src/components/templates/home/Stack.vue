@@ -4,7 +4,7 @@
       Mi Stack actual de lenguajes y tecnologías son:
     </h2>
     <div class="flex justify-center mb-16">
-      <down-arrow-icon class="animate-bounce mt-4" />
+      <down-arrow-icon class="mt-4" />
     </div>
     <div
       class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4 max-w-screen-lg"

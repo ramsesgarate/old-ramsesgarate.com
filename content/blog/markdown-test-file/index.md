@@ -269,6 +269,7 @@ const rut = function(opt) {
   return new Rut(options);
 };
 
+// test comment
 class Rut {
   constructor(opt) {
     this.opt = opt;

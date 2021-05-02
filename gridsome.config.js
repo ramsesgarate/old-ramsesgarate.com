@@ -42,6 +42,14 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/plugin-critical',
+      options: {
+        paths: ['/'],
+        width: 1300,
+        height: 900
+      }
+    },
+    {
       use: 'gridsome-plugin-tailwindcss',
     },
     {
@@ -77,6 +85,9 @@ module.exports = {
         path: 'content/blog/**/index.md',
         remark: {
           autolinkHeadings: {
+            linkProperties: {
+              ariaHidden: false
+            },
             content: {
               type: 'text',
               value: '#'

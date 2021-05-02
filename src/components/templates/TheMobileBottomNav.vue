@@ -6,6 +6,7 @@
     <div class="relative">
       <div class="icons h-14">
         <g-link
+          aria-label="Inicio"
           to="/"
           class="text-teal-400 transition-colors duration-300 ease-linear flex flex-col justify-center items-center px-2"
         >
@@ -16,6 +17,7 @@
         </g-link>
         <br />
         <g-link
+          aria-label="Blog"
           to="/blog/"
           class="text-teal-400 transition-colors duration-300 ease-linear flex flex-col justify-center items-center px-2"
         >
@@ -25,7 +27,11 @@
           />
         </g-link>
       </div>
-      <button class="circle" @click="showSearchModal">
+      <button
+        class="circle"
+        @click="showSearchModal"
+        aria-label="button search"
+      >
         <search-icon class="w-7 h-7" />
       </button>
       <wave-nav class="w-full" />

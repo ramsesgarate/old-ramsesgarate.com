@@ -9,7 +9,7 @@
       <template #title class="flex justify-between">
         Últimos artículos
         <g-link
-          class="text-lg bg-teal-400 text-gray-100 rounded px-1"
+          class="text-lg bg-teal-400 text-gray-800 hover:bg-teal-300 transition-colors duration-300 ease-in rounded px-1"
           to="/blog/"
         >
           Ver todos</g-link

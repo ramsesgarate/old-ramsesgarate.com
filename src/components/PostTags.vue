@@ -1,6 +1,6 @@
 <template>
   <g-link
-    class="px-2 py-1 bg-teal-400 hover:bg-teal-500 flex rounded mr-2 text-gray-200 items-center transition-all duration-300 lowercase"
+    class="px-2 py-1 bg-teal-400 hover:bg-teal-300 flex rounded mr-2 text-gray-800 items-center transition-all duration-300 lowercase"
     :to="tag.path"
   >
     <span class="font-normal">

@@ -1,12 +1,12 @@
 <template>
   <nav class="flex justify-between flex-wrap mt-4">
-    <Button exact :to="previousPage.link" v-if="previousPage" outlined>
+    <Button exact :to="previousPage.link" v-if="previousPage" outlined class="mr-auto">
       <arrow-left-icon class="w-6 h-6 inline-block" />
       <span class="hidden sm:inline">
         {{ previousPage.title }}
       </span>
     </Button>
-    <Button exact :to="nextPage.link" v-if="nextPage">
+    <Button exact :to="nextPage.link" v-if="nextPage" class="ml-auto">
       {{ nextPage.title }}
       <arrow-right-icon class="w-6 h-6 inline-block" />
     </Button>

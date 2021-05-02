@@ -55,10 +55,10 @@ export default {
 
 <style scoped lang="scss">
 .btn {
-  @apply rounded border-2 border-teal-400 duration-300 transition-colors ease-in px-3 py-2 flex items-center bg-teal-400 hover:bg-teal-600;
+  @apply rounded border-2 border-teal-400 bg-teal-400 duration-300 transition-colors ease-in px-3 py-2 flex items-center text-gray-800 hover:bg-teal-300 hover:border-teal-300;
 
   &--outlined {
-    @apply bg-transparent hover:bg-teal-400 hover:bg-opacity-20;
+    @apply bg-transparent hover:bg-teal-400 hover:bg-opacity-20 text-gray-100;
   }
 }
 </style>
