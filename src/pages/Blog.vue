@@ -93,7 +93,7 @@ query ($page: Int) {
 <script>
 import { Pager } from "gridsome";
 import PostTags from "~/components/PostTags";
-import TextField from "~/components/organism/TextField";
+import TextField from "~/components/TextField";
 import PostList from "~/components/PostList.vue";
 
 export default {

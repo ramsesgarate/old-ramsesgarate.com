@@ -44,9 +44,9 @@ query {
 
 <script>
 import Wave from "~/assets/svg/wave-footer.svg";
-import TheHeader from "~/components/templates/TheHeader";
+import TheHeader from "~/components/TheHeader";
 import Footer from "~/components/Footer";
-import TheMobileBottomNav from "~/components/templates/TheMobileBottomNav";
+import TheMobileBottomNav from "~/components/TheMobileBottomNav";
 import { mapState } from "vuex";
 import ModalSearch from "@/components/ModalSearch.vue";
 import SiteSEO from "~/mixins/SiteSEO";

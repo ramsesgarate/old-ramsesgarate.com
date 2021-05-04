@@ -72,12 +72,12 @@
 </template>
 
 <script>
-import TextField from "~/components/organism/TextField";
+import TextField from "~/components/TextField";
 import UserIcon from "~/assets/icons/icon-user.svg";
-import SearchFocus from "~/components/organism/SearchFocus";
+import SearchFocus from "~/components/SearchFocus";
 
 import { navLinks } from "~/data/navLinks";
-import ModalSearch from "../ModalSearch.vue";
+import ModalSearch from "./ModalSearch.vue";
 
 export default {
   components: {

@@ -50,8 +50,8 @@ query {
 
 <script>
 import Wave from "~/assets/svg/wave-header.svg";
-import HomeWelcome from "~/components/templates/home/Welcome";
-import HomeStack from "~/components/templates/home/Stack";
+import HomeWelcome from "~/components/Welcome";
+import HomeStack from "~/components/Stack";
 import Section from "~/components/Section";
 import PostList from "~/components/PostList";
 import ProjectList from "~/components/ProjectList";

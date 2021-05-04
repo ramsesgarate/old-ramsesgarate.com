@@ -144,7 +144,7 @@ import KeyEnterIcon from "~/assets/icons/icon-key-enter.svg";
 import KeyEscIcon from "~/assets/icons/icon-key-esc.svg";
 import KeyDownIcon from "~/assets/icons/icon-key-down.svg";
 import KeyUpIcon from "~/assets/icons/icon-key-up.svg";
-import TextField from "~/components/organism/TextField";
+import TextField from "~/components/TextField";
 
 export default {
   name: "ModalSearch",
