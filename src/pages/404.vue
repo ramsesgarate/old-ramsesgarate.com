@@ -3,15 +3,15 @@
     <g-image src="~/assets/images/icons8-darth-vader-480.png" blur="5" width="300" alt="Dart Vader"></g-image>
     <h3>&lt;404-ERROR/&gt;</h3>
     <h4>Subestimas el poder del lado oscuro</h4>
-    <Button to="/" dark>Regresar al Inicio</Button>
+    <r-button to="/">Regresar al Inicio</r-button>
   </div>
 </template>
 
 <script>
-import Button from "~/components/Button"
+import RButton from "~/components/atoms/Button"
 export default {
   components: {
-    Button
+    RButton
   },
   metaInfo: {
     titleTemplate: 'Page Not Found - %s'

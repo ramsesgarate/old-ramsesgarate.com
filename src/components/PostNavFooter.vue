@@ -1,20 +1,20 @@
 <template>
   <nav class="flex justify-between flex-wrap mt-4">
-    <Button exact :to="previousPage.link" v-if="previousPage" outlined class="mr-auto">
+    <r-button exact :to="previousPage.link" v-if="previousPage" outlined class="mr-auto">
       <arrow-left-icon class="w-6 h-6 inline-block" />
       <span class="hidden sm:inline">
         {{ previousPage.title }}
       </span>
-    </Button>
-    <Button exact :to="nextPage.link" v-if="nextPage" class="ml-auto">
+    </r-button>
+    <r-button exact :to="nextPage.link" v-if="nextPage" class="ml-auto">
       {{ nextPage.title }}
       <arrow-right-icon class="w-6 h-6 inline-block" />
-    </Button>
+    </r-button>
   </nav>
 </template>
 
 <script>
-import Button from "~/components/Button";
+import RButton from "~/components/atoms/Button";
 import ArrowLeftIcon from "~/assets/icons/icon-arrow-left.svg";
 import ArrowRightIcon from "~/assets/icons/icon-arrow-right.svg";
 
@@ -28,7 +28,7 @@ export default {
     },
   },
   components: {
-    Button,
+    RButton,
     ArrowLeftIcon,
     ArrowRightIcon,
   },

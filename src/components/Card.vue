@@ -12,17 +12,22 @@
       </p>
     </div>
     <div class="flex justify-center">
-      <Button outlined with-icon-link :to="to"> Revisar </Button>
+      <r-button outlined :to="to">
+        Revisar
+        <link-icon class="h-5 w-5 icon--right" />
+      </r-button>
     </div>
   </div>
 </template>
 
 <script>
-import Button from "./Button";
+import RButton from "@/components/atoms/Button";
+import LinkIcon from "~/assets/icons/icon-link.svg";
 
 export default {
   components: {
-    Button,
+    RButton,
+    LinkIcon,
   },
   props: {
     outlined: {
@@ -43,3 +48,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.icon--right {
+  @apply ml-2;
+}
+</style>
