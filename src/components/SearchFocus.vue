@@ -12,14 +12,12 @@
   </button>
 </template>
 <script>
-import GInput from "./Input";
 import SearchIcon from "~/assets/icons/icon-search.svg";
 
 export default {
   name: "SearchFocus",
   inheritAttrs: false,
   components: {
-    GInput,
     SearchIcon,
   },
   props: {

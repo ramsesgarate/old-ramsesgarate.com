@@ -47,7 +47,7 @@
       :info="$page.posts.pageInfo"
       class="pager-container"
       linkClass="pager-container__link"
-      range="1"
+      :range="1"
       :show-links="false"
       prevLabel="Anterior"
       nextLabel="Siguiente"

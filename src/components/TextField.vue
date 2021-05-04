@@ -1,16 +1,22 @@
 <template>
-  <g-input
+  <r-input
     :label="label"
     :computedId="computedId"
     :hasValue="hasValue"
     :isFocused="isFocused"
     @click-input="clickInput"
   >
+    <template v-slot:prepend>
+      <component
+        :is="prependIcon + '-icon'"
+        class="input__icon"
+        v-if="prependIcon"
+      />
+    </template>
     <template v-slot:input>
       <input
         autocomplete="off"
         v-model="internalValue"
-        class="w-full outline-none"
         @keyup="onKeyup"
         v-bind="$attrs"
         :id="computedId"
@@ -21,15 +27,12 @@
         ref="input"
       />
     </template>
-    <template v-slot:left>
+    <template v-slot:append>
       <component
-        :is="prependIcon + '-icon'"
-        class="h-7 w-7"
-        v-if="prependIcon"
+        :is="appendIcon + '-icon'"
+        class="input__icon"
+        v-if="appendIcon"
       />
-    </template>
-    <template v-slot:right>
-      <component :is="appendIcon + '-icon'" class="h-7 w-7" v-if="appendIcon" />
       <button
         class="flex items-center justify-center focus:outline-none"
         v-if="clearable"
@@ -41,21 +44,19 @@
         />
       </button>
     </template>
-  </g-input>
+  </r-input>
 </template>
 
 <script>
-import GInput from "./Input";
+import RInput from "@/components/atoms/Input";
 import SearchIcon from "~/assets/icons/icon-search.svg";
 import CloseIcon from "~/assets/icons/icon-close.svg";
-import Validatable from "~/mixins/validatable";
 
 export default {
   name: "TextField",
-  mixins: [Validatable],
   inheritAttrs: false,
   components: {
-    GInput,
+    RInput,
     SearchIcon,
     CloseIcon,
   },
@@ -77,21 +78,43 @@ export default {
       type: Boolean,
       default: false,
     },
+    value: { required: false },
+  },
+  data() {
+    return {
+      hasFocused: false,
+      isFocused: false,
+    };
   },
   computed: {
     computedId() {
       return this.id || `input-${this._uid}`;
     },
+    internalValue: {
+      get() {
+        return this.value;
+      },
+      set(val) {
+        typeof this.$emit("input", val);
+      },
+    },
+    hasValue() {
+      return (
+        typeof this.internalValue === "boolean" ||
+        typeof this.internalValue === "number" ||
+        (typeof this.internalValue === "string" &&
+          this.internalValue.length > 0)
+      );
+    },
   },
   mounted() {
-    if(this.isFocus) {
+    if (this.isFocus) {
       this.clickInput();
     }
   },
   methods: {
     onFocus(e) {
       this.isFocused = true;
-      this.searchResultsVisible = true;
 
       this.$emit("focus", e);
     },
@@ -103,19 +126,22 @@ export default {
     },
     onBlur(e) {
       this.isFocused = false;
-      this.searchResultsVisible = false;
       this.$emit("blur", e);
     },
     onInput(e) {
       const target = e.target;
       this.internalValue = target.value;
-      
+
       this.$emit("highlight-reset", e);
     },
     clickInput() {
       if (document.activeElement !== this.$refs["input"]) {
         return this.$refs["input"].focus();
       }
+    },
+    clearableCallback() {
+      this.$refs.input && this.$refs.input.focus();
+      this.$nextTick(() => (this.internalValue = ""));
     },
   },
 };
