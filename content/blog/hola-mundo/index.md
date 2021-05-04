@@ -6,7 +6,6 @@ slug: "hola-mundo"
 published: true
 tags: ["blog", "notas"]
 author: Ramses Garate
-canonical_url: false
 description: "Bienvenido a mi sitio web, en este espacio voy a estar compartiendo las cosas que he aprendido en mi camino como desarrollador web, lo que estoy aprendiendo, consejos, mejores prácticas, etc."
 cover_image: ./cover_digital_garden.png
 ---

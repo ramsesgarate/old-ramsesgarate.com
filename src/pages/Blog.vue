@@ -43,12 +43,25 @@
         </p>
       </div>
     </section>
+    <Pager
+      :info="$page.posts.pageInfo"
+      class="pager-container"
+      linkClass="pager-container__link"
+      range="1"
+      :show-links="false"
+      prevLabel="Anterior"
+      nextLabel="Siguiente"
+    />
   </Layout>
 </template>
 
 <page-query>
-query {
-  posts: allPost(filter: { published: { eq: true }}) {
+query ($page: Int) {
+  posts: allPost(filter: { published: { eq: true }}, perPage: 12, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id
@@ -78,6 +91,7 @@ query {
 </page-query>
 
 <script>
+import { Pager } from "gridsome";
 import PostTags from "~/components/PostTags";
 import TextField from "~/components/organism/TextField";
 import PostList from "~/components/PostList.vue";
@@ -88,6 +102,7 @@ export default {
     PostList,
     TextField,
     PostTags,
+    Pager,
   },
   data() {
     return {
@@ -119,5 +134,17 @@ export default {
 <style lang="scss">
 .blog p {
   font-size: 1.2rem;
+}
+
+.pager-container {
+  @apply flex items-center justify-center mt-16;
+
+  &__link {
+    @apply rounded px-4 py-2 mx-2 text-center bg-gray-900 transition-colors duration-300 ease-in hover:bg-teal-400 hover:text-gray-900;
+
+    &.active {
+      @apply bg-teal-400 text-gray-800;
+    }
+  }
 }
 </style>

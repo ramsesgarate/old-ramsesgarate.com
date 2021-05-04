@@ -28,7 +28,7 @@
 
 <page-query>
 query {
-  posts: allPost(filter: { published: { eq: true }}) {
+  posts: allPost(limit: 6, filter: { published: { eq: true }}) {
     edges {
       node {
         id
@@ -52,7 +52,6 @@ query {
 import Wave from "~/assets/svg/wave-header.svg";
 import HomeWelcome from "~/components/templates/home/Welcome";
 import HomeStack from "~/components/templates/home/Stack";
-import Card from "~/components/templates/home/Card.vue";
 import Section from "~/components/Section";
 import PostList from "~/components/PostList";
 import ProjectList from "~/components/ProjectList";
@@ -62,7 +61,6 @@ export default {
     HomeStack,
     Wave,
     HomeWelcome,
-    Card,
     Section,
     PostList,
     ProjectList,

@@ -37,10 +37,11 @@
                 {{ link.name }}
               </span>
               <span
-                class="opacity-0 ml-1"
+                class="opacity-0 ml-1 flex"
                 :class="{ 'opacity-100': $route.path === link.path }"
               >
-                &gt;
+                <span> &#47; </span>
+                <span> &gt; </span>
               </span>
             </g-link>
           </li>

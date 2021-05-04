@@ -22,26 +22,17 @@
         </a>
       </div>
       <div class="flex justify-center">
-        Hecho con
+        ¡Hecho con ❤ y con
         <a
           href="https://gridsome.org/"
           target="_blank"
           rel="noopener noreferrer"
-          class="mx-2"
+          class="ml-2"
           title="Gridsome"
         >
           <gridsome-logo />
         </a>
-        y hosteado en
-        <a
-          href="https://netlify.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Netlify"
-          class="mx-2"
-        >
-          <netlify-logo />
-        </a>
+        !
       </div>
     </div>
   </footer>
