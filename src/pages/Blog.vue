@@ -24,8 +24,8 @@
         </text-field>
       </div>
       <div class="flex justify-center mb-16 flex-wrap">
-        <PostTags
-          v-for="(tag, index) in allTags"
+        <meta-tag
+          v-for="(tag, index) of allTags"
           :key="index"
           :tag="tag.node"
           class="mb-2"
@@ -92,8 +92,8 @@ query ($page: Int) {
 
 <script>
 import { Pager } from "gridsome";
-import PostTags from "~/components/PostTags";
-import TextField from "~/components/TextField";
+import MetaTag from "~/components/molecules/MetaTag";
+import TextField from "~/components/molecules/TextField";
 import PostList from "~/components/PostList.vue";
 
 export default {
@@ -101,7 +101,7 @@ export default {
   components: {
     PostList,
     TextField,
-    PostTags,
+    MetaTag,
     Pager,
   },
   data() {

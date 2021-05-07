@@ -1,15 +1,10 @@
 <template>
-  <div class="bg-gray-900 text-center">
-    <div class="container max-w-screen-lg mx-auto pt-16">
-      <h1
-        class="text-5xl font-medium tracking-normal leading-tight mb-4 text-teal-400"
-        id="title"
-      >
+  <div class="post-header">
+    <div class="post-header__content">
+      <h1 class="post-header__title" id="title">
         {{ title }}
       </h1>
-      <div class="post-info">
-        <post-meta :date="date" :time-to-read="timeToRead" />
-      </div>
+      <post-meta :date="date" :time-to-read="timeToRead" />
     </div>
   </div>
 </template>
@@ -37,3 +32,17 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.post-header {
+  @apply bg-gray-900;
+
+  &__content {
+    @apply container max-w-screen-lg mx-auto pt-16 text-center;
+  }
+
+  &__title {
+    @apply text-5xl font-medium tracking-normal leading-tight mb-4 text-teal-400;
+  }
+}
+</style>

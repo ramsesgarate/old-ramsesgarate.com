@@ -1,27 +1,25 @@
 <template>
-  <footer class="bg-gray-900 text-gray-300 font-normal pb-16">
-    <div class="container mx-auto">
-      <div class="flex justify-center mb-8 flex-wrap">
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__socials">
         <g-link
-          v-for="(link, index) in siteLinks"
+          v-for="(link, index) of siteLinks"
           :key="`internal-${index}`"
           :to="link.path"
-          class="mr-4 border-b-2 border-transparent hover:border-green-500 transition duration-200 p-2"
         >
           {{ link.name }}
         </g-link>
         <a
-          v-for="(link, index) in externalLinks"
+          v-for="(link, index) of externalLinks"
           :key="`external-${index}`"
           :href="link.path"
           target="_blank"
           rel="noopener noreferrer"
-          class="mr-4 border-b-2 border-transparent hover:border-green-500 transition duration-200 p-2"
         >
           {{ link.name }}
         </a>
       </div>
-      <div class="flex justify-center">
+      <div class="footer__about">
         ¡Hecho con ❤ y con
         <a
           href="https://gridsome.org/"
@@ -58,4 +56,31 @@ export default {
   },
 };
 </script>
+
+
+<style lang="scss" scoped>
+.footer {
+  @apply bg-gray-900 text-gray-300 font-normal pb-16;
+
+  &__content {
+    @apply container mx-auto;
+  }
+
+  &__socials {
+    @apply flex justify-center mb-8 flex-wrap;
+
+    a {
+      @apply hover:text-teal-400  transition-colors duration-300 ease-in mr-4 p-2;
+    }
+  }
+
+  &__about {
+    @apply flex justify-center;
+
+    &:last-of-type {
+      @apply mr-0;
+    }
+  }
+}
+</style>
 

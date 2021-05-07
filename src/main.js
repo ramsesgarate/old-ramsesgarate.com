@@ -30,5 +30,5 @@ export default function (Vue, { head, appOptions }) {
     }
   })
 
-  head.bodyAttrs = { class: 'bg-gray-800 text-grey-050 font-sans font-medium' }
+  head.bodyAttrs = { class: 'bg-gray-800 text-grey-050 font-sans font-medium scroll-dark' }
 }

@@ -84,6 +84,8 @@ export default {
 
 <style lang="scss">
 .icon {
+  @apply h-6 w-6;
+
   .primary {
     fill: #64d5ca;
   }
@@ -91,9 +93,19 @@ export default {
   .secondary {
     fill: #20504f;
   }
+
+  &--right {
+    @apply ml-1;
+  }
+
+  &--left {
+    @apply mr-1;
+  }
 }
 
 .icon--inactive {
+  @apply h-6 w-6;
+
   .primary {
     fill: #a5b3bb;
   }

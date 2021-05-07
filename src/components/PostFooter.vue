@@ -1,28 +1,27 @@
 <template>
-  <div class="mt-16">
-    <div
-      class="flex justify-between items-center border-b-2 border-teal-400 pb-4 flex-wrap"
-    >
-      <link-edit-page :edit-link="editLink" class="mb-4 sm:mb-0" />
-      <div class="flex flex-wrap">
-        <PostTags
-          v-for="tag in $page.post.tags"
+  <div class="post-footer">
+    <div class="post-footer__meta">
+      <link-edit-post :edit-link="editLink" />
+      <div class="post-footer__tags">
+        <meta-tag
+          v-for="tag of $page.post.tags"
           :key="tag.id"
           :tag="tag"
-          class="mb-2 sm:mb-0"
+          class="post-footer__tag"
         />
       </div>
     </div>
-    <post-nav-footer :previous-page="previousPage" :next-page="nextPage" />
+    <post-pagination :previous-page="previousPage" :next-page="nextPage" />
   </div>
 </template>
 
 <script>
-import LinkEditPage from "~/components/LinkEditPage";
-import PostNavFooter from "~/components/PostNavFooter";
-import PostTags from "~/components/PostTags";
+import LinkEditPost from "~/components/molecules/LinkEditPost";
+import PostPagination from "~/components/PostPagination";
+import MetaTag from "~/components/molecules/MetaTag";
 
 export default {
+  name: "PostFooter",
   props: {
     editLink: {
       type: String,
@@ -38,9 +37,27 @@ export default {
     },
   },
   components: {
-    LinkEditPage,
-    PostTags,
-    PostNavFooter,
+    LinkEditPost,
+    MetaTag,
+    PostPagination,
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.post-footer {
+  @apply mt-16;
+
+  &__meta {
+    @apply flex justify-between items-center border-b-2 border-teal-400 pb-4 flex-wrap;
+  }
+
+  &__tags {
+    @apply flex flex-wrap;
+  }
+
+  &__tag {
+    @apply mb-2 sm:mb-0;
+  }
+}
+</style>

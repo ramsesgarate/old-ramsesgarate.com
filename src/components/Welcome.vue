@@ -5,9 +5,7 @@
         <div
           class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0 flex flex-col justify-center mr-4"
         >
-          <h1 class="text-3xl font-medium tracking-normal leading-tight mb-2">
-            ¡Hola a todos <span class="wave">👋</span>!
-          </h1>
+          <h1 class="">¡Hola a todos <span class="wave">👋</span>!</h1>
           <h2 class="text-4xl mb-6">
             Soy <span class="italic text-teal-400">Ramses Garate</span>
           </h2>

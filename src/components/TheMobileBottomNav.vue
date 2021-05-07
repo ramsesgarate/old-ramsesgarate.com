@@ -1,34 +1,21 @@
 <template>
-  <nav
-    class="tab-bar fixed bottom-0 sm:hidden w-full z-50"
-    :class="{ 'tab-bar--hidden': !showNavbar }"
-  >
-    <div class="relative">
-      <div class="icons h-14">
-        <g-link
-          aria-label="Inicio"
-          to="/"
-          class="text-teal-400 transition-colors duration-300 ease-linear flex flex-col justify-center items-center px-2"
-        >
+  <nav class="tab-bar" :class="{ 'tab-bar--hidden': !showNavbar }">
+    <div class="tab-bar__content">
+      <div class="tab-bar__links">
+        <g-link aria-label="Inicio" to="/" class="tab-bar__link">
           <home-icon
-            class="transform transition duration-300 ease-linear h-7 w-7"
             :class="[$route.path === '/' ? 'icon' : 'icon--inactive']"
           />
         </g-link>
         <br />
-        <g-link
-          aria-label="Blog"
-          to="/blog/"
-          class="text-teal-400 transition-colors duration-300 ease-linear flex flex-col justify-center items-center px-2"
-        >
+        <g-link aria-label="Blog" to="/blog/" class="tab-bar__link">
           <book-icon
-            class="transform transition duration-300 ease-linear h-7 w-7"
             :class="[$route.path === '/blog/' ? 'icon' : 'icon--inactive']"
           />
         </g-link>
       </div>
       <button
-        class="circle"
+        class="tab-bar__button-search"
         @click="showSearchModal"
         aria-label="button search"
       >
@@ -66,16 +53,6 @@ export default {
     path() {
       return this.$route.path;
     },
-    classes() {
-      return {
-        iconActive: [
-          "outline-none translate-y-0 transform transition-all duration-1000",
-        ],
-        iconInactive: [
-          "outline-none translate-y-3 transform transition-all duration-1000",
-        ],
-      };
-    },
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
@@ -106,30 +83,41 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .tab-bar {
   transform: translate3d(0, 0, 0);
   transition: 0.2s all ease-out;
-}
 
-.tab-bar.tab-bar--hidden {
-  box-shadow: none;
-  transform: translate3d(0, 200%, 0);
-}
+  @apply fixed bottom-0 sm:hidden w-full z-50;
 
-.icons {
-  grid-template-columns: 1fr 3rem 1fr;
-  z-index: 1;
+  &--hidden {
+    box-shadow: none;
+    transform: translate3d(0, 200%, 0);
+  }
 
-  @apply place-items-center	m-auto inset-y-0 inset-x-4 absolute grid;
-}
+  &__content {
+    @apply relative;
+  }
 
-.circle {
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 1.5rem;
-  bottom: 22px;
+  &__links {
+    grid-template-columns: 1fr 3rem 1fr;
+    z-index: 1;
 
-  @apply bg-teal-400 absolute z-10 rounded-full w-14 h-14 flex justify-center items-center;
+    @apply place-items-center	m-auto inset-y-0 inset-x-4 absolute grid  h-14;
+  }
+
+  &__link {
+    @apply text-teal-400 transition-colors duration-300 ease-linear flex flex-col justify-center items-center px-2;
+
+    svg {
+      @apply h-7 w-7;
+    }
+  }
+
+  &__button-search {
+    transform: translateX(-50%);
+
+    @apply bg-teal-400 absolute z-10 rounded-full w-14 h-14 flex justify-center items-center bottom-6 left-2/4;
+  }
 }
 </style>

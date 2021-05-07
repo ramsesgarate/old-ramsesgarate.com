@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="post__content" v-html="content" />
+    <div class="post-body" v-html="content" />
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 @import "~/assets/style/prism.scss";
 @import "~prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-.post__content {
+.post-body {
   ::selection {
     @apply bg-teal-400 bg-opacity-30;
   }
@@ -69,7 +69,7 @@ export default {
   }
 
   p {
-    @apply text-lg font-normal mb-5 leading-relaxed;
+    @apply text-lg font-normal mb-5 leading-relaxed tracking-wide;
   }
 
   ul {
@@ -85,7 +85,7 @@ export default {
   }
 
   blockquote {
-    @apply border-l-2 border-teal-400 pl-4 italic  bg-teal-400 bg-opacity-10 rounded-r;
+    @apply border-l-2 border-teal-400 pl-4 italic  bg-teal-400 bg-opacity-10 rounded-r mb-4;
   }
 
   img {

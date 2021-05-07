@@ -35,6 +35,7 @@ query Tag($id: ID!) {
             cover_image(blur: 5)
             date(format: "D. MMMM YYYY", locale: "es-ES")
             path
+            description
             tags {
               id
               title

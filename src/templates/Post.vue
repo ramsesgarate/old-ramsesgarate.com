@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section class="relative">
+    <section class="post">
       <ClientOnly>
         <read-progress color="#3EBD93"></read-progress>
       </ClientOnly>
@@ -13,17 +13,15 @@
       />
       <wave-post />
 
-      <div class="container max-w-screen-md mx-auto">
+      <div class="post-content">
         <g-image
           alt="Cover image"
           v-if="$page.post.cover_image"
           :src="$page.post.cover_image"
           quality="100"
-          class="rounded w-full h-auto"
-          width="1920"
-          height="1080"
+          class="post-cover"
         />
-        <post-sidebar :subtitles="subtitles" />
+        <post-table-content :subtitles="subtitles" />
         <post-body :content="$page.post.content" />
         <post-footer
           :edit-link="editLink"
@@ -31,18 +29,7 @@
           :previous-page="previousPage"
           :next-page="nextPage"
         />
-      </div>
-      <div class="button-actions">
-        <button
-          class="opacity-0 mb-2"
-          @click.prevent="sharePost"
-          ref="buttonShare"
-        >
-          <share-icon class="h-6 w-6" />
-        </button>
-        <button class="opacity-0" v-scroll-to="'#title'" ref="buttonTop">
-          <up-icon class="h-6 w-6" />
-        </button>
+        <post-actions @click:share="onWebShare" />
       </div>
     </section>
   </Layout>
@@ -80,28 +67,31 @@ query Post ($id: ID!) {
 
 <script>
 //Components
-import PostBody from "~/components/PostBody";
-import PostHeader from "~/components/PostHeader";
-import PostFooter from "~/components/PostFooter";
-import PostSidebar from "~/components/PostSidebar";
-import UpIcon from "~/assets/icons/icon-up.svg";
-import ShareIcon from "~/assets/icons/icon-share.svg";
-import config from "~/data/website.json";
-import WavePost from "~/assets/svg/wave-post.svg";
+import PostActions from "@/components/PostActions";
+import PostBody from "@/components/PostBody";
+import PostHeader from "@/components/PostHeader";
+import PostFooter from "@/components/PostFooter";
+import PostTableContent from "@/components/PostTableContent";
 
-import postLinks from "~/data/post-links.yaml";
-import share from "~/mixins/shareAction";
+//Assets
+import WavePost from "@/assets/svg/wave-post.svg";
+
+//Data
+import config from "@/data/website.json";
+import postLinks from "@/data/post-links.yaml";
+
+//Mixins
+import share from "@/mixins/shareAction";
 
 export default {
   name: "Post",
   mixins: [share],
   components: {
+    PostActions,
     PostBody,
     PostHeader,
     PostFooter,
-    PostSidebar,
-    UpIcon,
-    ShareIcon,
+    PostTableContent,
     WavePost,
     ReadProgress: () =>
       import("vue-read-progress")
@@ -110,6 +100,7 @@ export default {
   },
   data() {
     return {
+      allPostLinks: postLinks,
       isBlogPost: true,
     };
   },
@@ -119,9 +110,6 @@ export default {
       return cover.src
         ? `https://ramsesgarate.com${this.$page.post.cover_image.src}`
         : "";
-    },
-    postLinks() {
-      return postLinks;
     },
     shareUrl() {
       return config.siteUrl + this.$page.post.path;
@@ -133,17 +121,17 @@ export default {
       return `${title} ${authorText}`;
     },
     currentIndex() {
-      return this.postLinks.findIndex((item) => {
+      return this.allPostLinks.findIndex((item) => {
         return (
           item.link.replace(/\/$/, "") === this.$route.path.replace(/\/$/, "")
         );
       });
     },
     nextPage() {
-      return this.postLinks[this.currentIndex + 1];
+      return this.allPostLinks[this.currentIndex + 1];
     },
     previousPage() {
-      return this.postLinks[this.currentIndex - 1];
+      return this.allPostLinks[this.currentIndex - 1];
     },
     editLink() {
       return `https://github.com/ramsesgarate/ramsesgarate.com/blob/master/${this.$page.post.fileInfo.path}`;
@@ -168,30 +156,12 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.scrollListener);
     if (this.$store.state.isSearchModalOpen) {
       this.$store.dispatch("hideSearchModal");
     }
   },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.scrollListener);
-  },
   methods: {
-    scrollListener() {
-      const scrollToTopBtn = this.$refs.buttonTop;
-      const buttonShare = this.$refs.buttonShare;
-      let isVisibleTopBtn = window.scrollY > 300;
-
-      if (isVisibleTopBtn) {
-        scrollToTopBtn.classList.add("opacity-100");
-        buttonShare.classList.add("opacity-100");
-      } else {
-        scrollToTopBtn.classList.remove("opacity-100");
-        buttonShare.classList.remove("opacity-100");
-      }
-    },
     sharePost(e) {
-      console.log(this.isWebShareSupported);
       if (this.isWebShareSupported) {
         this.onWebShare(e);
       } else {
@@ -203,17 +173,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.button-actions {
-  align-items: flex-end;
-  bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  right: 24px;
-  z-index: 2;
+.post {
+  &-cover {
+    @apply rounded w-full h-auto;
+  }
 
-  button {
-    @apply rounded-full bg-teal-400 p-2 outline-none transition-opacity duration-200 ease-in focus:outline-none;
+  &-content {
+    @apply container max-w-screen-md mx-auto;
   }
 }
 </style>

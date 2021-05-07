@@ -3,11 +3,11 @@
     <div
       v-if="show"
       @click.self="closeModal"
-      class="fixed top-0 left-0 z-50 flex w-screen h-screen flex-col p-4 sm:p-6 md:p-16"
+      class="fixed top-0 left-0 z-50 flex w-screen h-screen flex-col p-4 sm:p-6"
       style="background-color: rgba(0, 0, 0, 0.4)"
     >
       <div
-        class="my-0 mx-auto w-full max-w-screen-md flex flex-col min-h-0 bg-gray-900 relative rounded-2xl overflow-y-auto text-lg"
+        class="my-0 mx-auto w-full max-w-screen-md flex flex-col min-h-0 bg-gray-900 relative rounded-2xl text-lg"
       >
         <header class="flex-none relative flex z-10 items-center mx-6 pt-6">
           <text-field
@@ -144,7 +144,7 @@ import KeyEnterIcon from "~/assets/icons/icon-key-enter.svg";
 import KeyEscIcon from "~/assets/icons/icon-key-esc.svg";
 import KeyDownIcon from "~/assets/icons/icon-key-down.svg";
 import KeyUpIcon from "~/assets/icons/icon-key-up.svg";
-import TextField from "~/components/TextField";
+import TextField from "~/components/molecules/TextField";
 
 export default {
   name: "ModalSearch",
@@ -281,11 +281,6 @@ export default {
   opacity: 0;
 }
 
-.key {
-  background: linear-gradient(-225deg, #d5dbe4, #f8f8f8);
-  box-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff, 0 1px 2px 1px rgba(30, 35, 90, 0.4);
-}
-
 .scroll-dark::-webkit-scrollbar {
   width: 4px;
 }
@@ -298,6 +293,12 @@ export default {
 .scroll-dark::-webkit-scrollbar-thumb {
   background-color: #3ebd93;
   border-radius: 4px;
+}
+
+.key {
+  background: linear-gradient(-225deg, #d5dbe4, #f8f8f8);
+  box-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff,
+    0 1px 2px 1px rgba(30, 35, 90, 0.4);
 }
 
 .search-highlighted {

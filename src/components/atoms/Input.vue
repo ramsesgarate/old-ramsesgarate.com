@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .input {
-  @apply w-full flex flex-col h-auto flex-grow flex-wrap min-w-0;
+  @apply w-full h-auto min-w-0;
 
   &__prepend,
   &__append {

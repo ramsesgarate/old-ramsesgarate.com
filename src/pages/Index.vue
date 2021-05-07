@@ -57,6 +57,7 @@ import PostList from "~/components/PostList";
 import ProjectList from "~/components/ProjectList";
 
 export default {
+  name: 'Home',
   components: {
     HomeStack,
     Wave,
