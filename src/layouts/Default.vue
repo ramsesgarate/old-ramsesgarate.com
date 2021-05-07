@@ -44,22 +44,19 @@ query {
 
 <script>
 import Wave from "~/assets/svg/wave-footer.svg";
-import TheHeader from "~/components/TheHeader";
 import Footer from "~/components/Footer";
-import TheMobileBottomNav from "~/components/TheMobileBottomNav";
 import { mapState } from "vuex";
-import ModalSearch from "@/components/ModalSearch.vue";
 import SiteSEO from "~/mixins/SiteSEO";
 import LazyHydrate from "vue-lazy-hydration";
 
 export default {
   mixins: [SiteSEO],
   components: {
-    TheHeader,
+    TheHeader: () => import("@/components/TheHeader"),
     Footer,
-    TheMobileBottomNav,
+    TheMobileBottomNav: () => import("@/components/TheMobileBottomNav"),
     Wave,
-    ModalSearch,
+    ModalSearch: () => import("@/components/ModalSearch"),
     LazyHydrate,
   },
   computed: mapState({
@@ -113,5 +110,23 @@ export default {
   .secondary {
     fill: #20504f;
   }
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: #3ebd93;
 }
 </style>

@@ -5,29 +5,3 @@
 html {
   scroll-behavior: "smooth";
 }
-
-@layer base {
-  h1 {
-    @apply text-5xl font-semibold mb-6;
-  }
-
-  h2 {
-    @apply text-4xl font-semibold mb-5;
-  }
-
-  h3 {
-    @apply text-3xl font-semibold mb-4;
-  }
-
-  h4 {
-    @apply text-2xl font-semibold mb-3;
-  }
-
-  h5 {
-    @apply text-xl font-semibold mb-2;
-  }
-
-  p {
-    @apply text-lg font-normal mb-5 leading-relaxed tracking-wide;
-  }
-}
