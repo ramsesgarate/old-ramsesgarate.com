@@ -2,8 +2,8 @@
   <div
     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-lg mx-auto"
   >
-    <template v-for="post of posts">
-      <post-card :key="post.node.id" :post="post.node" />
+    <template v-for="{ node: post } of posts">
+      <post-card :key="post.id" :post="post" />
     </template>
   </div>
 </template>

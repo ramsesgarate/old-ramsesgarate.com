@@ -34,7 +34,7 @@ query {
         id
         title
         description
-        cover_image (blur: 5)
+        cover_image (blur: 5, quality: 80)
         date (format: "D. MMMM YYYY" locale: "es-ES")
         path
         tags {
@@ -57,7 +57,7 @@ import PostList from "~/components/PostList";
 import ProjectList from "~/components/ProjectList";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     HomeStack,
     Wave,
