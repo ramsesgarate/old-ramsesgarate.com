@@ -3,7 +3,7 @@
     <r-card :title="post.title" with-hover>
       <template #card-image>
         <g-image
-          :src="post.cover_image.dataUri"
+          :src="post.cover_image.src"
           alt="Cover Image"
           height="200"
           width="328"
