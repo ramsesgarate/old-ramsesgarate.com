@@ -53,7 +53,7 @@ determines the header level.)
 
 Images are added with `![Image Alt](./images/image.jpg)`
 
-![Image](./cover-image.png)
+![Image](./cover_digital_garden.jpg)
 
 ### Blockquotes
 
