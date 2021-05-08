@@ -9,11 +9,11 @@
     <div class="card__subtitle" v-show="subTitle">
       {{ subTitle }}
     </div>
-    <p class="card__text">
+    <div class="card__text">
       <slot name="card-text">
         {{ text }}
       </slot>
-    </p>
+    </div>
     <div class="card__actions" :class="classActions" v-show="hasActionsSlot">
       <slot name="card-actions"> </slot>
     </div>
