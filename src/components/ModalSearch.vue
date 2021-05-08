@@ -1,7 +1,7 @@
 <template>
   <Transition name="fade">
     <div
-      v-show="show"
+      v-if="show"
       @click.self="closeModal"
       class="fixed top-0 left-0 z-50 flex w-screen h-screen flex-col p-4 sm:p-6"
       style="background-color: rgba(0, 0, 0, 0.4)"

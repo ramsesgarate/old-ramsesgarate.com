@@ -1,20 +1,20 @@
 <template>
   <div class="card" :class="cardClass">
-    <div class="card__image" v-show="hasImageSlot">
+    <div class="card__image" v-if="hasImageSlot">
       <slot name="card-image"></slot>
     </div>
     <div class="card__title">
       {{ title }}
     </div>
-    <div class="card__subtitle" v-show="subTitle">
+    <div class="card__subtitle" v-if="subTitle">
       {{ subTitle }}
     </div>
-    <div class="card__text">
+    <p class="card__text">
       <slot name="card-text">
         {{ text }}
       </slot>
-    </div>
-    <div class="card__actions" :class="classActions" v-show="hasActionsSlot">
+    </p>
+    <div class="card__actions" :class="classActions" v-if="hasActionsSlot">
       <slot name="card-actions"> </slot>
     </div>
   </div>

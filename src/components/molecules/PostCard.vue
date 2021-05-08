@@ -2,7 +2,7 @@
   <g-link :to="post.path">
     <r-card :title="post.title" with-hover>
       <template #card-image>
-        <g-image :src="post.cover_image.src"></g-image>
+        <g-image :src="post.cover_image.src" alt="Cover Image" height="200" width="328"></g-image>
       </template>
       <template #card-text>
         <div class="three-lines mb-3">

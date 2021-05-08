@@ -17,7 +17,7 @@
       <button
         class="tab-bar__button-search"
         @click="showSearchModal"
-        aria-label="button search"
+        aria-label="search button"
       >
         <search-icon class="w-7 h-7" />
       </button>

@@ -19,6 +19,8 @@
           v-if="$page.post.cover_image"
           :src="$page.post.cover_image"
           quality="100"
+          width="1920"
+          height="1080"
           class="post-cover"
         ></g-image>
         <post-table-content :subtitles="subtitles" />

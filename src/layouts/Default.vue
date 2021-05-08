@@ -43,23 +43,20 @@ query {
 </static-query>
 
 <script>
-import TheHeader from "@/components/TheHeader";
 import Wave from "~/assets/svg/wave-footer.svg";
 import Footer from "~/components/Footer";
 import { mapState } from "vuex";
 import SiteSEO from "~/mixins/SiteSEO";
 import LazyHydrate from "vue-lazy-hydration";
-import TheMobileBottomNav from "@/components/TheMobileBottomNav";
-import ModalSearch from "@/components/ModalSearch";
 
 export default {
   mixins: [SiteSEO],
   components: {
-    TheHeader,
+    TheHeader: () => import("@/components/TheHeader"),
     Footer,
-    TheMobileBottomNav,
+    TheMobileBottomNav: () => import("@/components/TheMobileBottomNav"),
     Wave,
-    ModalSearch,
+    ModalSearch: () => import("@/components/ModalSearch"),
     LazyHydrate,
   },
   computed: mapState({

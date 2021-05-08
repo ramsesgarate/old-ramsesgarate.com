@@ -44,14 +44,14 @@ export default {
   }
 
   &__item-depth {
-    @apply text-sm  mb-0 py-2 font-normal leading-5 tracking-wide;
+    @apply text-base  mb-0 py-2 font-normal leading-5 tracking-wide;
 
     &--2 {
       border-top: 1px dashed #0d2538;
     }
 
     &--3 {
-      @apply text-xs py-1 pl-4 text-gray-400;
+      @apply text-sm py-1 pl-4 text-gray-400;
     }
   }
 

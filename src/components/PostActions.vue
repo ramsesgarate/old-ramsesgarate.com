@@ -1,9 +1,9 @@
 <template>
   <div class="post-actions">
-    <button class="opacity-0 mb-2" @click="onClickShare" ref="buttonShare">
+    <button class="opacity-0 mb-2" @click="onClickShare" ref="buttonShare" aria-label="share button">
       <share-icon class="h-6 w-6" />
     </button>
-    <button class="opacity-0" v-scroll-to="'#title'" ref="buttonTop">
+    <button class="opacity-0" v-scroll-to="'#title'" ref="buttonTop" aria-label="top button">
       <up-icon class="h-6 w-6" />
     </button>
   </div>

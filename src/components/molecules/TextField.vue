@@ -35,11 +35,11 @@
       />
       <button
         class="flex items-center justify-center focus:outline-none"
-        v-if="clearable"
+        v-if="clearable && hasValue"
         @click="clearableCallback"
+        aria-label="close button"
       >
         <close-icon
-          v-if="hasValue"
           class="block h-7 w-7 transition-colors duration-300 ease-linear outline-none"
         />
       </button>
@@ -88,7 +88,7 @@ export default {
   },
   computed: {
     computedId() {
-      return this.id || `input-${this._uid}`;
+      return this.$attrs.id || `input-${this._uid}`;
     },
     internalValue: {
       get() {

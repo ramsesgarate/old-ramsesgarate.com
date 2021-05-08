@@ -19,6 +19,7 @@
           label="Buscar publicación"
           v-model="search"
           prepend-icon="search"
+          id="search"
           clearable
         >
         </text-field>

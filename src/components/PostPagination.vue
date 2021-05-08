@@ -5,13 +5,14 @@
       v-if="previousPage"
       outlined
       class="post-pagination__prev"
+      aria-label="previous post"
     >
       <arrow-left-icon class="icon--left" />
       <span class="hidden sm:inline-block">
         {{ previousPage.title }}
       </span>
     </r-button>
-    <r-button :to="nextPage.link" v-if="nextPage" class="post-pagination__next">
+    <r-button :to="nextPage.link" v-if="nextPage" class="post-pagination__next" aria-label="next post">
       {{ nextPage.title }}
       <arrow-right-icon class="icon--right" />
     </r-button>
