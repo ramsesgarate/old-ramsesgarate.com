@@ -20,7 +20,7 @@
           :src="$page.post.cover_image"
           quality="100"
           class="post-cover"
-        />
+        ></g-image>
         <post-table-content :subtitles="subtitles" />
         <post-body :content="$page.post.content" />
         <post-footer

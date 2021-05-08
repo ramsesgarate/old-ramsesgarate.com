@@ -34,6 +34,8 @@ module.exports = {
     Tag: '/tag/:id'
   },
   chainWebpack: config => {
+    config.mode('development');
+    
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
     svgRule
