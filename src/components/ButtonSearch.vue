@@ -33,7 +33,7 @@ export default {
   }
 
   &__label {
-    @apply text-base text-gray-500 my-4 w-full overflow-ellipsis whitespace-nowrap font-semibold;
+    @apply text-base text-gray-400 my-4 w-full overflow-ellipsis whitespace-nowrap font-semibold;
   }
 }
 </style>

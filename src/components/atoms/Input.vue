@@ -78,7 +78,7 @@ export default {
           top: 18px;
           transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
 
-          @apply text-base pointer-events-none whitespace-nowrap overflow-ellipsis overflow-hidden leading-5 h-5 absolute right-auto left-0 text-gray-500;
+          @apply text-base pointer-events-none whitespace-nowrap overflow-ellipsis overflow-hidden leading-5 h-5 absolute right-auto left-0 text-gray-400;
         }
       }
     }
