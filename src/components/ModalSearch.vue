@@ -1,7 +1,7 @@
 <template>
   <Transition name="fade">
     <div
-      v-if="show"
+      v-show="show"
       @click.self="closeModal"
       class="fixed top-0 left-0 z-50 flex w-screen h-screen flex-col p-4 sm:p-6"
       style="background-color: rgba(0, 0, 0, 0.4)"
@@ -297,8 +297,7 @@ export default {
 
 .key {
   background: linear-gradient(-225deg, #d5dbe4, #f8f8f8);
-  box-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff,
-    0 1px 2px 1px rgba(30, 35, 90, 0.4);
+  box-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff, 0 1px 2px 1px rgba(30, 35, 90, 0.4);
 }
 
 .search-highlighted {
