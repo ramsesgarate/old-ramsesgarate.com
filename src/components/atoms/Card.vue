@@ -1,12 +1,12 @@
 <template>
   <div class="card" :class="cardClass">
-    <div class="card__image" v-if="hasImageSlot">
+    <div class="card__image" v-show="hasImageSlot">
       <slot name="card-image"></slot>
     </div>
     <div class="card__title">
       {{ title }}
     </div>
-    <div class="card__subtitle" v-if="subTitle">
+    <div class="card__subtitle" v-show="subTitle">
       {{ subTitle }}
     </div>
     <p class="card__text">
@@ -14,7 +14,7 @@
         {{ text }}
       </slot>
     </p>
-    <div class="card__actions" :class="classActions" v-if="hasActionsSlot">
+    <div class="card__actions" :class="classActions" v-show="hasActionsSlot">
       <slot name="card-actions"> </slot>
     </div>
   </div>
