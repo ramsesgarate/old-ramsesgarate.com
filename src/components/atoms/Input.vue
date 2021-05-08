@@ -9,7 +9,7 @@
         <slot name="prepend"></slot>
       </div>
       <div class="text-field__slot">
-        <label class="label" :for="computedId" v-html="label"></label>
+        <label class="label" :for="computedId" >{{label}}</label>
         <slot name="input"></slot>
       </div>
       <div class="input__append">
