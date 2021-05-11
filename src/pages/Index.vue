@@ -34,7 +34,7 @@ query {
         id
         title
         description
-        cover_image (blur: 10, width: 640, height: 360, quality: 90)
+        cover_image (blur: 10, width: 656, height: 400, quality: 90)
         date (format: "D. MMMM YYYY" locale: "es-ES")
         path
         tags {
