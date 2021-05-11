@@ -94,7 +94,7 @@ export default {
     },
     metaImage() {
       const siteUrl = this.$static.metadata.siteUrl;
-      const logo = this.$static.metadata.image;
+      const logo = 'images/logo.png';
       const parentImage = this.$parent && this.$parent.$metaInfo && this.$parent.$metaInfo.image;
       const image = parentImage || `${siteUrl}/${logo}`;
 

@@ -5,11 +5,8 @@
         <g-image
           :src="post.cover_image.src"
           alt="Cover Image"
-          height="200"
-          width="328"
           :srcset="post.cover_image.srcset"
           :sizes="post.cover_image.sizes"
-          fit="contain"
         ></g-image>
       </template>
       <template #card-text>

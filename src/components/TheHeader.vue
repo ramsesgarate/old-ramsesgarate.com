@@ -4,11 +4,12 @@
       <g-link to="/">
         <g-image
           src="~/assets/svg/logo-120.svg"
-          :immediate="true"
           class="header__logo"
           alt="Logo RG"
-          width="48"
-          height="48"
+          width="56"
+          height="56"
+          blur="10"
+          quality="90"
         ></g-image>
       </g-link>
       <nav class="header-nav">
@@ -70,10 +71,6 @@ export default {
 
   &__content {
     @apply container mx-auto max-w-screen-lg items-center flex justify-between py-2 h-16 sm:h-20;
-  }
-
-  &__logo {
-    @apply h-14 w-14;
   }
 
   &-nav {
