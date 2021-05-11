@@ -19,7 +19,6 @@
           label="Buscar publicación"
           v-model="search"
           prepend-icon="search"
-          id="search-input"
           clearable
         >
         </text-field>
@@ -68,7 +67,7 @@ query ($page: Int) {
         id
         title
         description
-        cover_image (blur: 5, quality: 80)
+        cover_image (blur: 10, width: 640, height: 360, quality: 90)
         date (format: "D. MMMM YYYY" locale: "es-ES")
         path
         tags {

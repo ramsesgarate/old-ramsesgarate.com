@@ -51,7 +51,7 @@ export default {
     }
 
     &--3 {
-      @apply text-sm py-1 pl-4 text-gray-400;
+      @apply text-sm pl-4 text-gray-400;
     }
   }
 
