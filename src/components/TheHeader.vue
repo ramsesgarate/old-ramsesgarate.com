@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     showSearchModal() {
-      this.$store.dispatch("showSearchModal");
+      this.$emit("open-search-modal");
     },
   },
 };

@@ -12,8 +12,7 @@
     "gridsome-plugin-rss": "^1.2.0",
     "vue-lazy-hydration": "^2.0.0-beta.4",
     "vue-read-progress": "^1.0.4",
-    "vue-scrollto": "^2.20.0",
-    "vuex": "^3.6.2"
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@gridsome/plugin-critical": "^0.2.0",

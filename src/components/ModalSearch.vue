@@ -264,7 +264,7 @@ export default {
       this.hideSearchModal();
     },
     hideSearchModal() {
-      this.$store.dispatch("hideSearchModal");
+      this.$emit("hide-search-modal");
     },
   },
 };

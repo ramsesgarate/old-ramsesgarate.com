@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="">
-    <the-header />
+    <the-header @open-search-modal="openSearchModal" />
     <main class="">
       <slot />
     </main>
@@ -10,7 +10,10 @@
       <the-mobile-bottom-nav />
     </LazyHydrate>
     <LazyHydrate on-interaction>
-      <modal-search :show="isSearchModalOpen" />
+      <modal-search
+        :show="isSearchModalOpen"
+        @hide-search-modal="hideSearchModal"
+      />
     </LazyHydrate>
   </div>
 </template>
@@ -44,7 +47,6 @@ query {
 import Wave from "~/assets/svg/wave-footer.svg";
 import TheHeader from "@/components/TheHeader";
 import Footer from "~/components/Footer";
-import { mapState } from "vuex";
 import SiteSEO from "~/mixins/SiteSEO";
 import LazyHydrate from "vue-lazy-hydration";
 
@@ -58,9 +60,11 @@ export default {
     Wave,
     ModalSearch: () => import("@/components/ModalSearch"),
   },
-  computed: mapState({
-    isSearchModalOpen: (state) => state.isSearchModalOpen,
-  }),
+  data() {
+    return {
+      isSearchModalOpen: false,
+    };
+  },
   mounted() {
     window.addEventListener("keyup", this.listenerKey);
   },
@@ -70,8 +74,14 @@ export default {
   methods: {
     listenerKey(evt) {
       if (evt.key === "/") {
-        this.$store.dispatch("showSearchModal");
+        this.openSearchModal();
       }
+    },
+    openSearchModal() {
+      this.isSearchModalOpen = true;
+    },
+    hideSearchModal() {
+      this.isSearchModalOpen = false;
     },
   },
 };
