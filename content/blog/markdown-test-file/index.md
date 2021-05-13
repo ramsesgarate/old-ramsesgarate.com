@@ -1,9 +1,9 @@
 ---
-title: Markdown test file
+title: Bienvenidos a mi jardín digital
 date: 2019-02-06
-slug: "markdown-test-file"
+slug: "bienvenidos-a-mi-jardin-digital"
 published: true
-tags: ["Markdown", "Test files"]
+tags: ["blog"]
 author: Ramses Garate
 date_update: 2019-02-07
 cover_image: ./cover_digital_garden.jpg

@@ -18,6 +18,8 @@
           alt="Cover image"
           v-if="$page.post.cover_image"
           :src="$page.post.cover_image"
+          :srcset="$page.post.cover_image.srcset"
+          :sizes="$page.post.cover_image.sizes"
           quality="100"
           width="1920"
           height="1080"
@@ -57,7 +59,7 @@ query Post ($id: ID!) {
     }
     description
     content
-    cover_image (blur: 5)
+    cover_image (blur: 10, quality: 90)
     subtitles: headings {
       depth
       value

@@ -6,8 +6,12 @@
     </main>
     <wave />
     <Footer />
-    <the-mobile-bottom-nav />
-    <modal-search :show="isSearchModalOpen" />
+    <LazyHydrate on-interaction>
+      <the-mobile-bottom-nav />
+    </LazyHydrate>
+    <LazyHydrate on-interaction>
+      <modal-search :show="isSearchModalOpen" />
+    </LazyHydrate>
   </div>
 </template>
 
@@ -39,20 +43,20 @@ query {
 <script>
 import Wave from "~/assets/svg/wave-footer.svg";
 import TheHeader from "@/components/TheHeader";
-import TheMobileBottomNav from "@/components/TheMobileBottomNav";
 import Footer from "~/components/Footer";
-import ModalSearch from "@/components/ModalSearch";
 import { mapState } from "vuex";
 import SiteSEO from "~/mixins/SiteSEO";
+import LazyHydrate from "vue-lazy-hydration";
 
 export default {
   mixins: [SiteSEO],
   components: {
+    LazyHydrate,
     TheHeader,
     Footer,
-    TheMobileBottomNav,
+    TheMobileBottomNav: () => import("@/components/TheMobileBottomNav"),
     Wave,
-    ModalSearch,
+    ModalSearch: () => import("@/components/ModalSearch"),
   },
   computed: mapState({
     isSearchModalOpen: (state) => state.isSearchModalOpen,
