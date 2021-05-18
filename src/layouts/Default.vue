@@ -1,10 +1,12 @@
 <template>
   <div id="app" class="">
     <the-header @open-search-modal="openSearchModal" />
+    <SideSocialNetworks />
     <main class="">
       <slot />
     </main>
     <wave />
+    <SideEmail />
     <Footer />
     <LazyHydrate on-interaction>
       <the-mobile-bottom-nav />
@@ -59,6 +61,8 @@ export default {
     TheMobileBottomNav: () => import("@/components/TheMobileBottomNav"),
     Wave,
     ModalSearch: () => import("@/components/ModalSearch"),
+    SideSocialNetworks: () => import("@/components/SideSocialNetworks"),
+    SideEmail: () => import("@/components/SideEmail"),
   },
   data() {
     return {

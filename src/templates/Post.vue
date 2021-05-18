@@ -183,7 +183,7 @@ export default {
   }
 
   &-content {
-    @apply container max-w-screen-md mx-auto;
+    @apply container max-w-screen-md mx-auto md:px-20 lg:px-10;
   }
 }
 </style>

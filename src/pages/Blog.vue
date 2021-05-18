@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="bg-gray-900 pb-24">
-      <div class="container max-w-screen-lg mx-auto pt-16">
+      <div class="container max-w-screen-lg mx-auto pt-16 md:px-20 lg:px-10">
         <h1 class="text-5xl font-medium tracking-normal leading-tight mb-4">
           Blog
         </h1>
@@ -13,7 +13,7 @@
       </div>
     </section>
 
-    <section class="container mx-auto max-w-screen-lg">
+    <section class="container mx-auto max-w-screen-lg md:px-20 lg:px-10">
       <div class="mx-auto max-w-lg -mt-8 mb-8">
         <text-field
           label="Buscar publicación"
