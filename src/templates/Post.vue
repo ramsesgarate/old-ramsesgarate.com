@@ -1,10 +1,6 @@
 <template>
   <Layout>
     <section class="post">
-      <ClientOnly>
-        <read-progress color="#3EBD93"></read-progress>
-      </ClientOnly>
-
       <post-header
         :title="$page.post.title"
         :date="$page.post.dateFormat"
@@ -97,10 +93,6 @@ export default {
     PostFooter,
     PostTableContent,
     WavePost,
-    ReadProgress: () =>
-      import("vue-read-progress")
-        .then((m) => m.default)
-        .catch(),
   },
   data() {
     return {
