@@ -1,396 +1,89 @@
 ---
 title: Bienvenidos a mi jardín digital
-date: 2019-02-06
+date: 2021-05-14
 slug: "bienvenidos-a-mi-jardin-digital"
 published: true
 tags: ["blog"]
 author: Ramses Garate
-date_update: 2019-02-07
+date_update: 2021-05-14
 cover_image: ./cover_digital_garden.jpg
-description: "Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions."
+description: "Bienvenidos a mi pagina web, o mejor dicho, a mi Jardín Digital, la idea de tener un jardín digital es crear un espacio en línea en la interrelación de un cuaderno y un blog, donde los jardineros digitales comparten semillas de pensamientos para cultivar en público. A diferencia de un blog, donde los artículos y ensayos tienen una fecha de publicación y comienzan a decaer tan pronto como se publican, un jardín digital es siempre verde: los jardineros digitales siguen editando y refinando sus notas."
 ---
 
-# Test
+Bienvenidos a mi pagina web, o mejor dicho, a mi Jardín Digital, la idea de tener un jardín digital es crear un espacio en línea en la interrelación de un cuaderno y un blog, donde los jardineros digitales comparten semillas de pensamientos para cultivar en público. A diferencia de un blog, donde los artículos y ensayos tienen una fecha de publicación y comienzan a decaer tan pronto como se publican, un jardín digital es siempre verde: los jardineros digitales siguen editando y refinando sus notas.
 
-Markdown is intended to be as easy-to-read and easy-to-write as is feasible.Readability, however, is emphasized above all else. A Markdown-formatted
-document should be publishable as-is, as plain text, without looking
-like it's been marked up with tags or formatting instructions.
+Desde hace un tiempo quería lanzar mi página web, sin embargo, nunca le dedique el tiempo suficiente, nunca estaba satisfecho con el diseño o estaba enfocado en tener un performance de 100%, ya casi estamos a mitad de año y seguía sin web, decidí que este año o lo que queda de año iba a ser diferente. A lo largo de este post le voy a contar un poco de los objetivos de mi pagina, las tecnologías que use, estructura de componentes, sobre algunos componentes puntuales que me gustaron mucho, entre otras cosas.
 
-While Markdown's syntax has been influenced by several existing text-to-HTML
-filters -- including [Setext](http://docutils.sourceforge.net/mirror/setext.html), [atx](http://www.aaronsw.com/2002/atx/), [Textile](http://textism.com/tools/textile/), [reStructuredText](http://docutils.sourceforge.net/rst.html),
-[Grutatext](http://www.triptico.com/software/grutatxt.html), and [EtText](http://ettext.taint.org/doc/) -- the single biggest source of
-inspiration for Markdown's syntax is the format of plain text email.
+## Objetivo
 
-## Block Elements
+Mi objetivo principal es crear un medio para reforzar lo que he aprendido y estoy aprendiendo, escribir cosas de las que me hubiera beneficiado en el pasado; mejorar mi redacción, perder ese miedo a escribir o a explicar un tema; crear un portafolio para demostrar mis habilidades y por ultimo pero no menos importante, ayudar a las personas que vienen después de mí con recursos técnicos y tutoriales.
 
-### Paragraphs and Line Breaks
+## Tecnologías
 
-A paragraph is simply one or more consecutive lines of text, separated
-by one or more blank lines. (A blank line is any line that looks like a
-blank line -- a line containing nothing but spaces or tabs is considered
-blank.) Normal paragraphs should not be indented with spaces or tabs.
+Para mi pagina decidí usar las siguientes tecnologías:
 
-The implication of the "one or more consecutive lines of text" rule is
-that Markdown supports "hard-wrapped" text paragraphs. This differs
-significantly from most other text-to-HTML formatters (including Movable
-Type's "Convert Line Breaks" option) which translate every line break
-character in a paragraph into a `<br />` tag.
+- Gridsome: [Gridsome](https://gridsome.org/) es un framework Jamstack (JavaScript, APIs y Markup) basado en Vue.js para crear sitios web de forma estática.
 
-When you _do_ want to insert a `<br />` break tag using Markdown, you
-end a line with two or more spaces, then type return.
+- Tailwind: [Tailwind](https://tailwindcss.com/) es un framework CSS que proporciona una serie de utilidades de bajo nivel que nos permite crear diseños completamente personalizados en base a la composición de clases.
 
-### Headers
+- Netlify: [Netlify](https://netlify.com/) un servicio de hosting para sitios web estáticos, optimiza los recursos del proyecto automáticamente y la integración continua se activa con las implementaciones del repositorio de Git.
 
-Markdown supports two styles of headers, [Setext][1] and [atx][2].
+El framework de JavaScript que dominó es Vue.js, así que decidí que una buena manera de demostrar mis habilidades era creando mi web con él.
 
-Optionally, you may "close" atx-style headers. This is purely
-cosmetic -- you can use this if you think it looks better. The
-closing hashes don't even need to match the number of hashes
-used to open the header. (The number of opening hashes
-determines the header level.)
+## Estructura de componentes
 
-### Images
+Lamentablemente Vue.js no tiene una estructura de componentes definida, así que tuve que indagar durante varios días cuál era la estructura ideal o que mejor se adaptaría a mi proyecto, al final terminó gustándome la metodología Atomic Design, ¿Por que? Todas las páginas, realmente son un compendio de componentes, es decir, los componentes son los que forman las pantallas, y estos componentes pueden estar compuestos por otros componentes más pequeños, les dejo una breve explicación de su creador Brad Frost:
 
-Images are added with `![Image Alt](./images/image.jpg)`
+> "Las interfaces están formadas por componentes más pequeños. Esto significa que podemos dividir interfaces enteras en bloques de construcción fundamentales y trabajar desde allí. Esa es la esencia básica del diseño atómico".
 
-![Image](./cover_digital_garden.jpg)
+Entonces, Atomic Design es un sistema de diseño que se basa en la creación de elementos modulares sencillos para crear estructuras de información mucho más complejas.
 
-### Blockquotes
+Hay cinco niveles distintos en el diseño atómico, no las explicare en detalle, pero si las voy a enumerar:
 
-Markdown uses email-style `>` characters for blockquoting. If you're
-familiar with quoting passages of text in an email message, then you
-know how to create a blockquote in Markdown. It looks best if you hard
-wrap the text and put a `>` before every line:
+- Atoms.
+- Molecules.
+- Organism.
+- Templates.
+- Pages.
 
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
->
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
+## Velocidad
 
-Markdown allows you to be lazy and only put the `>` before the first
-line of a hard-wrapped paragraph:
+Realmente quería que mi sitio fuese extremadamente rápido, era algo muy importante para mí, odio cuando espero más de 3 seg. por una página, por eso recomiendo encarecidamente usar [Gridsome](https://gridsome.org/) o un generador de sitios estáticos y [Netlify](https://netlify.com/).
 
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+El mejor resultado que pude obtener en las pruebas de pagespeed fue 97, realmente no quería enfocarme en llegar a 100, con estar por encima de 90 era suficiente para mi.
 
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
+![Result Performance](./performance.png)
 
-Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
-adding additional levels of `>`:
+Cosas que ayudaron, usar un generador de sitios estáticos, optimizar las imágenes, tener lo esencial y no agregar muchas dependencias de terceros, esto ha mantenido el sitio extremadamente rápido.
 
-> This is the first level of quoting.
->
-> > This is nested blockquote.
->
-> Back to the first level.
+## Open Source
 
-Blockquotes can contain other Markdown elements, including headers, lists,
-and code blocks:
+Una de mis metas como desarrollador es comenzar a involucrarme más en la comunidad y colaborar en proyectos open source, por ende, mi primer paso era dejar libre el código de mi proyecto para que otras personas lo puedan usar como un template y modificar lo que gusten a su conveniencia. Les dejo el link del [repositorio ramsesgarate.com](https://github.com/ramsesgarate/ramsesgarate.com).
 
-> ## This is a header.
->
-> 1.  This is the first list item.
-> 2.  This is the second list item.
->
-> Here's some example code:
->
->     return shell_exec("echo $input | $markdown_script");
+## Componentes
 
-Any decent text editor should make email-style quoting easy. For
-example, with BBEdit, you can make a selection and choose Increase
-Quote Level from the Text menu.
+Hay una serie de componentes que desarrolle y me gustaron mucho, entre ellos se encuentran los siguientes:
 
-### Lists
+### Buscador
 
-Markdown supports ordered (numbered) and unordered (bulleted) lists.
+Todo blog debe tener un buscador, sin embargo, yo quería que este, se pudiera acceder desde cualquier lugar de la página y poder realizar buscar entre todas las publicaciones, así que cree un componente llamado `ModalSearch.vue` que está compuesto por un input y una lista con los resultados, algo interesante fue agregar que se pudiera navegar entre los resultado, entrar o cerrar el modal con el teclado, esto lo explicare en un post próximamente, mientras les dejo el resultado.
 
-Unordered lists use asterisks, pluses, and hyphens -- interchangably
--- as list markers:
+![Modal Search](./modal_search.png)
 
-- Red
-- Green
-- Blue
+### Menú Mobile
 
-is equivalent to:
+Usualmente en la versión mobile de una aplicación o un landing page se usan menú de hamburguesas, pero hay aplicaciones que tienen un menu de navegacion mobile, es decir, una barra de navegación en la parte inferior de la pantalla, realmente esto siempre me ha gustado, así que mi sitio tenía que tener uno, era simple y efectivo, ademas, le agregue al medio un botón para poder levantar el `ModalSeach.vue`.
 
-- Red
-- Green
-- Blue
+![Menu Mobile](./menu_mobile.png)
 
-and:
+### Botón Compartir
 
-- Red
-- Green
-- Blue
+Cuando se piensa en una función compartir contenido se suele crear una función para cada red social o plataforma, sin embargo, el navegador tiene una API llamada `Navigator.share()` que permite usar el mecanismo de uso compartido nativo del dispositivo, así que me aproveche de este y lo integre con un botón, si el navegador tiene soporte a la api hace uso de ella, como dije, muchos navegadores no tienen soporte, así que deje por default compartir en Twitter, proximamente agregare mas opciones.
 
-Ordered lists use numbers followed by periods:
+![Button Search](./button_search.png)
 
-1.  Bird
-2.  McHale
-3.  Parish
+## Conclusión
 
-It's important to note that the actual numbers you use to mark the
-list have no effect on the HTML output Markdown produces. The HTML
-Markdown produces from the above list is:
+Disfruté mucho haciendo esto y todavía me falta mucho más por hacer para que esté como lo imagino, pero quería publicar una primera parte, que las personas me den un feedback y que vayan viendo como va evolucionando, no creo que la interfaz cambie mucho, pero si tengo pensado agregarle otras funcionalidades.
 
-If you instead wrote the list in Markdown like this:
-
-1.  Bird
-1.  McHale
-1.  Parish
-
-or even:
-
-3. Bird
-1. McHale
-1. Parish
-
-you'd get the exact same HTML output. The point is, if you want to,
-you can use ordinal numbers in your ordered Markdown lists, so that
-the numbers in your source match the numbers in your published HTML.
-But if you want to be lazy, you don't have to.
-
-To make lists look nice, you can wrap items with hanging indents:
-
-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-  viverra nec, fringilla in, laoreet vitae, risus.
-- Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-  Suspendisse id sem consectetuer libero luctus adipiscing.
-
-But if you want to be lazy, you don't have to:
-
-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-  viverra nec, fringilla in, laoreet vitae, risus.
-- Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-  Suspendisse id sem consectetuer libero luctus adipiscing.
-
-List items may consist of multiple paragraphs. Each subsequent
-paragraph in a list item must be indented by either 4 spaces
-or one tab:
-
-1.  This is a list item with two paragraphs. Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
-    mi posuere lectus.
-
-    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
-    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
-    sit amet velit.
-
-2.  Suspendisse id sem consectetuer libero luctus adipiscing.
-
-It looks nice if you indent every line of the subsequent
-paragraphs, but here again, Markdown will allow you to be
-lazy:
-
-- This is a list item with two paragraphs.
-
-      This is the second paragraph in the list item. You're
-
-  only required to indent the first line. Lorem ipsum dolor
-  sit amet, consectetuer adipiscing elit.
-
-- Another item in the same list.
-
-To put a blockquote within a list item, the blockquote's `>`
-delimiters need to be indented:
-
-- A list item with a blockquote:
-
-  > This is a blockquote
-  > inside a list item.
-
-To put a code block within a list item, the code block needs
-to be indented _twice_ -- 8 spaces or two tabs:
-
-- A list item with a code block:
-
-      <code goes here>
-
-### Code Blocks
-
-Pre-formatted code blocks are used for writing about programming or
-markup source code. Rather than forming normal paragraphs, the lines
-of a code block are interpreted literally. Markdown wraps a code block
-in both `<pre>` and `<code>` tags.
-
-To produce a code block in Markdown, simply indent every line of the
-block by at least 4 spaces or 1 tab.
-
-This is a normal paragraph:
-
-    This is a code block.
-
-Here is an example of AppleScript:
-
-```bash
-tell application "Foo"
-  beep
-end tell
-```
-
-A code block continues until it reaches a line that is not indented
-(or the end of the article).
-
-Within a code block, ampersands (`&`) and angle brackets (`<` and `>`)
-are automatically converted into HTML entities. This makes it very
-easy to include example HTML source code using Markdown -- just paste
-it and indent it, and Markdown will handle the hassle of encoding the
-ampersands and angle brackets. For example, this:
-
-```html
-<div class="footer">
-  &copy; 2004 Foo Corporation
-</div>
-```
-
-```shell
-npm init
-```
-
-Regular Markdown syntax is not processed within code blocks. E.g., asterisks
-are just literal asterisks within a code block. This means it's also easy to use
-Markdown to write about Markdown's own syntax.
-
-```js
-var { module11, clean } = require("../../helpers");
-
-const isRut = (r) => r instanceof Rut;
-
-const cleanRegex = /^0+|[^0-9kK]+/g;
-
-const rut = function(opt) {
-  const options = typeof opt === "object" ? opt : {};
-  return new Rut(options);
-};
-
-// test comment
-class Rut {
-  constructor(opt) {
-    this.opt = opt;
-  }
-
-  /**
-   * Check the length of the RUT
-   * @param {String} rut
-   * @returns {Boolean}
-   */
-  #isLengthOk(rut) {
-    return rut.length >= 7 && rut.length <= 9;
-  }
-
-  /**
-   * Check the sum with the module 11 algorithm
-   * @param {String} rut
-   * @returns {Boolean}
-   */
-  #checksumIsOk(rut) {
-    const checkDigit = this.getCheckDigit(rut.slice(0, -1));
-
-    return checkDigit == rut.slice(-1);
-  }
-
-  format(rut) {
-    return rut.replace(/^(\d{1,2})(\d{3})(\d{3})(\w{1})$/, "$1.$2.$3-$4");
-  }
-
-  /**
-   * Verify that a Chilean RUT is valid
-   * @param {String} rut
-   * @returns {Boolean}
-   */
-  isValid(rut) {
-    if (!rut) return false;
-
-    rut = clean(rut, cleanRegex);
-    return this.#isLengthOk(rut) && this.#checksumIsOk(rut);
-  }
-
-  /**
-   * It allows to obtain the check digit of a rut
-   * @param {String} rut
-   * @returns {Number}
-   */
-  getCheckDigit(rut) {
-    if (!!rut && rut.length >= 6 && rut.length <= 8) {
-      const mod11 = module11(rut);
-      switch (mod11) {
-        case 11:
-          return 0;
-        case 10:
-          return "K";
-        default:
-          return mod11;
-      }
-    } else {
-      return false;
-    }
-  }
-
-  /**
-   * Generate a random RUT
-   * @returns {String}
-   */
-  generate() {
-    var rut = Math.floor(2e7 * Math.random() + 1e6).toString();
-    rut += this.getCheckDigit(rut);
-    return this.opt.format ? this.format(rut) : rut;
-  }
-}
-
-const proto = Rut.prototype;
-rut.prototype = proto;
-rut.isRut = isRut;
-
-module.exports = rut;
-```
-
-## Span Elements
-
-### Links
-
-Markdown supports two style of links: _inline_ and _reference_.
-
-In both styles, the link text is delimited by [square brackets].
-
-To create an inline link, use a set of regular parentheses immediately
-after the link text's closing square bracket. Inside the parentheses,
-put the URL where you want the link to point, along with an _optional_
-title for the link, surrounded in quotes. For example:
-
-This is [an example](http://example.com/) inline link.
-
-[This link](http://example.net/) has no title attribute.
-
-### Emphasis
-
-Markdown treats asterisks (`*`) and underscores (`_`) as indicators of
-emphasis. Text wrapped with one `*` or `_` will be wrapped with an
-HTML `<em>` tag; double `*`'s or `_`'s will be wrapped with an HTML
-`<strong>` tag. E.g., this input:
-
-_single asterisks_
-
-_single underscores_
-
-**double asterisks**
-
-**double underscores**
-
-### Code
-
-To indicate a span of code, wrap it with backtick quotes (`` ` ``).
-Unlike a pre-formatted code block, a code span indicates code within a
-normal paragraph. For example:
-
-Use the `printf()` function.
-
-<iframe height="707" style="width: 100%;" scrolling="no" title="How does the Virtual DOM work?" src="https://codepen.io/sdras/embed/RwwQapa?height=707&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/sdras/pen/RwwQapa'>How does the Virtual DOM work?</a> by Sarah Drasner
-  (<a href='https://codepen.io/sdras'>@sdras</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+Esta fue mi primera publicación y espero pronto estar compartiendo la siguiente.

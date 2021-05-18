@@ -89,7 +89,7 @@ export default {
   }
 
   img {
-    @apply rounded;
+    @apply rounded mx-auto;
   }
 }
 </style>
