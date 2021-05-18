@@ -2,7 +2,6 @@
   <Layout>
     <HomeWelcome />
     <wave />
-    <HomeStack />
     <div class="border-b-2 border-gray-900 max-w-5xl mx-auto"></div>
 
     <Section class="mt-16">
@@ -51,7 +50,6 @@ query {
 <script>
 import Wave from "~/assets/svg/wave-header.svg";
 import HomeWelcome from "~/components/Welcome";
-import HomeStack from "~/components/Stack";
 import Section from "~/components/Section";
 import PostList from "~/components/PostList";
 import ProjectList from "~/components/ProjectList";
@@ -59,7 +57,6 @@ import ProjectList from "~/components/ProjectList";
 export default {
   name: "Home",
   components: {
-    HomeStack,
     Wave,
     HomeWelcome,
     Section,
