@@ -1,6 +1,14 @@
 <template>
   <footer class="footer">
     <div class="footer__content">
+      <div class="footer__contact">
+        <p class="text-center mb-4">
+          Ya sea que tenga una pregunta o simplemente quiera saludar,
+          <br />
+          ¡haré todo lo posible para responderle!
+        </p>
+        <r-button to="mailto:rsgarate@gmail.com" outlined>Di Hola</r-button>
+      </div>
       <div class="footer__socials">
         <g-link
           v-for="(link, index) of siteLinks"
@@ -40,9 +48,11 @@
 import { footerLinks } from "~/data/navLinks";
 import GridsomeLogo from "~/assets/svg/gridsome.svg";
 import NetlifyLogo from "~/assets/svg/netlify.svg";
+import RButton from "@/components/atoms/Button";
 
 export default {
   components: {
+    RButton,
     GridsomeLogo,
     NetlifyLogo,
   },
@@ -63,7 +73,11 @@ export default {
   @apply bg-gray-900 text-gray-300 font-normal pb-16;
 
   &__content {
-    @apply container mx-auto;
+    @apply container mx-auto max-w-screen-lg md:px-20 lg:px-10;
+  }
+
+  &__contact {
+    @apply flex flex-col items-center mx-auto mb-10;
   }
 
   &__socials {
