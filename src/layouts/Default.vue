@@ -1,17 +1,23 @@
 <template>
   <div id="app" class="">
     <the-header @open-search-modal="openSearchModal" />
-    <SideSocialNetworks />
+    <LazyHydrate when-visible>
+      <side-social-networks />
+    </LazyHydrate>
     <main class="">
       <slot />
     </main>
-    <wave />
-    <SideEmail />
+    <LazyHydrate when-visible>
+      <wave />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <side-email />
+    </LazyHydrate>
     <Footer />
-    <LazyHydrate on-interaction>
+    <LazyHydrate when-visible>
       <the-mobile-bottom-nav />
     </LazyHydrate>
-    <LazyHydrate on-interaction>
+    <LazyHydrate when-visible>
       <modal-search
         :show="isSearchModalOpen"
         @hide-search-modal="hideSearchModal"
@@ -46,10 +52,9 @@ query {
 </static-query>
 
 <script>
-import Wave from "~/assets/svg/wave-footer.svg";
 import TheHeader from "@/components/TheHeader";
-import Footer from "~/components/Footer";
-import SiteSEO from "~/mixins/SiteSEO";
+import Footer from "@/components/Footer";
+import SiteSEO from "@/mixins/SiteSEO";
 import LazyHydrate from "vue-lazy-hydration";
 
 export default {
@@ -59,7 +64,7 @@ export default {
     TheHeader,
     Footer,
     TheMobileBottomNav: () => import("@/components/TheMobileBottomNav"),
-    Wave,
+    Wave: () => import("@/assets/svg/wave-footer.svg"),
     ModalSearch: () => import("@/components/ModalSearch"),
     SideSocialNetworks: () => import("@/components/SideSocialNetworks"),
     SideEmail: () => import("@/components/SideEmail"),
@@ -135,11 +140,7 @@ export default {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border-radius: 4px;
-}
-
-*:hover::-webkit-scrollbar-thumb {
   background-color: #3ebd93;
+  border-radius: 4px;
 }
 </style>

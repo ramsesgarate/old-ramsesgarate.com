@@ -1,7 +1,10 @@
 <template>
   <Layout>
     <HomeWelcome />
-    <wave />
+    <LazyHydrate when-visible>
+      <wave />
+    </LazyHydrate>
+    <HomeStack />
     <div class="border-b-2 border-gray-900 max-w-5xl mx-auto"></div>
 
     <Section class="mt-16">
@@ -48,8 +51,9 @@ query {
 </page-query>
 
 <script>
-import Wave from "~/assets/svg/wave-header.svg";
+import LazyHydrate from "vue-lazy-hydration";
 import HomeWelcome from "~/components/Welcome";
+import HomeStack from "~/components/Stack";
 import Section from "~/components/Section";
 import PostList from "~/components/PostList";
 import ProjectList from "~/components/ProjectList";
@@ -57,7 +61,8 @@ import ProjectList from "~/components/ProjectList";
 export default {
   name: "Home",
   components: {
-    Wave,
+    HomeStack,
+    Wave: () => import("~/assets/svg/wave-header.svg"),
     HomeWelcome,
     Section,
     PostList,

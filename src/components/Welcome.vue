@@ -24,7 +24,9 @@
         <div
           class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0 flex justify-center items-center mx-auto my-auto"
         >
-          <cartoon />
+          <LazyHydrate when-visible>
+            <cartoon />
+          </LazyHydrate>
         </div>
       </div>
     </div>
@@ -32,11 +34,12 @@
 </template>
 
 <script>
-import Cartoon from "~/assets/svg/cartoon.svg";
+import LazyHydrate from "vue-lazy-hydration";
 
 export default {
   components: {
-    Cartoon,
+    LazyHydrate,
+    Cartoon: () => import("@/assets/svg/cartoon.svg"),
   },
 };
 </script>
