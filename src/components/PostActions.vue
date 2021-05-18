@@ -1,9 +1,19 @@
 <template>
   <div class="post-actions">
-    <button class="opacity-0 mb-2" @click="onClickShare" ref="buttonShare" aria-label="share button">
+    <button
+      class="opacity-0 mb-2"
+      @click="onClickShare"
+      ref="buttonShare"
+      aria-label="share button"
+    >
       <share-icon class="h-6 w-6" />
     </button>
-    <button class="opacity-0" v-scroll-to="'#title'" ref="buttonTop" aria-label="top button">
+    <button
+      class="opacity-0"
+      v-scroll-to="'#title'"
+      ref="buttonTop"
+      aria-label="top button"
+    >
       <up-icon class="h-6 w-6" />
     </button>
   </div>
@@ -53,7 +63,7 @@ export default {
   display: flex;
   flex-direction: column;
   position: fixed;
-  right: 24px;
+  right: 8px;
   z-index: 2;
 
   button {
