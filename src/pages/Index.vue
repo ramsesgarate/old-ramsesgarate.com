@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <HomeWelcome />
-    <LazyHydrate when-visible>
+    <LazyHydrate never>
       <wave />
     </LazyHydrate>
     <HomeStack />
@@ -61,6 +61,7 @@ import ProjectList from "~/components/ProjectList";
 export default {
   name: "Home",
   components: {
+    LazyHydrate,
     HomeStack,
     Wave: () => import("~/assets/svg/wave-header.svg"),
     HomeWelcome,

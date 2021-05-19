@@ -1,23 +1,23 @@
 <template>
   <div id="app" class="">
     <the-header @open-search-modal="openSearchModal" />
-    <LazyHydrate when-visible>
+    <LazyHydrate never>
       <side-social-networks />
     </LazyHydrate>
     <main class="">
       <slot />
     </main>
-    <LazyHydrate when-visible>
+    <LazyHydrate never>
       <wave />
     </LazyHydrate>
-    <LazyHydrate when-visible>
+    <LazyHydrate never>
       <side-email />
     </LazyHydrate>
     <Footer />
-    <LazyHydrate when-visible>
+    <LazyHydrate never>
       <the-mobile-bottom-nav />
     </LazyHydrate>
-    <LazyHydrate when-visible>
+    <LazyHydrate never>
       <modal-search
         :show="isSearchModalOpen"
         @hide-search-modal="hideSearchModal"

@@ -4,7 +4,7 @@
       Mi Stack actual de lenguajes y tecnologías son:
     </h2>
     <div class="flex justify-center mb-16">
-      <LazyHydrate when-visible>
+      <LazyHydrate never>
         <down-arrow-icon class="mt-4" />
       </LazyHydrate>
     </div>
@@ -12,52 +12,52 @@
       class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4 max-w-screen-lg"
     >
       <div title="VueJs" class="flex justify-center items-center mb-2">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <vue-icon />
         </LazyHydrate>
       </div>
       <div title="Webpack" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <webpack-icon />
         </LazyHydrate>
       </div>
       <div title="JavaScript" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <js-icon />
         </LazyHydrate>
       </div>
       <div title="TypeScript" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <typescript-icon />
         </LazyHydrate>
       </div>
       <div title="NodeJs" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <node-js-icon />
         </LazyHydrate>
       </div>
       <div title="HTML" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <html-icon />
         </LazyHydrate>
       </div>
       <div title="CSS" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <css-icon />
         </LazyHydrate>
       </div>
       <div title="SASS" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <sass-icon />
         </LazyHydrate>
       </div>
       <div title="Git" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <git-icon />
         </LazyHydrate>
       </div>
       <div title="MySql" class="flex justify-center items-center">
-        <LazyHydrate when-visible>
+        <LazyHydrate never>
           <mysql-icon />
         </LazyHydrate>
       </div>

@@ -24,7 +24,7 @@
         <div
           class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0 flex justify-center items-center mx-auto my-auto"
         >
-          <LazyHydrate when-visible>
+          <LazyHydrate never>
             <cartoon />
           </LazyHydrate>
         </div>
