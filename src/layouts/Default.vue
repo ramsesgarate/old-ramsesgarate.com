@@ -4,15 +4,14 @@
     <lazy-component>
       <side-social-networks />
     </lazy-component>
+    <lazy-component>
+      <side-email />
+    </lazy-component>
     <main class="">
       <slot />
     </main>
     <lazy-component>
       <wave />
-    </lazy-component>
-
-    <lazy-component>
-      <side-email />
     </lazy-component>
     <lazy-component>
       <Footer />
