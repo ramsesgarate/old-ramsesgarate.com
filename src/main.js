@@ -1,8 +1,13 @@
 import Layout from '~/layouts/Default.vue';
 import VueScrollTo from 'vue-scrollto';
+import VueLazyload from 'vue-lazyload';
 
-export default function (Vue, { head, appOptions }) {
+export default function (Vue, { head }) {
   Vue.component('Layout', Layout);
+
+  Vue.use(VueLazyload, {
+    lazyComponent: true
+  });
 
   Vue.use(VueScrollTo, {
     duration: 500,

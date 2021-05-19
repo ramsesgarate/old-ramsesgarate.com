@@ -1,28 +1,31 @@
 <template>
   <div id="app" class="">
     <the-header @open-search-modal="openSearchModal" />
-    <LazyHydrate never>
+    <lazy-component>
       <side-social-networks />
-    </LazyHydrate>
+    </lazy-component>
     <main class="">
       <slot />
     </main>
-    <LazyHydrate never>
+    <lazy-component>
       <wave />
-    </LazyHydrate>
-    <LazyHydrate never>
+    </lazy-component>
+
+    <lazy-component>
       <side-email />
-    </LazyHydrate>
-    <Footer />
-    <LazyHydrate never>
+    </lazy-component>
+    <lazy-component>
+      <Footer />
+    </lazy-component>
+    <lazy-component>
       <the-mobile-bottom-nav />
-    </LazyHydrate>
-    <LazyHydrate never>
+    </lazy-component>
+    <lazy-component>
       <modal-search
         :show="isSearchModalOpen"
         @hide-search-modal="hideSearchModal"
       />
-    </LazyHydrate>
+    </lazy-component>
   </div>
 </template>
 
