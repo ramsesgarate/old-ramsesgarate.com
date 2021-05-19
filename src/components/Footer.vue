@@ -3,11 +3,11 @@
     <div class="footer__content">
       <div class="footer__contact">
         <p class="text-center mb-4">
-          Ya sea que tenga una pregunta o simplemente quiera saludar,
+          Ya sea que tengas una pregunta o simplemente quieras saludar,
           <br />
-          ¡haré todo lo posible para responderle!
+          ¡haré todo lo posible para responderte!
         </p>
-        <r-button to="mailto:rsgarate@gmail.com" outlined>Di Hola</r-button>
+        <r-button to="mailto:rsgarate@gmail.com" outlined>Hola!</r-button>
       </div>
       <div class="footer__socials">
         <g-link
