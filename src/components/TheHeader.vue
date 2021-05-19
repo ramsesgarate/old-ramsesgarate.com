@@ -1,7 +1,17 @@
 <template>
   <header class="header">
     <div class="header__content">
-      <g-link to="/"> Ramses </g-link>
+      <g-link to="/">
+        <g-image
+          src="~/assets/svg/logo-120.svg"
+          class="header__logo"
+          alt="Logo RG"
+          width="56"
+          height="56"
+          blur="10"
+          quality="90"
+        ></g-image>
+      </g-link>
       <nav class="header-nav">
         <ul class="header-nav__links">
           <li

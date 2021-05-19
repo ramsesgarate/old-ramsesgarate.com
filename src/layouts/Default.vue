@@ -14,6 +14,15 @@
       <side-email />
     </LazyHydrate>
     <Footer />
+    <LazyHydrate never>
+      <the-mobile-bottom-nav />
+    </LazyHydrate>
+    <LazyHydrate never>
+      <modal-search
+        :show="isSearchModalOpen"
+        @hide-search-modal="hideSearchModal"
+      />
+    </LazyHydrate>
   </div>
 </template>
 
@@ -54,7 +63,9 @@ export default {
     LazyHydrate,
     TheHeader,
     Footer,
+    TheMobileBottomNav: () => import("@/components/TheMobileBottomNav"),
     Wave: () => import("@/assets/svg/wave-footer.svg"),
+    ModalSearch: () => import("@/components/ModalSearch"),
     SideSocialNetworks: () => import("@/components/SideSocialNetworks"),
     SideEmail: () => import("@/components/SideEmail"),
   },

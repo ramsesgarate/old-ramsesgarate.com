@@ -23,14 +23,25 @@
         </div>
         <div
           class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0 flex justify-center items-center mx-auto my-auto"
-        ></div>
+        >
+          <LazyHydrate never>
+            <cartoon />
+          </LazyHydrate>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import LazyHydrate from "vue-lazy-hydration";
+
+export default {
+  components: {
+    LazyHydrate,
+    Cartoon: () => import("@/assets/svg/cartoon.svg"),
+  },
+};
 </script>
 
 <style>
