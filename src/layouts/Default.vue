@@ -17,15 +17,11 @@
     <lazy-component>
       <Footer />
     </lazy-component>
-    <lazy-component>
-      <the-mobile-bottom-nav />
-    </lazy-component>
-    <lazy-component>
-      <modal-search
-        :show="isSearchModalOpen"
-        @hide-search-modal="hideSearchModal"
-      />
-    </lazy-component>
+    <the-mobile-bottom-nav @open-search-modal="openSearchModal" />
+    <modal-search
+      :show="isSearchModalOpen"
+      @hide-search-modal="hideSearchModal"
+    />
   </div>
 </template>
 

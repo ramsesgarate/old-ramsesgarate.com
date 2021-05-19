@@ -77,7 +77,7 @@ export default {
       this.lastScrollPosition = currentScrollPosition;
     },
     showSearchModal() {
-      this.$store.dispatch("showSearchModal");
+      this.$emit("open-search-modal");
     },
   },
 };
