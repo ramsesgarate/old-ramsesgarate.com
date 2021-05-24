@@ -76,6 +76,10 @@ export default {
     @apply list-disc pl-10 mb-7;
   }
 
+  li {
+    @apply font-normal;
+  }
+
   ol {
     @apply list-decimal pl-10 mb-7;
   }
