@@ -7,7 +7,7 @@ tags: ["blog"]
 author: Ramses Garate
 date_update: 2021-05-24
 cover_image: ./cover_digital_garden.jpg
-description: "Bienvenidos a mi pagina web o mejor dicho a mi Jardín Digital, la idea de tener un jardín digital es crear un espacio en línea en la interrelación de un cuaderno y un blog, donde los jardineros digitales comparten semillas de pensamientos para cultivar en público. A diferencia de un blog, donde los artículos y ensayos tienen una fecha de publicación y comienzan a decaer tan pronto como se publican, un jardín digital es siempre verde: los jardineros digitales siguen editando y refinando sus notas."
+description: "Bienvenidos a mi pagina web o mejor dicho a mi Jardín Digital, la idea de tener un jardín digital es crear un espacio en línea en la interrelación de un cuaderno y un blog, donde los jardineros digitales comparten semillas de pensamientos para cultivar en público. A diferencia de un blog, donde los artículos y ensayos tienen una fecha de publicación y comienzan a decaer tan pronto como se publican, un jardín digital es siempre verde, los jardineros digitales siguen editando y refinando sus notas"
 ---
 
 Bienvenidos a mi pagina web o mejor dicho a mi Jardín Digital, la idea de tener un jardín digital es crear un espacio en línea en la interrelación de un cuaderno y un blog, donde los jardineros digitales comparten semillas de pensamientos para cultivar en público. A diferencia de un blog, donde los artículos y ensayos tienen una fecha de publicación y comienzan a decaer tan pronto como se publican, un jardín digital es siempre verde, los jardineros digitales siguen editando y refinando sus notas.
@@ -32,7 +32,9 @@ El framework de JavaScript que dominó es Vue.js, así que decidí que una buena
 
 ## Estructura de componentes
 
-Lamentablemente Vue.js no tiene una estructura de componentes definida, así que tuve que indagar durante varios días cuál era la estructura ideal o que mejor se adaptaría a mi proyecto, al final terminó gustándome la metodología Atomic Design, ¿Por qué? Todas las páginas, realmente son un compendio de componentes, es decir, los componentes son los que forman las pantallas, y estos componentes pueden estar compuestos por otros componentes más pequeños, les dejo una breve explicación de su creador Brad Frost:
+Lamentablemente Vue.js no tiene una estructura de componentes definida, así que tuve que indagar durante varios días cuál era la estructura ideal o que mejor se adaptaría a mi proyecto, al final terminó gustándome la metodología Atomic Design.
+
+¿Por qué? Todas las páginas, realmente son un compendio de componentes, es decir, los componentes son los que forman las pantallas, y estos componentes pueden estar compuestos por otros componentes más pequeños, les dejo una breve explicación de su creador Brad Frost:
 
 > "Las interfaces están formadas por componentes más pequeños. Esto significa que podemos dividir interfaces enteras en bloques de construcción fundamentales y trabajar desde allí. Esa es la esencia básica del diseño atómico".
 
